@@ -85,13 +85,14 @@
         for (let i = 1; i <= 200; i++) {
             // Tạo thẻ <a>
             const a = document.createElement('a');
+            // Link vẫn trỏ đúng về index1.html, index2.html...
             a.href = `index${i}.html`;
             a.className = 'link-item';
             
-            // Chèn icon đám mây và tên file vào trong thẻ <a>
+            // Chèn icon đám mây và tên Bài 1, Bài 2... vào trong thẻ <a>
             a.innerHTML = `
                 <i class="fas fa-cloud cloud-icon"></i>
-                <span>index${i}.html</span>
+                <span>Bài ${i}</span>
             `;
             
             // Thêm thẻ <a> vào vùng hiển thị
