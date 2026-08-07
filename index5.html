@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dạy Võ - Đạo Đức Người Học Võ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Nền võ đường với ánh sáng dịu */
+        body {
+            margin: 0;
+            padding: 60px 20px;
+            background-image: url('https://images.unsplash.com/photo-1579847668903-88746a6f6634?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: 'Nunito', sans-serif;
+            color: #2e2e2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 850px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-top: 10px solid #c62828; /* Điểm nhấn màu đỏ thẫm của võ thuật truyền thống */
+        }
+
+        .success-factor h1 {
+            font-size: 28px;
+            color: #b71c1c;
+            border-bottom: 2px dashed rgba(183, 28, 28, 0.3);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .vow-section {
+            text-align: center;
+            margin-bottom: 45px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(183, 28, 28, 0.2);
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #880e4f;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .vow-section h2 {
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .vow-text {
+            font-family: 'Merriweather', serif;
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.7;
+            color: #3e2723;
+            padding: 0 15px;
+        }
+
+        .teaching-section {
+            background: rgba(252, 228, 236, 0.5);
+            border-left: 5px solid #c62828;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 45px;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .teaching-section strong {
+            color: #b71c1c;
+        }
+
+        .details-list {
+            list-style: none;
+            padding: 0;
+            line-height: 1.9;
+        }
+
+        .details-list li {
+            margin-bottom: 25px;
+            background: rgba(0, 0, 0, 0.03);
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .details-list strong {
+            color: #b71c1c;
+            font-size: 18px;
+        }
+
+        .snippet-text {
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            color: #4a148c;
+            display: block;
+            margin-top: 10px;
+            padding-left: 18px;
+            border-left: 3px solid #b71c1c;
+        }
+
+        .youtube-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #b71c1c;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 17px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(183, 28, 28, 0.3);
+        }
+
+        .youtube-btn:hover {
+            background: #8e0000;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 30px; }
+            .vow-text { font-size: 18px; }
+            .youtube-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="success-factor">
+            <h1><i class="fas fa-fist-raised"></i> Dạy Võ</h1>
+
+            <div class="vow-section">
+                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
+                <div class="vow-text">
+                    "Con xin nguyện khi hướng dẫn huynh đệ học võ, con sẽ không chỉ dạy đòn thế chiến đấu, mà dốc lòng truyền đạt Võ Đạo. Xin cho con mượn những bài quyền để dạy các em sự khiêm cung, tôn sư trọng đạo và tinh thần bảo vệ kẻ yếu, để đạo đức của các em lớn lên cùng sức mạnh thể chất."
+                </div>
+            </div>
+
+            <div class="teaching-section">
+                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
+                <p>Sư Phụ dạy, người học võ đang nắm trong tay kỹ năng sát thương, nên đạo đức của họ phải cao gấp nhiều lần người bình thường. Nếu học võ mà không có đạo lý sẽ sinh ra bạo lực, hung hăng. Phải dạy Võ Đạo để hướng các em trở thành những người nho nhã, thanh cao.</p>
+            </div>
+
+            <ul class="details-list">
+                <li>
+                    <strong>Chủ đề:</strong> Đạo đức người học võ phải cao hơn người thường.
+                </li>
+                <li>
+                    <strong>Snippet:</strong>
+                    <span class="snippet-text">
+                        "... Đạo đức của người học võ phải cao gấp mấy lần người khác, vì người học võ đang thủ đắc bên trong một kỹ năng giết người nguy hiểm... Đánh võ mà thô bỉ là thứ ngu dốt kém cỏi. Đánh võ phải đẹp, phải có nghệ thuật... Càng tập võ thì người đó càng nho nhã thanh tao."
+                    </span>
+                </li>
+            </ul>
+            
+            <a href="https://youtu.be/uVPb3N_udeM?t=319" target="_blank" class="youtube-btn">
+                <i class="fab fa-youtube"></i> Xem Video (5:19 - 6:36) - ID: 5815
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

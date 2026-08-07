@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng hợp các trang Index</title>
+    <!-- Nhúng thư viện FontAwesome để lấy icon đám mây -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Thiết lập background màu xanh bầu trời */
+        body {
+            background-color: #87CEEB; /* Màu sky blue */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Lưới hiển thị các đường link */
+        .link-container {
+            display: grid;
+            /* Tự động chia cột, mỗi ô rộng ít nhất 120px */
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* Khung hiển thị của từng link */
+        .link-item {
+            background: rgba(255, 255, 255, 0.85); /* Nền trắng hơi trong suốt */
+            padding: 15px 10px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Hiệu ứng khi di chuột vào link */
+        .link-item:hover {
+            background: #ffffff;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            color: #00BFFF;
+        }
+
+        /* Màu xanh cho icon đám mây */
+        .cloud-icon {
+            color: #00BFFF; /* Màu Deep Sky Blue */
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Danh Sách Đường Link</h1>
+    
+    <!-- Khu vực chứa 200 link -->
+    <div class="link-container" id="links-wrapper"></div>
+
+    <script>
+        // Lấy thẻ div chứa link
+        const wrapper = document.getElementById('links-wrapper');
+        
+        // Vòng lặp từ 1 đến 200 để tạo tự động 200 đường link
+        for (let i = 1; i <= 200; i++) {
+            // Tạo thẻ <a>
+            const a = document.createElement('a');
+            a.href = `index${i}.html`;
+            a.className = 'link-item';
+            
+            // Chèn icon đám mây và tên file vào trong thẻ <a>
+            a.innerHTML = `
+                <i class="fas fa-cloud cloud-icon"></i>
+                <span>index${i}.html</span>
+            `;
+            
+            // Thêm thẻ <a> vào vùng hiển thị
+            wrapper.appendChild(a);
+        }
+    </script>
+
+</body>
+</html>
