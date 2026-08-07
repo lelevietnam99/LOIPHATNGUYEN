@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiền Là Uy Đức Vô Hình A - Gieo Duyên Lành</title>
+    <!-- Nhúng FontAwesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Nhúng Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Nền con đường ngập nắng ấm áp */
+        body {
+            margin: 0;
+            padding: 60px 20px;
+            background-image: url('https://images.unsplash.com/photo-1476610283151-506bc1bc4704?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: 'Nunito', sans-serif;
+            color: #3e2723;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung nội dung chính */
+        .container {
+            max-width: 850px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-top: 10px solid #d84315; /* Màu cam cháy ấm áp đại diện cho lòng nhiệt thành */
+        }
+
+        .success-factor h1 {
+            font-size: 28px;
+            color: #bf360c;
+            border-bottom: 2px dashed rgba(191, 54, 12, 0.3);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Phần Lời phát nguyện */
+        .vow-section {
+            text-align: center;
+            margin-bottom: 45px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(191, 54, 12, 0.2);
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #d84315;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .vow-section h2 {
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .vow-text {
+            font-family: 'Merriweather', serif;
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.7;
+            color: #4e342e;
+            padding: 0 15px;
+        }
+
+        /* Phần Đạo lý Sư Phụ */
+        .teaching-section {
+            background: rgba(253, 236, 230, 0.7);
+            border-left: 5px solid #d84315;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 45px;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .teaching-section strong {
+            color: #bf360c;
+        }
+
+        /* Phần chi tiết (Chủ đề & Snippet) */
+        .details-list {
+            list-style: none;
+            padding: 0;
+            line-height: 1.9;
+        }
+
+        .details-list li {
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .details-list strong {
+            color: #d84315;
+            font-size: 18px;
+        }
+
+        .snippet-text {
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            color: #4e342e;
+            display: block;
+            margin-top: 10px;
+            padding-left: 18px;
+            border-left: 3px solid #d84315;
+        }
+
+        /* Nút xem Video YouTube */
+        .youtube-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #d84315;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 17px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(216, 67, 21, 0.3);
+            margin-top: 10px;
+        }
+
+        .youtube-btn:hover {
+            background: #bf360c;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(216, 67, 21, 0.4);
+        }
+
+        /* Thích ứng trên màn hình nhỏ */
+        @media (max-width: 600px) {
+            .container { padding: 30px; }
+            .vow-text { font-size: 18px; }
+            .youtube-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="success-factor">
+            <h1><i class="fas fa-people-arrows"></i> Thiền Là Uy Đức Vô Hình A</h1>
+
+            <div class="vow-section">
+                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
+                <div class="vow-text">
+                    "Con xin nguyện dẫu biết huynh đệ không có duyên với con, con vẫn sẽ chủ động kết duyên lành. Con xin âm thầm giúp đỡ, nhường nhịn và bảo bọc họ trong công việc mà không mong họ phải thay đổi thái độ hay đền đáp, để từng bước dùng lòng từ bi hóa giải mọi nghịch duyên."
+                </div>
+            </div>
+
+            <div class="teaching-section">
+                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
+                <p>Khi làm việc chung với người ít duyên, ta đừng tránh né hay lạnh nhạt. Sự lạnh nhạt sẽ làm duyên của ta với chúng sinh đứt hẳn. Ta phải chủ động gieo duyên lại bằng cách nhiệt tình giúp đỡ, hướng dẫn họ. Có như vậy, những kiếp sau gặp lại, ta mới có thể là những người anh em đoàn kết gắn bó.</p>
+            </div>
+
+            <ul class="details-list">
+                <li>
+                    <strong>Chủ đề:</strong> Thiếu sự giúp đỡ, bảo bọc sẽ làm ta cạn duyên với mọi người.
+                </li>
+                <li>
+                    <strong>Snippet:</strong>
+                    <span class="snippet-text">
+                        "... Mà không thương tức là không giúp đỡ, không hướng dẫn, không bảo bọc, không tha thứ... làm cho ta không có duyên gì với chúng sinh hết. Đời sau này khi gặp lại ta và chúng sinh đi ngang qua mặt nhau cũng không nhìn thấy nhau... Còn có duyên gặp rồi sẽ gặp lại... Bởi vì đời xưa ta đã làm được năm việc, ta giúp đỡ chúng sinh, hướng dẫn cho chúng sinh vào điều tốt..."
+                    </span>
+                </li>
+            </ul>
+            
+            <!-- Link YouTube đã được chỉnh lại cú pháp ?t= để hoạt động chính xác -->
+            <a href="https://youtu.be/rYCBjINKYN8?t=1859" target="_blank" class="youtube-btn">
+                <i class="fab fa-youtube"></i> Xem Video (30:59 - 32:09) - ID: 4086
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

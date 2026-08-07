@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tập Khí - Tự Xét Mình, Tâm Nhẹ Nhàng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Nền hoa sen tĩnh lặng, biểu tượng cho việc quay lại soi mình */
+        body {
+            margin: 0;
+            padding: 60px 20px;
+            background-image: url('https://images.unsplash.com/photo-1595152645607-b95bc84f3cc3?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: 'Nunito', sans-serif;
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 850px;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-top: 10px solid #8e24aa; /* Màu tím của tâm định tĩnh */
+        }
+
+        .success-factor h1 {
+            font-size: 28px;
+            color: #6a1b9a;
+            border-bottom: 2px dashed rgba(106, 27, 154, 0.3);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .vow-section {
+            text-align: center;
+            margin-bottom: 45px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(106, 27, 154, 0.2);
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #7b1fa2;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .vow-section h2 {
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .vow-text {
+            font-family: 'Merriweather', serif;
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.7;
+            color: #3e2723;
+            padding: 0 15px;
+        }
+
+        .teaching-section {
+            background: rgba(243, 229, 245, 0.7);
+            border-left: 5px solid #8e24aa;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 45px;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .teaching-section strong {
+            color: #6a1b9a;
+        }
+
+        .details-list {
+            list-style: none;
+            padding: 0;
+            line-height: 1.9;
+        }
+
+        .details-list li {
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .details-list strong {
+            color: #8e24aa;
+            font-size: 18px;
+        }
+
+        .snippet-text {
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            color: #2c3e50;
+            display: block;
+            margin-top: 10px;
+            padding-left: 18px;
+            border-left: 3px solid #8e24aa;
+        }
+
+        .youtube-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #8e24aa;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 17px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(142, 36, 170, 0.3);
+        }
+
+        .youtube-btn:hover {
+            background: #6a1b9a;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 30px; }
+            .vow-text { font-size: 18px; }
+            .youtube-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="success-factor">
+            <h1><i class="fas fa-user-check"></i> Tập Khí</h1>
+
+            <div class="vow-section">
+                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
+                <div class="vow-text">
+                    "Con xin nguyện mỗi khi có chuyện đổ vỡ, sai sót hay bất hòa, con sẽ lập tức quay lại xét lỗi chính mình. Dù ai có sai quấy đến đâu, con cũng quyết không mở miệng chê trách, mà chỉ âm thầm sửa đổi bản thân."
+                </div>
+            </div>
+
+            <div class="teaching-section">
+                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
+                <p>Khi ta đổ lỗi, ta đang đẩy sự chia rẽ lên cao. Khi ta tự trách mình, tâm ta trở nên nhẹ nhàng, bao dung, và ta đang tích lũy một công đức rất lớn của sự khiêm hạ.</p>
+            </div>
+
+            <ul class="details-list">
+                <li>
+                    <strong>Chủ đề:</strong> Tự trách mình giúp tâm nhẹ nhàng và tránh gây chia rẽ.
+                </li>
+                <li>
+                    <strong>Snippet:</strong>
+                    <span class="snippet-text">
+                        "... Đa phần chúng ta là biết đạo chưa mấy năm nhưng mà rất dễ nói lỗi người khác... Khi mình hay trách người thì thứ nhất là mình mang tội thêm, thứ hai là mình gây chia rẽ... Còn nếu mà mình trách mình, hay đụng chuyện gì xảy ra mình trách mình, tâm mình sẽ nhẹ nhàng vô cùng. Không bắt lỗi người khác."
+                    </span>
+                </li>
+            </ul>
+            
+            <a href="https://youtu.be/AhO2MpMpz8E?t=3954" target="_blank" class="youtube-btn">
+                <i class="fab fa-youtube"></i> Xem Video (1:05:54 - 1:06:58) - ID: 5197
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
