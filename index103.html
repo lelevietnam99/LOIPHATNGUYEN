@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sống Nhanh Sống Chậm - Khẩn Trương & Kỹ Lưỡng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Nền chuyển động ánh sáng, biểu tượng tác phong nhanh nhẹn và sắc bén */
+        body {
+            margin: 0;
+            padding: 60px 20px;
+            background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: 'Nunito', sans-serif;
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 850px;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-top: 10px solid #ef6c00; /* Màu cam nhiệt huyết */
+        }
+
+        .success-factor h1 {
+            font-size: 28px;
+            color: #e65100;
+            border-bottom: 2px dashed rgba(230, 81, 0, 0.3);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .vow-section {
+            text-align: center;
+            margin-bottom: 45px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(230, 81, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #f57c00;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .vow-section h2 {
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .vow-text {
+            font-family: 'Merriweather', serif;
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.7;
+            color: #3e2723;
+            padding: 0 15px;
+        }
+
+        .teaching-section {
+            background: rgba(255, 243, 224, 0.7);
+            border-left: 5px solid #ef6c00;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 45px;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .teaching-section strong {
+            color: #e65100;
+        }
+
+        .details-list {
+            list-style: none;
+            padding: 0;
+            line-height: 1.9;
+        }
+
+        .details-list li {
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .details-list strong {
+            color: #ef6c00;
+            font-size: 18px;
+        }
+
+        .snippet-text {
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            color: #2c3e50;
+            display: block;
+            margin-top: 10px;
+            padding-left: 18px;
+            border-left: 3px solid #ef6c00;
+        }
+
+        .youtube-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #ef6c00;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 17px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(239, 108, 0, 0.3);
+        }
+
+        .youtube-btn:hover {
+            background: #e65100;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 30px; }
+            .vow-text { font-size: 18px; }
+            .youtube-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="success-factor">
+            <h1><i class="fas fa-bolt"></i> Sống Nhanh Sống Chậm</h1>
+
+            <div class="vow-section">
+                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
+                <div class="vow-text">
+                    "Con xin nguyện khi đối mặt với những công việc đột xuất, gấp gáp, con sẽ xem đó là cơ hội tuyệt vời để rèn luyện tác phong 'sống nhanh'. Xin cho đôi tay con thoăn thoắt, làm việc với tốc độ cao nhất nhưng vẫn giữ được sự tỉ mỉ, đẹp đẽ và gọn gàng, tuyệt đối không vì nhanh mà ẩu tả."
+                </div>
+            </div>
+
+            <div class="teaching-section">
+                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
+                <p>Trong thời đại này, ta phải tập làm việc khẩn trương, căng thẳng, nhanh tay lẹ mắt để giải quyết công việc trong chớp mắt. Nhưng cái hay là làm cực nhanh mà đâu ra đó, đồ vật sắp xếp đẹp đẽ, gọn gàng. Đó chính là lúc ta rèn luyện bản lĩnh để không bao giờ bị thua sút trong cuộc đời.</p>
+            </div>
+
+            <ul class="details-list">
+                <li>
+                    <strong>Chủ đề:</strong> Dùng những công việc gấp gáp để tập tác phong làm việc khẩn trương, nhanh mà vẫn kỹ lưỡng, gọn gàng.
+                </li>
+                <li>
+                    <strong>Snippet:</strong>
+                    <span class="snippet-text">
+                        "... Nhưng mà đó là những cơ hội để tập cái làm việc khẩn trương... Tụi con làm đi bước đi có nhanh hay không, rồi có làm cho sắp vào chỗ có gọn, nhanh tay, mà đồ nào ra đồ đó... nhanh thật nhanh, mà đẹp thật đẹp, gọn thật gọn... Đó là những lúc ta rèn luyện như vậy. Hiện nay ta bị thiếu cái này nên ta phải tập dữ lắm..."
+                    </span>
+                </li>
+            </ul>
+            
+            <a href="https://youtu.be/L033ghinHv8?t=1126" target="_blank" class="youtube-btn">
+                <i class="fab fa-youtube"></i> Xem Video (18:46 - 19:53) - ID: 6385
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
