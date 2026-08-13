@@ -3,183 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dạy Võ - Đạo Đức Người Học Võ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý 5 - Nghiệp Thiện và Thành Công</title>
     <style>
-        /* Nền võ đường với ánh sáng dịu */
-        body {
+        /* Thiết lập nền vũ trụ cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1579847668903-88746a6f6634?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh vũ trụ mới từ Unsplash - Dải ngân hà rực rỡ */
+            background-image: url('https://images.unsplash.com/photo-1501862700950-18382cd41497?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2e2e2e;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #c62828; /* Điểm nhấn màu đỏ thẫm của võ thuật truyền thống */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #b71c1c;
-            border-bottom: 2px dashed rgba(183, 28, 28, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(183, 28, 28, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #880e4f;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .teaching-section {
-            background: rgba(252, 228, 236, 0.5);
-            border-left: 5px solid #c62828;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #b71c1c;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(0, 0, 0, 0.03);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #b71c1c;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #4a148c;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #b71c1c;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #b71c1c;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(183, 28, 28, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #8e0000;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-fist-raised"></i> Dạy Võ</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khi hướng dẫn huynh đệ học võ, con sẽ không chỉ dạy đòn thế chiến đấu, mà dốc lòng truyền đạt Võ Đạo. Xin cho con mượn những bài quyền để dạy các em sự khiêm cung, tôn sư trọng đạo và tinh thần bảo vệ kẻ yếu, để đạo đức của các em lớn lên cùng sức mạnh thể chất."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Sư Phụ dạy, người học võ đang nắm trong tay kỹ năng sát thương, nên đạo đức của họ phải cao gấp nhiều lần người bình thường. Nếu học võ mà không có đạo lý sẽ sinh ra bạo lực, hung hăng. Phải dạy Võ Đạo để hướng các em trở thành những người nho nhã, thanh cao.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Đạo đức người học võ phải cao hơn người thường.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Đạo đức của người học võ phải cao gấp mấy lần người khác, vì người học võ đang thủ đắc bên trong một kỹ năng giết người nguy hiểm... Đánh võ mà thô bỉ là thứ ngu dốt kém cỏi. Đánh võ phải đẹp, phải có nghệ thuật... Càng tập võ thì người đó càng nho nhã thanh tao."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/uVPb3N_udeM?t=319" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (5:19 - 6:36) - ID: 5815
-            </a>
+        <h1>ĐỊNH LÝ 5</h1>
+        <h2>NGHIỆP THIỆN VÀ THÀNH CÔNG</h2>
+        
+        <p><strong>Định lý:</strong> Mọi sự <span class="highlight">thành công</span> ở đời không tự nhiên mà có bằng sự cố gắng mưu mô, mà nó là kết tinh của <span class="highlight">nghiệp thiện</span> và sự <span class="highlight">cống hiến</span>, giúp đỡ cộng đồng từ vô số kiếp hoặc trong quá khứ.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Cái thành công của mình nó cũng rất nhiều <span class="highlight">may mắn</span> vì nó là kết tinh của nghiệp thiện do ta đã giúp đỡ quá nhiều người nên cái thành công buộc phải đến với chúng ta... Ai cũng vậy, ai sống trên đời cũng vậy, không thể thụ động ngồi yên mà cái thành công tự nó đến, trừ trường hợp phước mình lớn quá."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> <br>
+            - <a href="https://youtu.be/T2AkbK1MhnI?t=440" target="_blank">https://youtu.be/T2AkbK1MhnI?t=440</a> (07:20) <br>
+            - <a href="https://youtu.be/NZNRWJXHZjk?t=1739" target="_blank">https://youtu.be/NZNRWJXHZjk?t=1739</a> (28:59)
+        </p>
     </div>
 
 </body>

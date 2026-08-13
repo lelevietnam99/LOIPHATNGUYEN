@@ -3,183 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>03. Hiền Tài - Khí Công & Thiền Định</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Lật Ngược Bản Năng</title>
     <style>
-        /* Nền hàng trúc trong sương mờ */
-        body {
+        /* Thiết lập nền vũ trụ cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1515942661998-486c40590836?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh vũ trụ mới từ Unsplash - Bầu trời ngàn sao tĩnh lặng */
+            background-image: url('https://images.unsplash.com/photo-1435224668334-0f82ea251ef0?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #263238;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.94);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            border-top: 10px solid #2e7d32; /* Xanh lá rặng trúc */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #1b5e20;
-            border-bottom: 2px dashed rgba(27, 94, 32, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(27, 94, 32, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #2e7d32;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(232, 245, 233, 0.7);
-            border-left: 5px solid #2e7d32;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #1b5e20;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.4);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #2e7d32;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #3e2723;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #2e7d32;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #2e7d32;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #1b5e20;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-leaf"></i> 03. Hiền Tài</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khi thấy Sư huynh ham thích thể thao thế gian, mải mê đánh cầu lông mà lãng quên công phu tu tập, con tuyệt đối không mở miệng phán xét. Thay vào đó, con xin dốc lòng tinh tấn ngồi thiền, dùng sự thanh tịnh miên mật của chính mình làm 'thân giáo' vô ngôn để gọi Sư huynh thức tỉnh."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Thể thao là tốt cho người đời, nhưng với người xuất gia, việc đam mê các môn thể thao như tennis, cầu lông, bóng đá... sẽ làm tâm trí động loạn, đánh mất uy nghi. Thay vì nói lỗi, ta phải dùng chính sự rèn luyện Khí công và Thiền định tĩnh lặng của mình để tạo ra từ trường lôi kéo huynh đệ quay về.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Tu sĩ không nên ham mê các môn thể thao tranh hơn thua của người đời.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Chúng ta không thể giống như người đời mà đi tập tạ, tập thể dục, đánh tennis, đá banh đồ được... Trong chùa mình có một môn tập luyện cơ thể là môn gì? Khí công của Tổ Đạt Ma, chúng ta cứ học cái đó... Chứ đừng để mà cứ sáng sớm dậy rồi cứ làm những việc tu bình thường mà không có cái giờ phút rèn luyện cơ thể đặc biệt thì người tu này sẽ bạc nhược liền..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/Q1dNm309i6s?t=4730" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (1:18:50 - 1:19:57) - ID: 972
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>LẬT NGƯỢC BẢN NĂNG</h2>
+        
+        <p><strong>Phát biểu:</strong> <span class="highlight">Bản năng tự nhiên</span> của phàm phu là "<span class="highlight">giúp ai thì nhớ mãi, thọ ơn ai thì quên liền</span>". Lòng biết ơn chân chính là một hệ đạo đức yêu cầu ta phải <span class="highlight">lật ngược lại hoàn toàn</span> bản năng này: "<span class="highlight">giúp ai thì quên liền, thọ ơn ai thì không bao giờ quên</span>".</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "...chúng sinh hầu hết chúng sinh bị một cái bản năng tự nhiên cái bản năng này rất tự nhiên tự nhiên như hơi thở đó là giúp ai thì ta nhớ mãi thỏa ơn ai quên liền đó là điều hết sức tự nhiên ai cũng vậy hết ta đều bị điều này chỉ có khi đến với Phật Pháp ta mới lật ngược cái bản năng đó lại một cách vất vả là khi giúp ai ta quên liền Đạo Phật gọi là <span class="highlight">không chấp công</span> không chấp công giúp ai quên liền mà thỏa ơn ai không bao giờ quên."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> <a href="https://youtu.be/63Ha5GtJMSU?t=1427" target="_blank">https://youtu.be/63Ha5GtJMSU?t=1427</a> (id: 2507)</p>
     </div>
 
 </body>

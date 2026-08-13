@@ -3,183 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cứ Vất Vả Hơn Nữa - Tình Nguyện Gánh Vác</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý 9 - Tỷ Lệ Thuận Giữa Phước Báu Và Trí Tuệ</title>
     <style>
-        /* Nền cánh đồng lúa chín vàng ấm áp */
-        body {
+        /* Thiết lập nền vũ trụ cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh vũ trụ mới từ Unsplash - Dải sao rực rỡ chiếu sáng không gian */
+            background-image: url('https://images.unsplash.com/photo-1518066000714-58c45f1a2c0a?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #3e2723;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #ef6c00; /* Màu cam đất ấm áp */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #bf360c;
-            border-bottom: 2px dashed rgba(191, 54, 12, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(191, 54, 12, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #e65100;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #4e342e;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .teaching-section {
-            background: rgba(255, 243, 224, 0.7);
-            border-left: 5px solid #ef6c00;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #bf360c;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.4);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #e65100;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #3e2723;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #ef6c00;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #e65100;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(230, 81, 0, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #bf360c;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-hand-holding-heart"></i> Cứ Vất Vả Hơn Nữa</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khi thấy huynh đệ lười biếng hay đùn đẩy trách nhiệm, con sẽ không sinh tâm bực dọc hay chê trách. Xin cho con mỉm cười giành lấy phần việc nặng nhọc đó, xem đây là cơ hội vàng để tạo thêm phước báu và âm thầm gánh vác thay cho huynh đệ."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Đừng nghĩ trốn việc để trút gánh nặng cho người khác là sung sướng. Sư Phụ dạy, trốn trách nhiệm hôm nay thì quả báo ngày mai sẽ vô cùng cực khổ. Khi ta tình nguyện làm nhiều hơn phần việc của mình, ta không chỉ đang cứu huynh đệ khỏi cái nghiệp lười biếng mà còn tích lũy phước báu vượt bậc cho chính ta.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Không lười biếng, tình nguyện làm nhiều hơn trách nhiệm của mình.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Trách nhiệm mình cứ trốn cứ trốn, thì tới một ngày sẽ có người cầm roi bắt mình phải làm cho bằng được... Cho nên đừng tưởng lười biếng, buông bỏ là mình thoát khổ, thoát cực. Không, sau này cực hơn mà cực trong đau khổ... Khôn nhất là ta tình nguyện làm cực hơn cái trách nhiệm của mình... Thì phước ta vượt lên ta mới thoát..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/LdvlQYfFbkU?t=2460" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (41:00 - 42:19) - ID: 6114
-            </a>
+        <h1>ĐỊNH LÝ 9</h1>
+        <h2>TỶ LỆ THUẬN GIỮA PHƯỚC BÁU VÀ TRÍ TUỆ</h2>
+        
+        <p><strong>Phát biểu:</strong> Sự thông minh, sáng tạo, khéo léo và thành công không phải tự nhiên mà có, cũng không chỉ do học hỏi, mà nó tỷ lệ thuận với khối lượng <span class="highlight">Phước báu</span> (nghiệp thiện) mà ta đã gieo tạo từ việc giúp đỡ người khác.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi gặp bế tắc, đừng cố vắt óc suy nghĩ. Hãy đi <span class="highlight">làm phước</span>, tự nhiên trí tuệ sẽ sáng bừng ra và tìm được cách giải quyết.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Phước tạo ra sự <span class="highlight">khôn ngoan</span>... Kỹ lưỡng, chu đáo, nhìn xa trông rộng, phán đoán, xét đâu đúng đó là người có phước. Như vậy, phước tạo ra sự khôn ngoan. Cái người mà khờ khờ là người không có phước... <span class="highlight">Thông minh</span>, học giỏi cũng là do phước."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> <a href="https://youtu.be/R2jtI0Swlto?t=4516" target="_blank">https://youtu.be/R2jtI0Swlto?t=4516</a> (id: 1095)</p>
     </div>
 
 </body>

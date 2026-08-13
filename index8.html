@@ -3,183 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>06. Thế Độ Xuất Gia - Tâm Nhu Thuận</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý 8 - Nước Chảy Chỗ Trũng</title>
     <style>
-        /* Nền dòng suối êm đềm */
-        body {
+        /* Thiết lập nền vũ trụ cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1502082936746-88001712a443?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh vũ trụ mới từ Unsplash - Bầu trời sao phản chiếu mặt nước tĩnh lặng */
+            background-image: url('https://images.unsplash.com/photo-1470071131384-001b85755f36?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #263238;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.94);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            border-left: 10px solid #0288d1; /* Màu xanh nước biển dịu */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #0277bd;
-            border-bottom: 2px dashed rgba(2, 119, 189, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(2, 119, 189, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #0288d1;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #37474f;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .teaching-section {
-            background: rgba(225, 245, 254, 0.7);
-            border-left: 5px solid #0288d1;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #01579b;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.4);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #0288d1;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #37474f;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #0288d1;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #0288d1;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(2, 136, 209, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #01579b;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-water"></i> 06. Thế Độ Xuất Gia</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khi đối diện với những huynh đệ bướng bỉnh, chưa biết vâng lời, con sẽ không dùng quyền để trấn áp hay sinh tâm ghét bỏ. Xin cho con kiên nhẫn dùng chính đời sống nhu thuận, khiêm cung của mình làm tấm gương vô ngôn để từng bước cảm hóa sự cố chấp của huynh đệ."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Sự bướng bỉnh, chống trái xuất phát từ việc bản ngã quá lớn, luôn cho ý mình là đúng. Chỉ có sự nhu thuận tuyệt đối – buông bỏ ý mình để hòa nhập đại chúng – mới có sức mạnh vô hình phá tan được lớp vỏ cố chấp của người khác. Ta càng khiêm nhường, nhu thuận bao nhiêu thì càng thu phục được nhân tâm bấy nhiêu.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Người tu phải có tâm nhu thuận, nếu bướng bỉnh cố chấp sẽ rất nguy hiểm.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Một cái tiêu chuẩn nữa để chúng ta xét là cái tâm nhu thuận, biết vâng lời, không có bướng bỉnh, không cãi... Còn người nào mà cố chấp cái ý mình, suy nghĩ phải thế này mới đúng, phải thế kia mới đúng... thì phải đề phòng người đó... Rất là nguy hiểm, khó tiến đạo, khó thấy lỗi của mình..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/l4XchRbwDJg?t=2748" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (45:48 - 46:53) - ID: 4183
-            </a>
+        <h1>ĐỊNH LÝ 8</h1>
+        <h2>"NƯỚC CHẢY CHỖ TRŨNG" (Sức hút của sự Khiêm Hạ)</h2>
+        
+        <p><strong>Phát biểu:</strong> Trong tự nhiên, nước chảy từ nơi cao xuống chỗ thấp. Trong tâm lý, khi ta tự hạ mình xuống tột cùng (thấy mình kém dở, tôn trọng mọi người), thì toàn bộ kiến thức, tài năng và sự kính trọng của vũ trụ sẽ tự động đổ dồn về tim ta. Ngược lại, <span class="highlight">kiêu mạn</span> (nhô cao lên) sẽ đẩy mọi thứ ra ngoài.</p>
+        
+        <p><strong>Ứng dụng:</strong> Muốn giỏi giang và được yêu mến, đừng khoe khoang. Hãy sống <span class="highlight">khiêm tốn tột cùng</span>, tự xem mình như cỏ rác.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Vì nó có cái quy luật lạ lắm là <span class="highlight">nước chảy về chỗ trũng</span>, chỗ thấp. Khi lòng ta <span class="highlight">khiêm hạ</span>, ta cứ nghĩ rằng là ta vẫn còn kém, còn dở. Điều rất là lạ là kiến thức cuộc đời tự nhiên tuôn vào tâm ta. Mặc dù ta không có cố ý đi tìm học hỏi... bởi vì ta đã <span class="highlight">hạ tâm mình xuống</span>, thì nước kiến thức nó sẽ phải đổ vào một cách tự nhiên..."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> <a href="https://youtu.be/_hI2vSsMyDw?t=2368" target="_blank">https://youtu.be/_hI2vSsMyDw?t=2368</a> (id: 3376)</p>
     </div>
 
 </body>

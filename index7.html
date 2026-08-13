@@ -3,183 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sự Bù Trừ Của Luật Nhân Quả - Trung Thực</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Đề - Luật Nhân Quả</title>
     <style>
-        /* Nền tùng bách ngay thẳng */
-        body {
+        /* Thiết lập nền vũ trụ cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh vũ trụ mới từ Unsplash - Rừng thông dưới bầu trời sao bao la */
+            background-image: url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #263238;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.93);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-left: 10px solid #2e7d32;
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #1b5e20;
-            border-bottom: 2px dashed rgba(27, 94, 32, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(27, 94, 32, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #2e7d32;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .teaching-section {
-            background: rgba(232, 245, 233, 0.7);
-            border-left: 5px solid #2e7d32;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #1b5e20;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.4);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #1b5e20;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #3e2723;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #2e7d32;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #2e7d32;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #1b5e20;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-tree"></i> Sự Bù Trừ Của Luật Nhân Quả</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện dẫu thấy huynh đệ có thái độ nịnh bợ, a dua với Quý Thầy lớn để vụ lợi, con tuyệt đối không khởi tâm khinh bỉ hay mỉa mai. Xin cho con giữ vững lòng trung thực, ngay thẳng, và thiết tha cầu nguyện cho huynh đệ sớm nhận ra sự vô minh để quay về với đạo đức chân thật."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Dùng lời khen nịnh hót để vụ lợi là một loại ác nghiệp của sự tính toán. Khi hết phước, người nịnh bợ sẽ bị khinh khi và rơi vào cùng khốn. Khi thấy huynh đệ lầm lạc vì danh lợi, ta phải xót thương chứ đừng chê bai, vì nếu ta khinh bỉ người khác, chính ta cũng đang làm tổn phước của mình.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Quả báo của thói quen nịnh hót, khen không đúng sự thật để vụ lợi.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Mỗi khi mình nói chuyện với ai mình khéo léo, nịnh hót người ta, khen ngợi người ta. Người ta xấu cứ khen người ta đẹp... để chiếm cảm tình, rồi lợi dụng tiền bạc... Nhưng mà rồi đến khi cái phước nó hết, tự nhiên người ta chán ghét xa lánh, nịnh gì người ta không tin... Khinh bỉ, không thành công và cuộc đời sẽ rơi trở lại khốn cùng..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/yQSAcQ5VB0A?t=1171" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (19:31 - 20:37) - ID: 1619
-            </a>
+        <h1>ĐỊNH ĐỀ</h1>
+        <h2>LUẬT NHÂN QUẢ (Tiên đề của mọi chân lý)</h2>
+        
+        <p><strong>Phát biểu:</strong> <span class="highlight">Luật Nhân quả</span> là <span class="highlight">nguyên lý tột cùng</span> của vũ trụ. Ta không thể dùng khoa học hiện tại để chứng minh nó, mà phải "chấp nhận" nó như một <span class="highlight">Định đề</span> (giống như Định đề Euclid trong Toán học). Khi ta chấp nhận Định đề này, ta sẽ xây dựng được cả một tòa lâu đài đạo đức và trí tuệ.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng bao giờ nghi ngờ hay đòi hỏi chứng minh luật nhân quả. Hãy cứ tin tưởng tuyệt đối và <span class="highlight">gieo nhân thiện</span> mỗi ngày.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "...Mọi chân lý đều có thể truy tìm nguyên nhân cho tới nguyên nhân cuối cùng. Nhưng nguyên nhân cuối cùng không bao giờ chứng minh được, đó chính là luật nhân quả nghiệp báo... Và ta không bao giờ chứng minh được, phải chấp nhận thôi. Giống như các nhà toán học đã phải chấp nhận định đề Euclid..."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> <a href="https://youtu.be/LcGsEoA-0aM?t=1170" target="_blank">https://youtu.be/LcGsEoA-0aM?t=1170</a> (id: 3587)</p>
     </div>
 
 </body>

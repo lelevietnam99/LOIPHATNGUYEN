@@ -3,183 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>86. Nơi Không Còn Trở Lại - Võ Đạo & Đạo Đức</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Phương Trình Của Sự Tự Tại</title>
     <style>
-        /* Nền võ đường dưới ánh nắng sớm */
-        body {
+        /* Thiết lập nền vũ trụ cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1599599810769-8bf551732684?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh vũ trụ mới từ Unsplash - Không gian tĩnh lặng, bao la */
+            background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #263238;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-left: 10px solid #c62828; /* Màu đỏ thẫm của tinh thần Võ Đạo */
+            background-color: rgba(10, 15, 30, 0.75); 
+            backdrop-filter: blur(8px); 
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #b71c1c;
-            border-bottom: 2px dashed rgba(183, 28, 28, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(183, 28, 28, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #880e4f;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(252, 228, 236, 0.7);
-            border-left: 5px solid #c62828;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #b71c1c;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.4);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #c62828;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #b71c1c;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #b71c1c;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(183, 28, 28, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #8e0000;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-fist-raised"></i> 86. Nơi Không Còn Trở Lại</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khéo léo lồng ghép những đạo lý làm người vào từng buổi tập võ. Xin cho con biết dạy các em lòng nhẫn nhục, sự tôn sư trọng đạo và tinh thần bảo vệ kẻ yếu, dùng cái 'Võ Đạo' hiệp nghĩa để dọn đường cho 'Phật Đạo' siêu xuất sau này."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Người luyện võ mà không có đạo lý thì rất dễ sinh ra cái "tập khí hung dữ", hở chút là động thủ. Việc của người huynh trưởng là thông qua võ thuật mà truyền tải luân lý nhân quả. Khi đạo đức nhân bản của các em đã vững, thì việc các em tự động cảm mến và tìm đến sự tu tập tâm linh chỉ còn là vấn đề thời gian.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Tập võ không có đạo lý sẽ sinh ra tập khí hung dữ, phải lấy nhẫn nhục làm nền tảng.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Tập khí là trong khi học võ mà mình không hiểu cái võ đạo. Nên ở chùa Phật Quang, Thầy cũng bắt các đệ tử phải tập võ. Mà khi tập võ phải đọc các lời thề. Cái lời thề đầu tiên là tập võ để đạt được cái hạnh nhẫn nhục tận cùng..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/t6Bjr-1ISXM?t=5345" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (1:29:05 - 1:30:16) - ID: 4725
-            </a>
+        <h1>HỆ ĐỊNH LÝ</h1>
+        <h2>PHƯƠNG TRÌNH CỦA SỰ TỰ TẠI</h2>
+        
+        <p><strong>Định lý:</strong> Sự bất an luôn tỷ lệ thuận với số lượng "cái muốn" (<span class="highlight">tham vọng</span>) trong tâm. Một tâm hồn đạt đến cảnh giới <span class="highlight">tự tại tuyệt đối</span> là khi thông số của <span class="highlight">Ước muốn</span> và <span class="highlight">Sợ hãi</span> đều trở về bằng 0.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Tự tại nghĩa là gì? Tự tại nghĩa là người này <span class="highlight">không muốn điều gì và chẳng sợ điều gì</span>. Không muốn điều gì và chẳng sợ điều gì. Đó là sự tự tại. Sẽ dĩ tại sao ta không tự tại? Vì sao tâm ta bất an? Bởi vì ta có nhiều cái gì ta muốn trong tâm mình quá, ta có muốn nhiều cái quá, có khi cái ta muốn đạt được, có khi cái ta muốn ta không đạt được, nhưng mà khi ta có cái muốn thì tâm ta đã bắt đầu bất an."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> <a href="https://youtu.be/wSDValVy36U?t=3521" target="_blank">https://youtu.be/wSDValVy36U?t=3521</a> (id: 5134)</p>
     </div>
 
 </body>
