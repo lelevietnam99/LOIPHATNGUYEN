@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TỨ DIỆU ĐẾ 19 - Tan Biến Tâm Tự Hào</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Tinh Tấn Trong Từng Sát Na</title>
     <style>
-        /* Nền hoa hướng dương rạng rỡ */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1597848212624-a19db35e9373?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh nền Unsplash - Dòng suối chảy êm đềm, tượng trưng cho sự miên mật trong từng khoảnh khắc */
+            background-image: url('https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #3e2723;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #ff9800; /* Màu cam vàng rạng rỡ */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #e65100;
-            border-bottom: 2px dashed rgba(230, 81, 0, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(230, 81, 0, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #fb8c00;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #4e342e;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(255, 243, 224, 0.7);
-            border-left: 5px solid #ff9800;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #e65100;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #ff9800;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #3e2723;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #ff9800;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #ff9800;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #e65100;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-sun"></i> TỨ DIỆU ĐẾ 19 - ĐẠO ĐẾ, CHÁNH TƯ DUY</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện nhổ tận gốc rễ cái tâm tự hào ngấm ngầm muốn mình luôn giỏi hơn người khác. Con xin quỳ trước Phật thiết tha cầu nguyện cho tất cả huynh đệ đều vượt trội hơn con, để mỗi khi thấy ai tài giỏi, lòng con chỉ trào dâng niềm hoan hỷ chân thật."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Đôi khi chúng ta tự hào vì thấy mình đi học nhanh hơn, tiếp thu giỏi hơn huynh đệ mà không hề hay biết. Cách duy nhất để diệt trừ cái kiêu hãnh ẩn nấp này là ép bản thân ngày nào cũng phải lạy Phật cầu xin cho người khác... xuất sắc hơn mình.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Cầu nguyện huynh đệ giỏi hơn để tan biến tâm tự hào luôn cho mình giỏi.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Mình có cái tự hào là luôn giỏi hơn người khác. Thì ra cái tự hào nó nằm sâu trong đây mình không hay... Bỗng nhiên khởi lên tâm đó, lật đật quỳ xuống liền, xin Phật gia hộ cho con biết vui, mừng, biết hạnh phúc khi huynh đệ của con giỏi hơn con... Ngày nào cũng phải cầu nguyện... Bắt đầu nó mới thấm, bắt đầu nó tan cái tâm tự hào đó đi."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/0oVcvDZzCgc?t=4585" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (1:16:25 - 1:17:23) - ID: 3426
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>TINH TẤN TRONG TỪNG SÁT NA</h2>
+        
+        <p><strong>Phát biểu:</strong> Tinh tấn chân thật (<span class="highlight">Đại tinh tấn</span>) không chỉ dừng lại ở việc chuyên cần trong giờ tọa thiền, mà là sự <span class="highlight">miên mật giữ chặt pháp môn tu hành</span> trong <span class="highlight">từng giây từng phút</span> của đời sống sinh hoạt, không để hở một khoảng trống nào cho tâm loạn động.</p>
+        
+        <p><strong>Ứng dụng:</strong> Dù ăn uống, đi lại, làm việc hay tiếp xúc với mọi người, vẫn phải <span class="highlight">duy trì ngầm pháp tu</span> trong nội tâm. Để mất chánh niệm một giây là phí phạm một giây của sinh mệnh.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Chủ yếu của tinh tấn ở chỗ là <span class="highlight">từng giây từng phút</span> trong cuộc sống <span class="highlight">không bao giờ để mất cái pháp môn mình tu</span>. Đó thật sự là tinh tấn, là <span class="highlight">đại tinh tấn</span>. Lúc nào không để mất, dù lúc ăn cơm uống nước, đi đại tiện đi tiểu tiện, ngay cả lúc nói chuyện với nhau như vậy <span class="highlight">vẫn không để mất cái pháp môn tu hành</span> trong tâm mình. Đó mới thật sự là tinh tấn."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> 12. Tinh tấn - <a href="https://youtu.be/ixX-yfFled0?t=4358" target="_blank">https://youtu.be/ixX-yfFled0?t=4358</a> (id: 4292)</p>
     </div>
 
 </body>

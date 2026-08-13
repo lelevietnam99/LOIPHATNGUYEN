@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>02. Làm Việc Với Người Ngang Cấp - Gánh Vác Âm Thầm</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Tinh Tấn Không Dằn Ép</title>
     <style>
-        /* Nền đá cuội tĩnh tại và cân bằng */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh nền Unsplash - Con đường tĩnh lặng, vững chãi và êm đềm */
+            background-image: url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #3e2723;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #8d6e63; /* Màu đá trầm ấm */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #5d4037;
-            border-bottom: 2px dashed rgba(93, 64, 55, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(93, 64, 55, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #6d4c41;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #4e342e;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(239, 235, 233, 0.7);
-            border-left: 5px solid #8d6e63;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #5d4037;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #8d6e63;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #3e2723;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #8d6e63;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #8d6e63;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(141, 110, 99, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #5d4037;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-hand-holding-water"></i> 02. Làm Việc Với Người Ngang Cấp</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khi làm việc chung, con sẽ tinh tế quan sát để giành lấy những phần việc nặng nhọc, khó khăn nhất về mình để huynh đệ được nhẹ nhàng. Xin cho con làm việc một cách lặng lẽ, tự nhiên, tuyệt đối không bao giờ kể lể cực nhọc hay vỗ ngực xưng công."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Đóng góp vật chất thì dễ, nhưng đóng góp bằng sự gánh vác âm thầm mới là vô giá. Nếu làm việc nặng mà khoe khoang thì mất hết phước. Bậc trí tuệ giành việc nặng một cách nhẹ nhàng "như một sở thích", giúp huynh đệ mà người ta còn không biết là mình đang giúp, đó mới là phá chấp công thực sự.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Gánh vác việc nặng một cách lặng lẽ, không khoe khoang.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Mình chẳng có tiền để cho huynh đệ mình, chẳng có điều gì cho. Thì mình chỉ có cái cho âm thầm mà huynh đệ mình nhiều khi không biết. Là mình cứ chơi mình gánh bớt mấy việc nặng... Mình giành mà giành nhẹ nhàng, chứ không phải vỗ ngực xưng ta... Cứ lặng lẽ giống như là mình thích."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/J68VbnIHktI?t=1601" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (26:41 - 27:48) - ID: 1139
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>TINH TẤN KHÔNG DẰN ÉP</h2>
+        
+        <p><strong>Phát biểu:</strong> Chánh tinh tấn trong tu hành là sự <span class="highlight">bền bỉ, kiên trì</span> đi những bước vững chãi, không ngừng nghỉ nhưng <span class="highlight">vô cùng thanh thản</span>. Nếu dùng sự vội vã, ham mau, dằn ép ép xác cầu đạo, đó là <span class="highlight">tà tinh tấn</span> và hệ quả tất yếu là <span class="highlight">phát điên</span>.</p>
+        
+        <p><strong>Ứng dụng:</strong> Tu hành tuyệt đối <span class="highlight">không được nôn nóng</span>. Hãy giữ tâm <span class="highlight">trầm tĩnh, kiên cường</span> qua năm tháng dài đằng đẵng mà không mong cầu kết quả xuất hiện ngay lập tức.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Nhưng cái tinh tấn, cái cố gắng, nó khác với cái <span class="highlight">dằn ép, vội vàng, ham mau</span>. Khác nhau nha. Chỗ này khác. Bởi vì ta trợt chút xíu, ta sai, mà ta dằn ép, ta ham mau, ta vội vàng, <span class="highlight">ta điên liền</span>. Đó là lý do tại sao mà có một số người tu một thời gian phát điên, phải đem vào bệnh viện tâm thần chữa, là vì cái chỗ ham mau này. Nên ở đây cái tinh tấn không phải là ham mau, dằn ép. Mà tinh tấn là gì? Là <span class="highlight">bền bỉ kiên trì lâu dài</span>, đi chậm thanh thản và không ngừng nghỉ. Quyết tâm rất cao, nhưng mà <span class="highlight">đặt từng bước chân rất cẩn thận</span>, đó là tinh tấn. Còn quyết tâm cao mà lại vội vã chạy là người này sẽ té, sẽ phát điên liền, phát bệnh tâm thần liền."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> 01. Giang san và bản tánh - <a href="https://youtu.be/QdNo6LRzR_Q?t=3721" target="_blank">https://youtu.be/QdNo6LRzR_Q?t=3721</a> (id: 1693)</p>
     </div>
 
 </body>

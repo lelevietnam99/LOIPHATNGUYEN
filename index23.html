@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yếu Tố Thành Công B - Dìu Dắt Đàn Em</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Sức Cản Phá Của Ái Luyến Đối Với Thiền Định</title>
     <style>
-        /* Nền chồi non vươn dưới ánh nắng */
-        body {
+        /* Thiết lập nền vũ trụ cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1516733965617-d825e369403a?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh vũ trụ mới từ Unsplash - Ngọn núi tuyết dưới bầu trời sao cô tịch */
+            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #fbc02d; /* Màu vàng nắng ấm áp */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #f57f17;
-            border-bottom: 2px dashed rgba(245, 127, 23, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(245, 127, 23, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #f57f17;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(255, 247, 205, 0.7);
-            border-left: 5px solid #fbc02d;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #f57f17;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #f57f17;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #fbc02d;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #f57f17;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(245, 127, 23, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #ef6c00;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-hand-holding-heart"></i> Yếu Tố Thành Công B</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện nhổ sạch tận gốc rễ tâm đố kỵ và ích kỷ muốn mình luôn là người giỏi nhất. Con xin quỳ trước Phật thiết tha cầu nguyện cho các huynh đệ nhỏ tuổi đi sau con sẽ ngày càng tiến bộ, tài năng xuất chúng và vĩ đại hơn con gấp vạn lần."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Bản ngã của một người "đàn anh" là luôn muốn đàn em phải thua mình, phải phục tùng mình. Khi thấy đàn em bộc lộ tài năng xuất chúng, ta dễ sinh tâm chèn ép. Người có đạo đức và tầm nhìn xa sẽ luôn mong đàn em giỏi hơn mình để nối tiếp sự nghiệp, vì "nếu ta già đi mà không có người nối tiếp thì Đạo Pháp sẽ ra sao?".</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Mong cho đàn em giỏi hơn mình để nối tiếp sự nghiệp Phật Pháp.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Trong lòng tụi con có mong ước cho những đàn em giỏi hơn mình hay không? Hãy nhớ như vậy... Tại vì sao? Tại vì người nào giảng hay, làm giỏi rồi cuối cùng cũng phải già, không làm được nữa. Mà nếu ta già xuống rồi mà không có người nối tiếp thì Đạo Pháp sẽ ra sao?... Khi ta đã thấy lấp lánh đâu đó xuất hiện những nhân tài nổi lên, thì ta phải vui mừng và tìm cách hỗ trợ, dìu dắt cho họ lên luôn."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/WXKlqqLyWd4?t=910" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (15:10 - 16:11) - ID: 4561
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>SỨC CẢN PHÁ CỦA ÁI LUYẾN ĐỐI VỚI THIỀN ĐỊNH</h2>
+        
+        <p><strong>Phát biểu:</strong> Tâm trí con người vốn đã luôn loạn động, nhưng nếu có thêm <span class="highlight">tình cảm luyến ái</span> xen vào, mức độ loạn động sẽ <span class="highlight">tăng lên gấp trăm lần</span>. Tình cảm luyến ái chính là <span class="highlight">chướng ngại vật nặng nề nhất</span> bóp chết công phu thiền định.</p>
+        
+        <p><strong>Ứng dụng:</strong> Phải xem tình cảm thế gian là sự <span class="highlight">trói buộc nguy hiểm</span>. Muốn tiến sâu vào thiền định, dứt khoát <span class="highlight">không được để lòng mình vương vấn</span> tình cảm với bất kỳ ai.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Cái người mà không yêu ai hết, bắt chân lên ngồi chỉ lo gì? Lo mình nhiếp tâm lần lần lắng vọng tưởng thôi. Còn người mà có yêu ai thì ngồi có yên không? Có yên không? Ví dụ như là bình thường tâm mình đã luôn luôn xao động vì bản chất của não bộ là luôn luôn hoạt động, nó cứ lay động lay động mãi. Vậy mà có thêm cái tình cảm, thêm cái tình yêu trong đó, cái sức mạnh nó lên <span class="highlight">gấp bội lần, gấp trăm lần</span>. Ngồi đó mà nhớ ai? Nhớ người yêu. Thôi bó tay luôn, làm sao mà ngồi thiền. Cho nên tình cảm nó gây <span class="highlight">chướng ngại rất nặng cho thiền định</span>."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Vì sao ta phải Chánh Tinh Tấn? - <a href="https://youtu.be/WaThr4Zihxg?t=1460" target="_blank">https://youtu.be/WaThr4Zihxg?t=1460</a></p>
     </div>
 
 </body>
