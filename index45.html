@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>02. Tăng Già Hòa Hợp - Diệt Tham Vọng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Hiệu Ứng Dây Cung (Lãi Kép Của Nhân Quả)</title>
     <style>
-        /* Nền những hạt cát bình dị dưới nắng */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1544627883-9bb6a27e0a29?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền bầu trời sao trên đỉnh núi, bao la hùng vĩ tượng trưng cho quỹ đạo bay xa của mũi tên nhân quả */
+            background-image: url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #8d6e63; /* Màu cát trầm ổn */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #5d4037;
-            border-bottom: 2px dashed rgba(93, 64, 55, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(93, 64, 55, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #6d4c41;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #4e342e;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(239, 235, 233, 0.7);
-            border-left: 5px solid #8d6e63;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #5d4037;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #8d6e63;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #8d6e63;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #8d6e63;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(141, 110, 99, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #5d4037;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-seedling"></i> 02. Tăng Già Hòa Hợp</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện dập tắt mọi suy nghĩ mơ ước mình trở thành một nhân vật quan trọng, một người tài giỏi được mọi người kính nể. Xin cho con lúc nào cũng chỉ mong mình là một người vô danh, thấp hèn và nhỏ bé để được âm thầm phục vụ tất cả chúng sinh."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Người càng giỏi, càng dễ rơi vào tham vọng. Bản ngã luôn xúi giục ta phải trở thành người vĩ đại, đứng trên vạn người. Người tu có trí tuệ phải tự bẻ gãy ước mơ đó, thà làm cát bụi dưới chân chúng sinh chứ quyết không để tham vọng nuốt chửng đạo tâm.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Người có trí tuệ phải tự diệt tham vọng làm bậc đạo sư, người nổi tiếng.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Người càng giỏi càng dễ bị tham vọng. Nên người mà tu đã có trí tuệ chừng nào thì phải diệt tham vọng mình chừng nấy. Đừng bao giờ mơ ước mình thành một bậc đạo sư lẫy lừng... Dẹp cái tư tưởng đó đi... Lúc nào cũng chỉ mong mình là một người thấp hèn, nhỏ bé để được phục vụ các ngài mà thôi."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/UT6L2yREfks?t=3490" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (58:10 - 59:13) - ID: 2396
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>HIỆU ỨNG DÂY CUNG <br>(Lãi Kép Của Nhân Quả)</h2>
+        
+        <p><strong>Phát biểu:</strong> Luật nhân quả không phải là một phép cộng đơn thuần mà là một <span class="highlight">nguyên lý khuếch đại</span> (giống như hiệu ứng bắn cung). Khi ta tác động một lực thiện lành nhỏ bé (như kéo dây cung về sau một chút) thì qua không gian và thời gian, sức bật phản hồi lại cho cuộc đời ta sẽ <span class="highlight">lớn gấp hàng trăm, hàng ngàn lần</span> so với công sức ban đầu.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng mặc cảm vì mình nghèo, không có nhiều tiền để làm phước. Hãy kiên trì giúp <span class="highlight">mỗi người một chút, một chút</span> (chỉ 5 tấc). Đến khi nhân quả chín muồi (buông dây cung), <span class="highlight">vinh quang và hạnh phúc dội lại</span> cho bạn sẽ xa và vĩ đại đến mức bạn không ngờ tới (bay xa 50 thước).</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Ta làm một hưởng mười. Ta làm một hưởng một trăm. Vì sao vậy? Vì đây, hôm nay để tiết lộ thêm một nguyên lý của luật nhân quả nữa. Luật nhân quả có một nguyên lý bắn cung. Cái <span class="highlight">hiệu ứng của dây cung</span> cũng là một nguyên lý của luật nhân quả. Ta bắn cung thì ta làm gì? Bắn cung hay bắn ná ta làm gì? Ta lắp cái mũi tên vào cái dây và ta kéo ngược về phía sau. Khi nó đủ độ trương rồi, ta buông dây cung ra. Nó bất ngờ thì nó đẩy cái mũi tên bay đi bao xa? Ví dụ người ta kéo về đây, dang hết tay ta là khoảng 5 tấc. Ta buông cái dây cung ra thì mũi tên nó bay mấy tấc? Thường thì mũi tên nó bay khoảng 50 mét, thường là như vậy, ít thì được 20 mét. Còn những cái cung mà cung thần thì nó bắn một cái đi có 100, 200 mét. Ý là như vậy. Còn cái nỏ thần của An Dương Vương, của Cao Lỗ thì bắn một cái ra là mấy trăm mũi tên bay lên trời đáp xuống cả 300, 400 thước ngoài kia. Nói là ta kéo chỉ có 5 tấc, nhưng nó bay ra 50 thước, gấp 100 lần. Đó là nguyên lý dây cung, mà đó cũng là nguyên lý của hiệu ứng của luật nhân quả. Nghĩa là sao? Nghĩa là trong cuộc sống này, ta cố gắng giúp đỡ người khác. Cái giúp đỡ của ta, <span class="highlight">giúp người này một chút, giúp người kia một chút</span>. Một chút à, một chút, một chút, chứ mình không có nhiều. Mình đâu có giàu đâu mình giúp nhiều. Nhưng mình cố gắng giúp người này một chút, giúp người kia một chút, một chút là chỉ 5 tấc. Nhưng đến khi ta buông cái dây cung một cái, mũi tên nó bay tới 50 thước, là 100 lần. Nghĩa là sau này cái cơ hội hạnh phúc, thành công đến với ta <span class="highlight">gấp trăm, gấp ngàn lần</span> cái trước kia mà ta giúp người. Đó gọi là <span class="highlight">hiệu ứng dây cung của luật nhân quả</span>."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Đừng Làm Vỡ Ánh Trăng - <a href="https://youtu.be/QWwSVI0ftVk?t=5152" target="_blank">https://youtu.be/QWwSVI0ftVk?t=5152</a> (id: 2122)</p>
     </div>
 
 </body>

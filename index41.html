@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>20. Kinh Người Cày Ruộng - Từ Bi Cụ Thể</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Sám Hối Dự Phòng (Cơ Chế Kiềm Chế Cơn Giận)</title>
     <style>
-        /* Nền thiên nhiên tươi mát, nuôi dưỡng sự sống */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền tĩnh lặng, màn sương sớm che chở, tượng trưng cho sự phòng hộ của tâm trí */
+            background-image: url('https://images.unsplash.com/photo-1476820865390-c52aeebb9891?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #2e7d32; /* Màu xanh lá sự sống */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #1b5e20;
-            border-bottom: 2px dashed rgba(27, 94, 32, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(27, 94, 32, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #2e7d32;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(232, 245, 233, 0.7);
-            border-left: 5px solid #2e7d32;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #1b5e20;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #2e7d32;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #2e7d32;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #2e7d32;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #1b5e20;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-seedling"></i> 20. Kinh Người Cày Ruộng - Kinh Từ Bi</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện tình yêu thương của con không chỉ là lời nói suông, mà thể hiện qua sự ân cần chăm sóc từng chút một. Xin cho con biết nhạy bén nhìn thấy sự mệt mỏi, cơn đói khát hay sự lúng túng của người khác để kịp thời hỏi han, giúp đỡ."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Nhiều người mở miệng ra là nói yêu thương chúng sinh, nhưng đứng trước một người đang khát nước hay lúng túng tìm đường thì lại làm ngơ. Từ bi đích thực là phải nhìn ra được nhu cầu dù là nhỏ nhất của người xung quanh để mang lại sự tiện lợi, bình an cho họ.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Từ bi thể hiện qua sự quan tâm chăm sóc cụ thể.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Họ đã ăn uống gì chưa, có mệt mỏi không, có khát nước không... Lúc nào mình cũng quan tâm lo cho người khác được lợi ích, được thuận tiện. Tâm đó là tâm từ bi. Chứ không thể mỗi ngày mình đều nói là thương yêu chúng sinh nhưng mà trong đời sống thực tế thì không hề lo lắng quan tâm cụ thể cho ai điều nào..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/kMW_ohDV3DY?t=4066" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (1:07:46 - 1:08:51) - ID: 5274
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>SÁM HỐI DỰ PHÒNG <br>(Cơ Chế Kiềm Chế Cơn Giận)</h2>
+        
+        <p><strong>Phát biểu:</strong> Khi cơn giận đã bùng nổ thì không một sức mạnh nào có thể cản kịp. Phương pháp toán học tối ưu để kiềm chế cơn giận là dùng "<span class="highlight">Sám hối dự phòng</span>": Lạy Phật xin sám hối những lỗi lầm nóng nảy trong quá khứ và xin <span class="highlight">sám hối trước cả những cơn nóng giận CHƯA xảy ra</span> trong tương lai. Sự thành tâm đi trước này sẽ tạo ra một lực cản vô hình, giúp ta bất ngờ có đủ sức mạnh để <span class="highlight">giảm xung lực giận dữ từ 100% xuống chỉ còn 20-30%</span>.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng đợi tới lúc cãi nhau, đập phá xong mới đi sám hối. Ngay đêm nay, khi tâm đang bình an, hãy quỳ lạy Phật và khấn: "<span class="highlight">Xin chư Phật gia hộ, nếu ngày mai con gặp chuyện chướng tai gai mắt, xin cho con đừng nổi giận</span>". Lời cầu xin đi trước này chính là <span class="highlight">hệ thống phanh an toàn</span> bảo vệ bạn.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Muốn như vậy thì khi chưa nổi nóng lên, <span class="highlight">mình phải lễ Phật sám hối trước</span> cái điều đó rồi. Tức là khi mình chưa gặp chuyện nổi nóng thì mình đã lễ Phật, đã than: 'Thế thì con có cái nổi nóng như vậy. Con sám hối, con <span class="highlight">sám hối những cái đã nóng phía trước</span> và <span class="highlight">sám hối những cái nóng sẽ xảy ra</span>'. Thì đến khi gặp chuyện nổi nóng, <span class="highlight">bỗng nhiên mình có cái sức mạnh lạ lùng mình kiềm lại bớt</span>. Thay vì nóng 100% như mọi lần, mình nóng còn 20-30%, rồi từ từ mình thắng luôn nha. Chứ còn đợi lúc nó nổi lên rồi thì Thầy cũng chịu thua nha, Thầy gặp Thầy cũng chạy trốn luôn sợ bị mắng đồ khùng á."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> GIẢI ĐÁP THẮC MẮC 07 - <a href="https://youtu.be/dWuzM4oQdtg?t=0" target="_blank">https://youtu.be/dWuzM4oQdtg?t=0</a> (id: 261)</p>
     </div>
 
 </body>

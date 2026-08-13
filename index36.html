@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KINH NIKAYA 29 - Tác Ý Hạt Cát</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Ranh Giới Của Sự Nhường Nhịn</title>
     <style>
-        /* Nền sa mạc/hạt cát bao la */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh nền Unsplash - Dãy núi vững chãi tượng trưng cho sự kiên định và trí tuệ */
+            background-image: url('https://images.unsplash.com/photo-1434394354979-a235cd36269d?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #3e2723;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #795548; /* Màu nâu đất bình dị */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #4e342e;
-            border-bottom: 2px dashed rgba(78, 52, 46, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(78, 52, 46, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #6d4c41;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #4e342e;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(239, 235, 233, 0.7);
-            border-left: 5px solid #795548;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #4e342e;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #795548;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #3e2723;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #795548;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #795548;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(121, 85, 72, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #5d4037;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-mountain"></i> KINH NIKAYA 29 - Kinh Tùy Phiền Não</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện dù tu hành có chút kết quả, tâm trí có được sự tĩnh lặng, con vẫn luôn dặn lòng rằng: con chỉ là một hạt cát, một chút cỏ rác so với chư Phật và chư vị Thánh. Xin cho con dùng sự khiêm hạ tột cùng này để đập tan mọi tự hào đang ngấm ngầm khởi lên."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Sư Phụ chia sẻ bằng cả máu và nước mắt rằng: khi ta ngồi thiền thấy tâm bình yên, tưởng là tốt, nhưng sâu thẳm bên trong là cái tự hào đang cuộn trào lên rình rập. Nếu không liên tục tác ý mình là hạt cát, sự kiêu ngạo vô hình sẽ đánh vỡ khối tâm thanh tịnh của ta.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Tác ý mình là hạt cát để đập tan tự hào ngấm ngầm phá vỡ công phu.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Bên ngoài thì mình thấy cái định nó cứ bình thường lặng lẽ. Nhưng bên trong cái tự hào nó cứ trào lên, trào lên như vậy mình không thấy. Lúc đó nếu mình không khởi cái tác ý rằng mình chỉ là một hạt cát so với chư Phật, so với chư vị A-la-hán... Nếu mình không có những cái tác ý đó để diệt cái tự hào bí mật... thì cái tự hào nó sẽ phá tan cái định của mình lui lại liền..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/pqcihqWoCKg?t=4177" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (1:09:37 - 1:10:47) - ID: 1574
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>RANH GIỚI CỦA SỰ NHƯỜNG NHỊN <br>(Nhường đúng và Nhường sai)</h2>
+        
+        <p><strong>Phát biểu:</strong> Nhường nhịn là một đạo đức sinh ra <span class="highlight">phước báu rất lớn</span>, nhưng nó không phải là một công thức <span class="highlight">áp dụng mù quáng</span> trong mọi hoàn cảnh. Nếu ta nhường quyền lợi cho một người tốt, ta được phước vô lượng. Nhưng nếu ta <span class="highlight">nhường vị trí cho một người xấu</span> để rồi người đó lộng quyền, phá nát cả một tập thể, thì sự nhường nhịn đó lại trở thành một cái <span class="highlight">tội rất nặng</span> vì đã <span class="highlight">tiếp tay cho cái ác</span>.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi quyết định nhường nhịn một điều gì đó quan trọng, phải <span class="highlight">dùng trí tuệ</span> để xét xem người nhận sự nhường nhịn có xứng đáng và có mang lại lợi ích chung hay không. Nếu đáng nhường thì dứt khoát nhường, còn nếu có nguy cơ gây hại cho người khác thì phải <span class="highlight">đứng lên đấu tranh bảo vệ</span>, <span class="highlight">không được yếu hèn</span> buông xuôi.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Có những chuyện <span class="highlight">đáng nhường ta phải nhường</span>, nhưng mà <span class="highlight">không phải lúc nào cũng nhường</span> nha. Ví dụ bây giờ ở trong cơ quan, cái đứa xấu nó lên giành cái chức thủ trưởng, mình biết nó xấu, mình thôi nhường cho. Rồi sau nó đè hết cả cơ quan tiêu luôn, mình <span class="highlight">mang tội, cái nhường đó thành tội</span>. Nhưng mà Thầy nói nhường là đáng nhường, đúng nhường thì mình sẽ được cái <span class="highlight">phước rất là lớn</span>."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Nhân Quả Giàu Và Nghèo - <a href="https://youtu.be/h-fotnrHAZs?t=4408" target="_blank">https://youtu.be/h-fotnrHAZs?t=4408</a> (id: 1469)</p>
     </div>
 
 </body>

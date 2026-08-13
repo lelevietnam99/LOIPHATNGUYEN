@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bản Ngã Vô Hình - Dập Tắt Khoái Cảm Vi Tế</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Phản Ứng Với Lời Khen (Thước Đo Sự Biết Lỗi)</title>
     <style>
-        /* Nền cánh chim bay tự do trên bầu trời */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Cập nhật ảnh nền Unsplash - Ngọn núi cao sừng sững tượng trưng cho việc leo ngược dốc đạo đức */
+            background-image: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #00acc1; /* Màu xanh ngọc của sự tỉnh táo */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #006064;
-            border-bottom: 2px dashed rgba(0, 96, 100, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(0, 96, 100, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #00838f;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #263238;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(224, 247, 250, 0.7);
-            border-left: 5px solid #00acc1;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #006064;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #00acc1;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #00acc1;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #00acc1;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 172, 193, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #00838f;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-feather-alt"></i> Bản Ngã Vô Hình</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện mỗi khi làm được việc tốt, được ai khen ngợi hay ngưỡng mộ, nếu trong tâm con có khởi lên một chút cảm giác khoái chí, sung sướng nhẹ nhàng, con xin lập tức phát hiện và dập tắt ngay. Quyết không để cảm giác êm ái đó nuôi lớn bản ngã của con."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Khi được khen, bản năng con người sẽ sinh ra một khoái cảm lâng lâng, rất nhẹ nhàng nhưng lại tàn phá nội tâm khủng khiếp. Bản lĩnh của Bậc Thánh nằm ở chỗ nhận ra ngay cái cảm giác sung sướng mờ ảo đó và cương quyết "không thèm khát, không chấp nhận" nó.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Dập tắt cảm giác sung sướng vi tế khi được khen ngợi.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Được người ta ngưỡng mộ, được người ta khen ngợi thì nó xuất hiện cái cảm giác sung sướng, nhẹ nhàng âm thầm... Mà cái cảm giác sung sướng, nhẹ nhẹ đó mà nếu ta không đủ trí tuệ để thấy nó, thì nó làm bản ngã lớn lên trở lại rất nhanh... Mình không chấp nhận cái cảm giác sung sướng đó thì mình vượt qua được... Và đây mới là chỗ bí mật của những Bậc Thánh."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/U2tg3YMqoTg?t=3274" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (54:34 - 56:23) - ID: 6466
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>PHẢN ỨNG VỚI LỜI KHEN <br>(Thước Đo Sự Biết Lỗi)</h2>
+        
+        <p><strong>Phát biểu:</strong> Lời khen chính là bài kiểm tra khắc nghiệt nhất để đo lường mức độ tu tập của một con người. Nếu một người nghe khen mà cười vui vẻ, hả hê sung sướng thì người đó đã <span class="highlight">rớt vào lưới ma kiêu mạn</span>. Người đang đi đúng con đường giải thoát là người khi nghe khen thì sinh lòng <span class="highlight">dè dặt, sợ hãi không dám nhận</span>, và khi nghe chê thì <span class="highlight">mừng rỡ lắng nghe</span> để tìm ra lỗi lầm nhằm sửa đổi.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi có ai đó khen ngợi bạn, hãy <span class="highlight">cảnh giác tột độ</span>. Đừng vội tự mãn mà hãy tự nhắc thầm: "Mình vẫn còn vô số khuyết điểm, <span class="highlight">đừng để lời khen này nuôi lớn bản ngã</span>". Biết dè dặt, sợ hãi trước lời khen chính là bạn đang <span class="highlight">leo ngược con dốc của đạo đức</span> và sẽ được quỷ thần kính trọng.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Ai chê tôi được một câu tôi rất là mừng vì có khi họ chê đúng, có khi họ chê sai nhưng đều làm cho tôi cảnh giác, <span class="highlight">xét lỗi mình</span>. Còn người nào khen tôi một câu dễ làm cho tôi chủ quan, <span class="highlight">kiêu mạn</span> cho nên xin làm ơn đừng khen tôi, người đó đức họ rất là tốt, đạo đức rất là tốt. Còn ta khen ai, họ cười vui vẻ hả hê sung sướng là người đã chết, người đã <span class="highlight">lọt trong lưới ma</span>. Do vậy ta muốn biết một người có đức hay không cứ khen một câu và chê một câu. Ta thấy chê họ giận, khen họ mừng, người này chưa biết lỗi, còn trong lưới ma. Còn một người ta chê họ, họ lắng nghe, họ lắng nghe với lòng thành khẩn là hy vọng rằng ta đã nói đúng lỗi của họ để họ sửa. Còn khi ta khen họ, họ lại <span class="highlight">dè dặt, không dám nhận lời khen</span> thì người này là người đã <span class="highlight">đi đúng đường</span>. Người này là người biết lỗi, biết sửa lỗi và đang <span class="highlight">leo ngược dốc</span> và người này được quỷ thần kính trọng."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> BIẾT LỖI CHÍNH MÌNH - <a href="https://youtu.be/4Xn8LlvU5aM?t=2981" target="_blank">https://youtu.be/4Xn8LlvU5aM?t=2981</a> (id: 1591)</p>
     </div>
 
 </body>

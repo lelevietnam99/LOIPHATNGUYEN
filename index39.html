@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Còn Phước Đem Theo - Tích Lũy Phước Báu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Kẻ Thù Giấu Mặt (Bản Chất Của Nóng Giận)</title>
     <style>
-        /* Nền những giọt nước tụ trên lá sen */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1595055060410-d021c179c3d9?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền mây giăng bí ẩn, tượng trưng cho những con sóng ngầm của cơn giận và sự tĩnh lặng của thiền */
+            background-image: url('https://images.unsplash.com/photo-1509909756405-be01998816c5?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #26a69a; /* Màu xanh lá tươi mát của sự sống */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #00695c;
-            border-bottom: 2px dashed rgba(0, 105, 92, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(0, 105, 92, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #00897b;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(224, 242, 241, 0.7);
-            border-left: 5px solid #26a69a;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #00695c;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #26a69a;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #26a69a;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #26a69a;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(38, 166, 154, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #00897b;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-hand-holding-water"></i> Còn Phước Đem Theo</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện không bao giờ lười biếng bỏ qua bất kỳ cơ hội làm phước nào dù là mong manh nhất. Từ một nụ cười ân cần, một lời an ủi thiết tha, hay một cái gai nhọn dọn đi cho người khác bước, con xin dốc lòng thực hiện để tích lũy thành biển phước báu mênh mông."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Đừng chê việc thiện nhỏ mà không làm. Một ngọn núi khổng lồ cũng được đắp lên từ từng hạt bụi nhỏ. Khi ta trân trọng và tận dụng mọi cơ hội để trao đi yêu thương mỗi ngày, ta đang tự tạo ra cho mình một khối công đức cực kỳ vĩ đại để mang theo qua nhiều kiếp sống.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Tận dụng mọi cơ hội nhỏ bé để làm phước và trao đi yêu thương.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Từng cái cơ hội làm phước đến trong đời mình. Dù một cái ổ gà, dù một cục đá rơi, dù một cái gai nhọn cũng dọn cho người ta đi... Một tiếng than, một nụ cười, một cái giọt nước mắt đều cho ta phải quan tâm mà an ủi, mà xử lý, mà giúp đỡ. Đừng bỏ qua một điều thiện nhỏ gì trong cuộc đời mà không làm... Tích lũy từng giọt phước như vậy để mới thành cái phước lớn..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/CvPsnx5IKJQ?t=3884" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (1:04:44 - 1:06:00) - ID: 3755
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>KẺ THÙ GIẤU MẶT <br>(Bản Chất Của Nóng Giận)</h2>
+        
+        <p><strong>Phát biểu:</strong> Nóng giận không phải là bản tính tự nhiên hay thể hiện sức mạnh, mà nó là một "<span class="highlight">kẻ thù giấu mặt</span>" nguy hiểm nhất sống ký sinh ngay trong nội tâm con người. Bình thường nó ẩn nấp không dấu vết, nhưng khi đụng chuyện, nó lập tức trỗi dậy, <span class="highlight">chiếm đoạt toàn bộ thân xác</span> và tâm trí để xúi giục ta làm chuyện bậy bạ, phá nát toàn bộ danh dự và phước báu. Thuốc giải duy nhất để tiêu diệt tận gốc kẻ thù này chính là công phu <span class="highlight">Thiền định</span>.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng bao giờ biện minh "tôi nóng tính nhưng để bụng không có gì". Hãy nhận diện cơn giận là <span class="highlight">con ác quỷ</span> đang trực chờ cướp mất cuộc đời mình. Để tự vệ, không có cách nào khác ngoài việc <span class="highlight">kiên trì tọa thiền</span>, khi tâm lắng xuống thanh tịnh thì sự nóng giận mới từ từ tan biến.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Và cái nóng giận là kẻ thù của chúng ta. Mà kẻ thù đó nó ở trong tâm ta, ta không thấy nó ở đâu hết. Khi đụng chuyện nó khởi lên, nó chiếm ngự hết cái thân xác ta để làm chuyện bậy. Còn bình thường nó núp đâu mất. Bình thường bây giờ biết mình nóng tánh, không biết nó đâu để diệt trừ. Đụng chuyện nó khởi lên, nó chiếm hết con người ta, nó làm bậy. Nên vì vậy, nó là <span class="highlight">kẻ thù giấu mặt rất đáng sợ</span>. Nó làm cho... nó <span class="highlight">chôn vùi cuộc đời ta</span>, làm mất danh dự của ta, mất ý nghĩa, mất hạnh phúc và làm mọi người sợ hãi, ghét bỏ ta. Nên vì vậy ta phải tu thiền. Khi lắng tâm ta được rồi, cái điều bất lợi thứ nhất là sự nóng giận sẽ từ từ biến mất. Còn người nào mà nhập được thiền sâu rồi thì <span class="highlight">vĩnh viễn không bao giờ nóng giận nữa</span>."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Thiền Là Nơi Trở Về - <a href="https://youtu.be/YViI6SAfuI4?t=1258" target="_blank">https://youtu.be/YViI6SAfuI4?t=1258</a> (id: 4088)</p>
     </div>
 
 </body>
