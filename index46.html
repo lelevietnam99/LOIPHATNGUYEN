@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01. Bốn điều cần phải có - Lý Tưởng vs Tham Vọng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Phản Lực Của Nghiệp (Định Luật 3 Newton Tâm Linh)</title>
     <style>
-        /* Nền núi cao trong bình minh hùng vĩ */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền bầu trời sao phản chiếu trên mặt nước, tượng trưng cho lực và phản lực của vũ trụ */
+            background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #283593; /* Màu xanh hoàng gia của lý tưởng */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #1a237e;
-            border-bottom: 2px dashed rgba(26, 35, 126, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(26, 35, 126, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #303f9f;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(232, 234, 246, 0.7);
-            border-left: 5px solid #283593;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #1a237e;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #283593;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #283593;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #283593;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(40, 53, 147, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #1a237e;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-mountain"></i> 01. Bốn điều cần phải có</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện mỗi khi làm một việc gì lớn lao, con sẽ tự soi rọi lại tâm mình. Xin cho con chỉ làm vì lợi ích, vì tình thương dành cho mọi người (Lý Tưởng), tuyệt đối không để lẫn lộn chút mong cầu danh tiếng, quyền lực hay sự vinh quang cho cá nhân mình (Tham Vọng)."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Lý tưởng và Tham vọng nhìn bề ngoài rất giống nhau vì đều là khát khao "làm chuyện lớn". Nhưng khác nhau ở chỗ: Lý tưởng là quên mình để cống hiến cho đời, làm ta cao thượng như bậc Thánh; còn Tham vọng là mưu cầu vinh quang cho bản thân, sẽ tàn phá tâm hồn và biến ta thành ác quỷ.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Sự khác nhau giữa Lý tưởng và Tham vọng.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Lý tưởng và tham vọng đều giống nhau, đó là những chuyện lớn. Nhưng tham vọng là thế này, là ta mong cái điều lớn đó dành cho cuộc đời của mình... Còn lý tưởng là gì? Cũng là những điều lớn lao nhưng mà là điều mà ta đem cho cuộc đời, cống hiến cho đời, phục vụ cho đời chứ không phải cho ta."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/i1zMjYuz-rU?t=2382" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (39:42 - 40:54) - ID: 1661
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>PHẢN LỰC CỦA NGHIỆP <br>(Định Luật 3 Newton Tâm Linh)</h2>
+        
+        <p><strong>Phát biểu:</strong> Mọi nghiệp (hành động thiện hay ác) ta gieo vào cuộc đời đều tuân theo <span class="highlight">nguyên lý "Lực và Phản lực"</span> của vật lý học, nhưng ở mức độ cao cấp hơn. Khi ta dùng tâm <span class="highlight">tác động vào cuộc sống một điều tốt đẹp</span>, vũ trụ bắt buộc phải tạo ra một <span class="highlight">phản lực tương đương</span> (hoặc mạnh hơn nhờ nhân quả) dội ngược trở lại cuộc đời ta. Phản lực đó <span class="highlight">ta gọi là Phước</span>.</p>
+        
+        <p><strong>Ứng dụng:</strong> Bất cứ khi nào bạn cảm thấy bế tắc, hãy <span class="highlight">chủ động tác động một lực thiện lành</span> vào xã hội (ví dụ đi xây nhà tình thương, giúp người nghèo). Lực tác động đó chắc chắn sẽ dội lại bạn một <span class="highlight">phản hồi vô hình</span> mang tên "Sự bình an, hạnh phúc và may mắn".</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Nhưng mà chánh nghiệp nó có cái thế này, là nó giống như cái luật của vật lý: có <span class="highlight">lực và phản lực</span>. Vì khi ta đè cái bàn này xuống cái lực 5kg, thì có nghĩa là cái bàn nó đẩy lên ta cái lực mấy kg? Dám là 2kg lắm. Nguyên tắc lực và phản lực thì sao? Thì cũng là 5kg. Mình đè nó 5kg thì nó đè mình lại 5kg. Mình đạp bức tường để mình đi với một cái động lượng mv thì nó cũng đẩy mình lại với một cái mv bằng như vậy. Cái này hồi cấp mấy học? Cấp 3, lớp 10 học rồi, về vật lý. Và nghiệp cũng vậy. Ví dụ bây giờ ta thấy một người nghèo, ta vận động mọi người xây cho họ một cái nhà tình thương, tìm về miền quê, một cái khu đất trống, xin được khu đất, chứ không phải ngồi nói, không phải ngồi hứa, xây cho họ một cái nhà tình thương rõ ràng. Thì đó là cái gì? Ta <span class="highlight">tác động vào cuộc đời này</span> một cái nhà tình thương, vào cuộc sống này một điều êm ấm, thì <span class="highlight">có phản lực trở lại cuộc đời ta</span>. Cái phản lực trở lại cuộc đời ta đó là một sự êm ấm, một cái niềm vui, một cái hạnh phúc, một sự bình an, một sự đỡ căng thẳng. Và cái phản ứng lại ta, mặc dù kết quả nó chưa hiện ra, nó giấu ở đâu đó ta không biết, ta gọi đó là gì? <span class="highlight">Gọi là phước</span>. Đó là cái phản lực ngược lại khi ta tác động vào cuộc đời và nó dội lại ta."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Sự Tương Quan Giữa Các Chi Phần Trong Bát Chánh Đạo - <a href="https://youtu.be/yZNR3lKiavI?t=1946" target="_blank">https://youtu.be/yZNR3lKiavI?t=1946</a> (id: 1025)</p>
     </div>
 
 </body>

@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới Hương - Bảo Vệ Huynh Đệ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Đẳng Cấp Tâm Hồn (Thước Đo Đạo Đức)</title>
     <style>
-        /* Nền ngọn hải đăng dẫn lối, biểu tượng sự bảo vệ */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1506555191890-482d38515714?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền bình minh trên biển bao la, biểu tượng cho một tâm hồn rộng mở, nghĩ đến lợi ích lớn lao của chúng sinh */
+            background-image: url('https://images.unsplash.com/photo-1495562569060-2eec283d3391?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #1a237e; /* Màu xanh biển sâu vững chãi */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #0d47a1;
-            border-bottom: 2px dashed rgba(13, 71, 161, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(13, 71, 161, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #1565c0;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(227, 242, 253, 0.7);
-            border-left: 5px solid #1a237e;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #0d47a1;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #1a237e;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #1a237e;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #1a237e;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(26, 35, 126, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #0d47a1;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-lighthouse"></i> Giới Hương</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện không chỉ giữ gìn sự trong sạch cho riêng mình, mà còn dốc lòng bảo vệ sự thanh tịnh cho huynh đệ. Nếu thấy người bên cạnh có nguy cơ phạm sai lầm, con xin nguyện dùng tình thương và sự khéo léo để lôi kéo, thức tỉnh họ, tuyệt đối không bao giờ quay lưng bỏ mặc."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Giữ giới không phải là chuyện cá nhân ích kỷ. Sư Phụ nhắc nhở, nếu ta thấy huynh đệ mình làm sai mà ta im lặng bỏ mặc để bảo toàn bản thân, thì chính ta cũng đang mang tội và phạm giới. Sức mạnh của người giữ giới chân chính là phải cuốn được cả những người xung quanh cùng đi trên con đường thanh tịnh.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Giữ giới là phải lôi kéo, bảo vệ huynh đệ khỏi sai phạm.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Chứ không phải là ta chỉ giữ được ta trong sạch, còn huynh đệ ta bị sai lầm ta bỏ mặc. Rồi ta vẫn tiếp tục mang tội và chính ta sẽ phạm giới. Vì ta đã bỏ mặt cho người khác hư hỏng... Kéo những huynh đệ chung quanh mình về con đường ngay nẻo thẳng hết, là cái sức mạnh phải như vậy..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/8sSzzn0yt28?t=743" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (12:23 - 13:25) - ID: 4536
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>ĐẲNG CẤP TÂM HỒN <br>(Thước Đo Đạo Đức)</h2>
+        
+        <p><strong>Phát biểu:</strong> Lời cầu nguyện là tấm gương phản chiếu chính xác đẳng cấp đạo đức của một con người. Nếu lời cầu nguyện chỉ xoay quanh những <span class="highlight">lợi ích vụn vặt của cá nhân</span> thì tâm hồn đó vẫn kẹt trong cõi <span class="highlight">phàm phu ích kỷ</span>. Khi lời cầu nguyện mở rộng ra cho <span class="highlight">quốc thái dân an</span>, cho bá gia bá tánh bớt khổ, thì tâm hồn đó đã mở ra con đường <span class="highlight">bước lên quả vị Thánh</span>.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng đến chùa xin Phật cho con khỏe mạnh, thi đậu, bán đắt. Hãy tập thói quen quỳ lạy Phật và <span class="highlight">xin cho đất nước hưng thịnh</span>, cho thế giới bớt chiến tranh đau khổ, vì một <span class="highlight">cái tâm rộng lớn sẽ định hình một bậc Thánh nhân</span> trong tương lai.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Cái lời cầu nguyện đầu năm là điều mà ta tâm huyết nhất, ta xem là quan trọng nhất của đời mình. Và qua cái lời cầu nguyện đó mình biết cái <span class="highlight">mức độ đạo đức của mình đến đâu</span>. Vì mình xem cái gì là quan trọng nhất, thì biết cái <span class="highlight">đẳng cấp của con người mình</span>, cái thành phần con người mình, cái tâm hồn con người mình là thuộc loại gì mình mới dâng cái lời cầu nguyện. Nếu ta chỉ cầu những <span class="highlight">điều vụn vặt cá nhân</span> thì biết ngay mình <span class="highlight">thuộc loại người ích kỷ</span>... Còn cái người nào mà cái ngày mùng một này đó, quỳ trước Phật mình <span class="highlight">cầu nguyện những điều lớn lao</span>. Lớn lao là gì? Vì mình thấy cái xã hội người ta còn nhiều người nghèo quá, thế mình cầu làm sao cho mọi người bớt nghèo bớt khổ... Cái lòng của người này rất là lớn... Những người này <span class="highlight">rất dễ làm Thánh</span> về sau này. Còn cái người mà cầu cái gì cũng cầu cho mình á, thì cứ <span class="highlight">mãi mãi đi trong phàm phu</span>."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Định Lượng Tội Phước - <a href="https://youtu.be/LrWAYQV2uO4?t=221" target="_blank">https://youtu.be/LrWAYQV2uO4?t=221</a> (id: 3777)</p>
     </div>
 
 </body>

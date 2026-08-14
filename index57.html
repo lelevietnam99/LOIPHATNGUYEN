@@ -3,143 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tài Năng Là Nghĩa Vụ - Gánh Vác Không So Đo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Phân Biệt Thích Và Thương (Bản Chất Của Tình Cảm)</title>
     <style>
-        /* Nền cánh tay nâng đỡ gánh nặng, biểu tượng sự gánh vác */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền ánh sáng ấm áp, sâu sắc, biểu tượng cho tình thương chân thật, bao dung và đầy trách nhiệm */
+            background-image: url('https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #ef6c00; /* Màu cam năng lượng của sự hành động */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #e65100;
-            border-bottom: 2px dashed rgba(230, 81, 0, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(230, 81, 0, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #f57c00;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #4e342e;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(255, 243, 224, 0.7);
-            border-left: 5px solid #ef6c00;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #e65100;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #ef6c00;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(239, 108, 0, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #e65100;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-hand-holding-usd"></i> Tài Năng Là Nghĩa Vụ</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện vì con có tài năng và sức khỏe hơn, con xin giành lấy những công việc khó khăn, vất vả và nhiều áp lực nhất về phần mình. Xin cho con nhường sự an nhàn cho các Sư huynh mà tuyệt đối không bao giờ khởi tâm so đo, bất mãn."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Kẻ kiêu mạn khi làm nhiều việc sẽ thường sinh ấm ức: "Tại sao tôi làm nhiều mà chức vụ lại thấp, còn người kia không làm gì lại ngồi trên tôi?". Người thấu hiểu đạo lý sẽ thấy tài năng là một nghĩa vụ: Trời cho mình giỏi để mình cày cuốc, gánh vác che chở cho huynh đệ, chứ không phải để đòi hỏi quyền lợi.</p>
-            </div>
-            
-            <a href="#" class="youtube-btn">
-                <i class="fas fa-info-circle"></i> Sống trọn vẹn với nghĩa vụ của người có tài.
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>PHÂN BIỆT THÍCH VÀ THƯƠNG <br>(Bản Chất Của Tình Cảm)</h2>
+        
+        <p><strong>Phát biểu:</strong> Tình cảm thế gian thường bị nhầm lẫn giữa "Thích" và "Thương". "Thích" thuộc về <span class="highlight">cảm tính ích kỷ</span>, sinh ra từ sự <span class="highlight">ham muốn chiếm hữu</span> khi thấy một đối tượng hợp nhãn, có tài sắc. Ngược lại, "Thương" là một <span class="highlight">phạm trù đạo đức cao cấp</span> hơn hẳn, nó đòi hỏi <span class="highlight">sự hy sinh, tinh thần trách nhiệm</span>, sự đắn đo suy nghĩ thấu đáo trước sau cho cuộc đời của đối phương.</p>
+        
+        <p><strong>Ứng dụng:</strong> Trong các mối quan hệ, đừng vội tin vào những lời ngọt ngào tỏ tình hay những cảm xúc nồng nhiệt ban đầu, vì 99% đó chỉ là cái "thích" ích kỷ để thỏa mãn bản thân. Hãy chọn gắn bó với một người <span class="highlight">biết lo toan, biết hy sinh và có trách nhiệm</span> với tương lai của bạn, đó mới là <span class="highlight">tình thương đích thực</span>.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Thích là hoàn toàn là cái <span class="highlight">cảm tính ích kỷ</span>. Thấy người nào mà hình dáng, thấy hợp nhãn, đẹp, có chút tài, có cái chút gì dễ thương, mình thích. Và <span class="highlight">muốn chiếm hữu</span>, muốn được kết bạn, hoặc là cặp bồ. Còn thương là một điều khác hẳn. Thương là <span class="highlight">có trách nhiệm, có hy sinh, có đắn đo, có suy nghĩ, có trước sau</span>. Nhưng mà không phải ai cũng biết thương. Hầu hết chỉ là thích. Nên khi một người con trai mà nói với người con gái, nói 'anh yêu em', xin thưa <span class="highlight">đừng bao giờ tin</span>. Đó chỉ là thích mà thôi. Thích của cái <span class="highlight">ham muốn cảm tính cá nhân</span>."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Dạy Con Nên Người 3 - <a href="https://youtu.be/0xl-4GhOIeA?t=647" target="_blank">https://youtu.be/0xl-4GhOIeA?t=647</a> (id: 3950)</p>
     </div>
 
 </body>

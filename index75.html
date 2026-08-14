@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4. Lời Nguyện Vô Thường Tích Cực - Gấp Rút Làm Phước</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Cấn Trừ Tội Phước (Tính Độc Lập Của Nhân Quả)</title>
     <style>
-        /* Nền hoa dại vươn mình, biểu tượng sự nỗ lực trong vô thường */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1490750963035-779815049405?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền cán cân công lý cổ điển, biểu tượng cho sự phân định minh bạch và độc lập của tội phước */
+            background-image: url('https://images.unsplash.com/photo-1589829545856-d1305417036a?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #ef6c00; /* Màu cam năng lượng */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #bf360c;
-            border-bottom: 2px dashed rgba(191, 54, 12, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(191, 54, 12, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #d84315;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(255, 243, 224, 0.7);
-            border-left: 5px solid #ef6c00;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #bf360c;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #ef6c00;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #ef6c00;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #ef6c00;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(239, 108, 0, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #d84315;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-running"></i> 4. Lời Nguyện Vô Thường Tích Cực</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện vì biết cuộc đời mong manh, sống nay chết mai, nên từng phút giây còn được hít thở, con sẽ dốc hết sức lực để làm việc phước, cống hiến và phụng sự. Xin cho con không bao giờ lãng phí một ngày sống nào trong sự lười biếng hay vô ích."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Biết vô thường không phải để buông xuôi, nằm chờ chết. Mà chính vì biết thời gian không chờ đợi ai, ta lại càng trân quý từng giây phút hiện tại để tạo ra những giá trị vĩnh cửu mang theo cho muôn kiếp sau (đó là Công đức và Sự thánh thiện).</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Chấp nhận vô thường mang lại sự bình yên và công đức.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Ta suy nghiệm cái đạo lý vô thường và chấp nhận nó... Ta trở nên cao thượng mà ta không ngờ. Bỗng nhiên ta không tạo thêm nghiệp và có khi ta đang tạo phước. Đáng lẽ phải đổ vỡ, đáng lẽ phải đau khổ... Nhưng không, tất cả đều được giữ lại bình tĩnh lại. Do cái gì? Ta chấp nhận vô thường, chấp nhận sự thay đổi."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/gdFFsD0mNko?t=1280" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (21:20 - 22:36) - ID: 3585
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>CẤN TRỪ TỘI PHƯỚC <br>(Tính Độc Lập Của Nhân Quả)</h2>
+        
+        <p><strong>Phát biểu:</strong> Tội và phước trong luật nhân quả có thể được định lượng như những con số, nhưng chúng chỉ có thể bù trừ cho nhau khi thuộc "<span class="highlight">cùng một loại hình</span>". Nếu tội và phước khác loại (ví dụ: có phước về trí tuệ thông minh nhưng lại gieo tội mượn nợ người khác không trả), chúng sẽ không thể cấn trừ mà sẽ <span class="highlight">trổ quả báo song song</span>: ta vừa được hưởng vinh quang, vừa phải chịu cảnh hầu hạ cực khổ để trả nợ.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng ỷ lại rằng mình đã làm nhiều việc thiện thì có thể thoải mái làm một vài việc ác để bù trừ. Tòa án nhân quả <span class="highlight">cực kỳ chi tiết và công bằng</span>, do đó phải cẩn trọng trong từng hành vi để không gieo thêm bất kỳ một loại tội lỗi nào.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Và hai cái phước, cái tội này, nó không cấn trừ được. Một bên là cái nợ về tiền bạc, một bên là cái phước về cái trí tuệ thông minh. Hai cái này nó không cấn trừ được. Nên qua đời sau ông hưởng cả hai. Là về cái thông minh trí tuệ, ông rất là xuất sắc, học rất giỏi, thi đâu đậu đó. Và chính cái nhờ cái học giỏi thi đâu đậu đó này, cũng được có những cái vinh quang của cuộc đời mình. Nhưng mà cái mượn nợ quen, cái tật quen tay mượn nợ người ta, mà mượn đến nỗi mà chết không kịp trả. Phải trả, thì qua đời này bắt đầu phải trả. Trả là sao? Trả là mình đang bằng cấp cao, ở địa vị lớn như vậy, nhưng mà bị kẹt cái gì đó, thì phải đi hầu hạ một cái gia đình đó một cách cực khổ bao nhiêu năm. Nên là người ta chửi lên người ta mắng xuống... <span class="highlight">Hai cái đó không cấn trừ được</span>. Nên ta thấy là cái tội phước cực kỳ phức tạp, không phải là dễ hiểu."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Định Lượng Tội Phước - <a href="https://youtu.be/LrWAYQV2uO4?t=1067" target="_blank">https://youtu.be/LrWAYQV2uO4?t=1067</a> (id: 3777)</p>
     </div>
 
 </body>

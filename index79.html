@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tập Khí - Tự Xét Mình, Tâm Nhẹ Nhàng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Từ Bi Khống Chế (Triết Lý Lưỡi Gươm)</title>
     <style>
-        /* Nền hoa sen tĩnh lặng, biểu tượng cho việc quay lại soi mình */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1595152645607-b95bc84f3cc3?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền thanh gươm sáng sắc bén, biểu tượng cho trí tuệ và sự cương quyết ngăn chặn cái ác */
+            background-image: url('https://images.unsplash.com/photo-1544607527-320c90d56b0d?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #8e24aa; /* Màu tím của tâm định tĩnh */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #6a1b9a;
-            border-bottom: 2px dashed rgba(106, 27, 154, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(106, 27, 154, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #7b1fa2;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(243, 229, 245, 0.7);
-            border-left: 5px solid #8e24aa;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #6a1b9a;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #8e24aa;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #8e24aa;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #8e24aa;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(142, 36, 170, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #6a1b9a;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-user-check"></i> Tập Khí</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện mỗi khi có chuyện đổ vỡ, sai sót hay bất hòa, con sẽ lập tức quay lại xét lỗi chính mình. Dù ai có sai quấy đến đâu, con cũng quyết không mở miệng chê trách, mà chỉ âm thầm sửa đổi bản thân."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Khi ta đổ lỗi, ta đang đẩy sự chia rẽ lên cao. Khi ta tự trách mình, tâm ta trở nên nhẹ nhàng, bao dung, và ta đang tích lũy một công đức rất lớn của sự khiêm hạ.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Tự trách mình giúp tâm nhẹ nhàng và tránh gây chia rẽ.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Đa phần chúng ta là biết đạo chưa mấy năm nhưng mà rất dễ nói lỗi người khác... Khi mình hay trách người thì thứ nhất là mình mang tội thêm, thứ hai là mình gây chia rẽ... Còn nếu mà mình trách mình, hay đụng chuyện gì xảy ra mình trách mình, tâm mình sẽ nhẹ nhàng vô cùng. Không bắt lỗi người khác."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/AhO2MpMpz8E?t=3954" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (1:05:54 - 1:06:58) - ID: 5197
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>TỪ BI KHỐNG CHẾ <br>(Triết Lý Lưỡi Gươm)</h2>
+        
+        <p><strong>Phát biểu:</strong> Từ bi trong Đạo Phật hoàn toàn không đồng nghĩa với sự nhu nhược hay dung túng cho cái ác. Tình thương dành cho kẻ ác được định nghĩa bằng một phương trình vô cùng mạnh mẽ: <span class="highlight">Từ bi = Ngăn chặn + Cảm hóa + Quở phạt + Tiêu diệt (khống chế)</span>. Ta tước đoạt khả năng làm ác của họ chính là cách ta bảo vệ họ khỏi ác nghiệp đọa đày.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi đứng trước cái ác, sự bất công hoặc kẻ phạm tội, tuyệt đối không được lấy danh nghĩa "từ bi" để bao che hay mặc kệ. Phải <span class="highlight">dũng cảm lên tiếng, dùng sức mạnh và kỷ cương</span> để ngăn chặn, khống chế họ, đó mới là tình thương đích thực và trí tuệ.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Từ bi không phải là nhu nhược. Thương không phải là đồng lõa với việc xấu. Mà thương có nghĩa là gì? Là ngăn chặn, là cảm hóa, là quở phạt, và có khi phải tiêu diệt. Cái câu này nghe lạ tai không? Vì nào giờ ta cứ tưởng thương là phải chiều. Không! Đối với kẻ xấu, thương là phải... nhắc lại, thương là phải ngăn chặn, thương là phải cảm hóa, thương là phải quở phạt, và thậm chí thương là phải tiêu diệt luôn, để cho người đó không thể làm việc ác được nữa. Đó gọi là thương kẻ xấu. Còn cái người tốt thì sao? Người tốt thì ta phải lo không? Không, người tốt ta phải ủng hộ, phải khuyến khích. Khi ta thương người tốt là ta tạo điều kiện, ta ủng hộ, ta khen ngợi để người tốt tiếp tục làm điều tốt. Còn khi ta thương kẻ xấu thì ta phải ngăn chặn, phải cảm hóa, phải quở phạt và thậm chí phải tiêu diệt. Có đồng ý không ạ? Nhớ vỗ tay đó nha, vỗ tay tức là đồng ý đó nha."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Triết Lý Về Lưỡi Gươm - <a href="https://youtu.be/WpAl3mOiUq0?t=4643" target="_blank">https://youtu.be/WpAl3mOiUq0?t=4643</a> (id: 3880)</p>
     </div>
 
 </body>

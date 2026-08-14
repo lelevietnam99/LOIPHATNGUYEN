@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinh Sống Hòa Hợp - Tùy Thuận Đại Chúng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Phương Trình Phước Báu Bố Thí</title>
     <style>
-        /* Nền sự hòa quyện của nước và sữa */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền cánh đồng lúa chín vàng dưới ánh mặt trời, biểu tượng cho hạt giống phước báu gieo xuống và gặt hái sau một thời gian dài */
+            background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #795548; /* Màu nâu đất nền nã */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #5d4037;
-            border-bottom: 2px dashed rgba(93, 64, 55, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(93, 64, 55, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #6d4c41;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(239, 235, 233, 0.7);
-            border-left: 5px solid #795548;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #5d4037;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #795548;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #795548;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #795548;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(121, 85, 72, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #5d4037;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-hand-holding-water"></i> Kinh Sống Hòa Hợp</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện luôn biết từ bỏ cái tôi và ý muốn cá nhân để sống tùy thuận theo mọi người. Khi làm việc chung, xin cho con không bao giờ cố chấp theo ý mình, để tất cả được hòa hợp trọn vẹn như nước hòa với sữa."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Trong bài kinh "Sống Hòa Hợp", các vị Tôn giả đã trình lên Đức Phật bí quyết để giữ sự hòa thuận tuyệt đối: Đó là không sống bằng tâm của mình, mà sống bằng tâm của bạn đồng tu. Khi cái "tôi" bị đập vỡ và ta biết tùy thuận, sự xung đột tự nhiên biến mất.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Từ bỏ tâm ý cá nhân để tùy thuận theo đại chúng.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Chúng con đã thật sự từ bỏ tâm ý mình để sống tùy thuận theo tâm của bạn đồng tu. Vì thực hiện như thế chúng con tuy khác thân mà tâm vẫn tương đồng... Vui sống ở bên nhau không một lời tranh cãi, như nước sữa hòa hợp."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/6bp1maFRqjE?t=208" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (3:28 - 5:51) - ID: 4371
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>PHƯƠNG TRÌNH PHƯỚC BÁU BỐ THÍ</h2>
+        
+        <p><strong>Phát biểu:</strong> Quả báo của một hành động từ thiện được tính bằng một phương trình toán học: Phước báu tỷ lệ thuận với <span class="highlight">(Giá trị tài vật × Thời gian × Tình thương × Lợi ích)</span> và tỷ lệ nghịch với <span class="highlight">(Sự khoe khoang + Kiêu căng)</span>. Do đó, nhân quả vận hành theo nguyên tắc lãi kép: Thời gian trôi qua càng lâu, quả báo thiện lành trả lại sẽ <span class="highlight">nhân lên gấp triệu lần</span>.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi làm bất cứ việc thiện nào, hãy làm bằng tình thương chân thật, làm xong <span class="highlight">giấu kín đừng khoe khoang</span> để tránh bị chia nhỏ phước. Và đừng mong gặt quả ngay lập tức, vì phước báu để dành càng lâu thì <span class="highlight">quả gặt được càng vĩ đại</span>.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Nó bằng giá trị tài vật nhân cho thời gian, nhân cho tình thương, nhân cho lợi ích. Và chia cho <span class="highlight">sự khoe khoang và kiêu căng</span>. Nghĩa là sao? Các bạn cứ chuyền chuyền nhau mà xem nhá, đưa cao cao lên đó, đừng có đưa thấp dưới. Phần mà dòng ở trên là thế này, nó là <span class="highlight">tỷ lệ thuận với phước báo</span>. Giá trị tài vật nghĩa là số tiền mà mình bố thí lớn chừng nào thì cái phước mình lớn chừng nấy. Nó dễ hiểu phải không? Ví dụ người bố thí 1 triệu thì đương nhiên được phước nhiều hơn người bố thí 500 ngàn, đúng không? Đó là bình thường, công bằng, phải không? Rồi mình thấy cái thứ hai nữa là thời gian kéo dài lâu chừng nào thì phước mình lớn chừng nấy. Ví dụ bây giờ mình cúng dường chùa 1 triệu đi. Nhờ cái phước đó qua ngày hôm sau mình lượm được 1 triệu rưỡi, thì qua một ngày mình lời có 500 ngàn. Nhưng nếu để qua 5 kiếp, xin thưa, 1 triệu đó đổi lại thành <span class="highlight">5 tỷ liền</span>. Lạ lùng như vậy, nghĩa là <span class="highlight">thời gian càng dài thì quả báo càng lớn</span>."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Bố Thí - <a href="https://youtu.be/yp0MpHxKcBs?t=4166" target="_blank">https://youtu.be/yp0MpHxKcBs?t=4166</a></p>
     </div>
 
 </body>

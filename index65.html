@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>02 Nhiệt Tâm Hộ Đạo - Nhường Nhịn Để Hòa Hợp</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Dấu Vết Bậc Thánh (Nhân Quả Của Sự Tôn Kính)</title>
     <style>
-        /* Nền những con sóng biển tan dần, biểu tượng sự nhường nhịn */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1505118380757-91fa5f561dc7?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền tia sáng rực rỡ chiếu rọi, biểu tượng cho ánh sáng tuệ giác và sự thăng hoa của nhân cách */
+            background-image: url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #2980b9; /* Màu xanh nước biển sâu */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #1a5276;
-            border-bottom: 2px dashed rgba(26, 82, 118, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(26, 82, 118, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #2471a3;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(234, 242, 248, 0.7);
-            border-left: 5px solid #2980b9;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #1a5276;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #2980b9;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #2980b9;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #2980b9;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(41, 128, 185, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #1a5276;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-peace"></i> 02 Nhiệt Tâm Hộ Đạo</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khi có bất đồng ý kiến, con sẽ im lặng nhẫn nhịn và nhường phần thắng cho người khác. Con quyết không bao giờ cãi vã hay cố chứng tỏ mình giỏi, vì con biết sự êm ấm của tập thể quan trọng hơn mọi cái lý đúng sai."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Nhiều người vì bảo vệ ý kiến của mình mà sẵn sàng cãi nảy lửa để chứng tỏ mình đúng. Sư Phụ nhấn mạnh, chính cái tâm "muốn mình hơn người" đó là một cái tội lớn phá nát sự hòa hợp. Người vô ngã sẽ luôn biết lùi lại để nhường nhịn.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Cãi vã để chứng tỏ mình giỏi là mang tội phá hòa hợp.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Do mình không có cái tâm hòa hợp nên dễ xung đột với nhau lắm. Cứ người này nói ra người kia cãi lại, mà cãi lại lại muốn cho mình hơn, để chứng tỏ rằng mình giỏi. Mình đâu có ngờ rằng cái điều đó là một cái tội trong Phật pháp: tội phá sự hòa hợp."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/f-hgRHy7A48?t=1379" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (22:59 - 24:08) - ID: 5188
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>DẤU VẾT BẬC THÁNH <br>(Nhân Quả Của Sự Tôn Kính)</h2>
+        
+        <p><strong>Phát biểu:</strong> Nhân quả của việc tôn kính một Bậc Thánh là <span class="highlight">nhân cách của chính ta sẽ tự động thăng hoa</span>. Người có lòng tôn kính Phật tuyệt đối sẽ lưu lại "<span class="highlight">dấu vết của Bậc Thánh</span>" trong từng suy nghĩ bí mật, từng lời nói và hành vi chuẩn mực. Ngược lại, nếu thiếu đi lòng tôn kính, con người lập tức rớt xuống làm phàm phu thô lỗ.</p>
+        
+        <p><strong>Ứng dụng:</strong> Hãy kiểm tra đạo lực của mình bằng cách <span class="highlight">quan sát những suy nghĩ thầm kín nhất</span>. Nếu nội tâm luôn đẹp đẽ và những lời nói ra đều đàng hoàng, đó là quả báo tốt đẹp của việc bạn đã luôn <span class="highlight">thành tâm đảnh lễ và tôn kính Đức Phật</span>.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Cái người mà có lòng tôn kính Đức Phật cao thì thường cái nhân cách nó cũng hiện ra liền vì đó là nhân quả mà. Ta tôn kính Bậc Thánh thì ta có cái <span class="highlight">dấu vết của Bậc Thánh</span> trong cuộc sống của mình. Còn ta không đủ lòng tôn kính Bậc Thánh thì ta lùi trở lại tự nhiên là phàm phu liền, ăn nói bỗ bã bậy bạ. Mà cái tư cách của một cái người mà có dấu vết Bậc Thánh đó, nhiều thứ lắm, <span class="highlight">những suy nghĩ bí mật trong đầu ta rất là đẹp</span>, rất là hay. Dù không ai nhìn thấy, nhưng những suy nghĩ bí mật trong nội tâm mình rất là đúng, rất là đẹp. Mỗi một lời nói của mình, những câu, những chữ của mình nó đều sao? <span class="highlight">Chuẩn mực đàng hoàng</span>."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Ba Thời Kỳ Của Phật Pháp - <a href="https://youtu.be/SqbNmanMtw0?t=2975" target="_blank">https://youtu.be/SqbNmanMtw0?t=2975</a></p>
     </div>
 
 </body>

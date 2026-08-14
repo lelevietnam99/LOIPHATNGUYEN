@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giải Đáp Thắc Mắc - Hoan Hỷ Trước Sự Vượt Trội</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Phòng Ngự Lời Khen (Phương Trình Của Sự Khiêm Hạ)</title>
     <style>
-        /* Nền cánh chim tự do, biểu tượng sự buông bỏ đố kỵ */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1501636657906-8c6734064516?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền tia nắng xuyên qua rừng cây, biểu tượng cho sự khiêm nhường, tĩnh lặng và thanh tao */
+            background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #0288d1; /* Màu xanh trời của sự khoáng đạt */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #01579b;
-            border-bottom: 2px dashed rgba(1, 87, 155, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(1, 87, 155, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #0277bd;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(225, 245, 254, 0.7);
-            border-left: 5px solid #0288d1;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #01579b;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #0288d1;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #0288d1;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #0288d1;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(2, 136, 209, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #01579b;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-praying-hands"></i> Giải Đáp Thắc Mắc Chùa Viên Quang 2015</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin quỳ trước Phật thiết tha cầu nguyện, xin gia hộ cho các Sư huynh của con ngày càng tu hành tinh tấn, trí tuệ sáng suốt và tài năng vượt trội hơn con gấp vạn lần. Xin cho con luôn ngập tràn hạnh phúc khi thấy các Sư huynh thành tựu."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Khi ta còn sợ người khác giỏi hơn mình, chứng tỏ bản ngã ta còn quá lớn. Sư Phụ dạy bí quyết vi diệu nhất để diệt trừ kiêu ngạo là phải liên tục nguyện cầu cho huynh đệ giỏi hơn mình. Khi ta thực sự vui mừng trước sự vượt trội của huynh đệ, ta đã chiến thắng chính mình.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Cầu xin cho huynh đệ giỏi hơn mình để diệt kiêu mạn, đố kỵ.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Mỗi khi mà Sư phụ lên bàn Phật... đều cầu nguyện câu này: Xin Phật gia hộ cho tất cả những huynh đệ của con giỏi hơn con. Mới nguyện một hai ngày đầu thì nó gượng... Từ đó về sau hễ thấy người nào giỏi hơn mình, lòng mừng liền."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/Gkb7LvSNZsE?t=794" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (13:14 - 14:16) - ID: 6312
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>PHÒNG NGỰ LỜI KHEN <br>(Phương Trình Của Sự Khiêm Hạ)</h2>
+        
+        <p><strong>Phát biểu:</strong> Khi được người khác khen ngợi, một người có nội tâm khiêm hạ chân thật sẽ tự động kích hoạt "<span class="highlight">hệ thống phòng ngự</span>" để <span class="highlight">đẩy lời khen đó ra khỏi bản ngã</span> bằng cách đổ thừa cho 3 yếu tố: <span class="highlight">Di truyền của ông bà + Phước báu từ kiếp trước + Hoàn cảnh xung quanh</span>. Việc <span class="highlight">tìm đủ mọi lý do để thoái thác công lao</span> về mình chính là phương trình hoàn hảo để bảo toàn phước báu.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi ai đó khen bạn đẹp, giỏi hay thành đạt, tuyệt đối đừng tự mãn nhận lấy. Hãy lập tức nhủ thầm trong tâm để <span class="highlight">nhường công lao đó cho Tam Bảo, cho ông bà tổ tiên và nhân quả</span>. Nhờ thái độ này, đạo đức khiêm hạ của bạn sẽ ngày càng vững chắc và <span class="highlight">tránh được lưới ma kiêu mạn</span>.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Còn cái người <span class="highlight">khiêm hạ</span>, trong đầu mới nghĩ như thế này. Trong đầu nghĩ thứ nhất: Chắc mình được hưởng gen của ông bà bên nội hay bên ngoại rớt lại, là cái thứ nhất. Cái thứ hai là: Chắc là nhờ đời xưa mình hay lễ Phật, sống hiền lành cho nên bây giờ cái gương mặt nó đẹp, chứ không phải là cái đẹp là cái ngẫu nhiên tự nhiên của mình. Cũng do nhân quả, cũng do đức của ông bà. Và cái thứ ba là do: Chắc tại chung quanh đây không có người đẹp hơn, nên giống như mình là người đẹp nhất. Chứ còn nếu mà có những người rất đẹp hiện ra, thì mình không phải là người đẹp nhất. Cho nên khi người ta khen, mình <span class="highlight">tìm đủ lý do để thoái thác</span> ở trong tâm mình đó, mình đổ thừa."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> NGHIỆP ĐIỀU KHIỂN TÂM TRÍ CHÚNG TA - TT. TS. Thích Chân Quang - TTPQ - BRVT - 17/02/2018 - <a href="https://youtu.be/t-zhFzsDbIM?t=2837" target="_blank">https://youtu.be/t-zhFzsDbIM?t=2837</a> (id: 2467)</p>
     </div>
 
 </body>
