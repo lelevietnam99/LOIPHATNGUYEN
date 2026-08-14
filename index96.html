@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lặng Lẽ Theo Phật - Huynh Đệ Dìu Dắt Nhau</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Hóa Giải Hủy Báng (Bài Học Từ Đức Phật)</title>
     <style>
-        /* Nền con đường núi, biểu tượng cho hành trình xuất gia dìu dắt nhau */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền tĩnh lặng giữa bão tố, biểu tượng cho sự bất động tâm trước hủy báng */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #5e35b1; /* Màu tím huyền bí của Không môn */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #4527a0;
-            border-bottom: 2px dashed rgba(69, 39, 160, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(69, 39, 160, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #512da8;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(237, 231, 246, 0.7);
-            border-left: 5px solid #5e35b1;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #4527a0;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #5e35b1;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #5e35b1;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #5e35b1;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(94, 53, 177, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #4527a0;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-mountain"></i> Lặng Lẽ Theo Phật</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con thấu hiểu rằng huynh đệ con vì còn nặng nợ ân nghĩa thế gian nên kiếp này chậm bước xuất gia. Con xin đem công đức tu hành của mình hồi hướng, cầu mong bề trên gia hộ cho các huynh đệ sớm hội đủ nhân duyên. Xin cho chúng con dù đời này hay kiếp lai sinh, lại được nắm tay nhau bước vào cánh cửa Không môn, trọn vẹn lý tưởng thanh tịnh."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Sự xuất gia có khi phải sắp xếp qua vô số kiếp luân hồi. Mình có phước đi tu trước thì hãy nỗ lực để kiếp sau trở thành người Thầy, người Sư huynh dẫn dắt lại những huynh đệ chưa đủ duyên của kiếp này. Tình huynh đệ thiêng liêng là lời thề dìu dắt nhau mãi mãi trên con đường Bồ Tát đạo, không bỏ sót một ai.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Sự sắp xếp của nhân quả để huynh đệ đời này đời sau dìu dắt nhau tu tập xuất gia.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Mà cái người huynh đệ mình lại đủ duyên phước làm thầy tu. Mình gặp mình thương mình mến liền. Lại mình tiếp tục nương cái người huynh đệ đó, người mà đời trước đã tinh tấn hơn mình nên đời này họ xuất gia... dìu dắt nhau đi tiếp trên con đường tu tập... Những điều đó được tính toán, được sắp xếp hết..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/tfNY7yDOZE4?t=227" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (3:47 - 4:52) - ID: 6772
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>HÓA GIẢI HỦY BÁNG <br>(Bài Học Từ Đức Phật)</h2>
+        
+        <p><strong>Phát biểu:</strong> Khi đối mặt với sự công kích, chửi rủa hay bôi nhọ tàn nhẫn, phản xạ thông thường của bản ngã là nổi giận chống trả hoặc bịt tai giả điếc để trốn tránh. Nhưng Đức Phật đã chỉ ra một phương trình hóa giải cao tột: "<span class="highlight">Đón nhận 100% + Không hề động tâm</span>". Người có đạo hạnh không coi lời chửi mắng như gió thoảng ngoài tai, mà họ dám bản lĩnh lắng nghe từng chữ, chấp nhận sự phỉ báng đó nhưng nội tâm vẫn ngập tràn hạnh phúc và không hề sinh ra một tia oán giận.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi có ai đó đặt điều, nói xấu hay mắng chửi bạn thậm tệ, đừng vội vã cãi tay đôi hay bỏ đi chỗ khác. Hãy thực tập bản lĩnh của Đức Phật: đứng yên, mỉm cười và <span class="highlight">lắng nghe thật rõ từng lời chửi rủa đó để trả nghiệp</span>. Khi bạn đủ sức chứa đựng mọi lời cay độc mà lòng vẫn bình an không thù hận, lúc đó bạn đã chiến thắng hoàn toàn bản ngã của chính mình.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Cô mang cái nỗi thù cho đến cái ngày mà cô phát hiện ra cái người mà chửi mình ở dơ là chính là cái ông Sa-môn, bây giờ đang về đây trở lại. Nên bà mới dùng cái quyền lực của mình, tổ chức một cái cuộc hủy báng Đức Phật khủng khiếp. Và cái thái độ của Đức Phật là như vậy, là một bài học của chúng ta ngày hôm nay: <span class="highlight">Lắng nghe từng chữ</span>. Chứ không phải giả điếc, chứ không nói 'ờ nó chửi như gió thoảng qua tai'. Không, lắng nghe từng chữ, chấp nhận nó, đón nhận nó, vậy mà hạnh phúc."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Bình An Trong Cái Vui Cái Khổ - <a href="https://youtu.be/pDvwuZBvBi4?t=1995" target="_blank">https://youtu.be/pDvwuZBvBi4?t=1995</a> (id: 3749)</p>
     </div>
 
 </body>

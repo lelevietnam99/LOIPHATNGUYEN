@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triết Lý Về Thời Gian - Điềm Đạm Trong Công Việc</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Domino Nhân Quả (Chuỗi Phản Ứng Của Tình Thương)</title>
     <style>
-        /* Nền hồ nước phẳng lặng, biểu tượng tâm thanh thản */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền gợn sóng lan tỏa, biểu tượng cho chuỗi phản ứng dây chuyền của nhân quả */
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #0288d1; /* Màu xanh dương điềm đạm */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #01579b;
-            border-bottom: 2px dashed rgba(1, 87, 155, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(1, 87, 155, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #0277bd;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(225, 245, 254, 0.7);
-            border-left: 5px solid #0288d1;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #01579b;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #0288d1;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #0288d1;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #0288d1;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(2, 136, 209, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #01579b;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-water"></i> Triết Lý Về Thời Gian</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện dẫu công việc có gấp gáp, áp lực dồn dập đến mức nào, con vẫn giữ một nội tâm điềm đạm và hơi thở chậm rãi, bình an. Xin cho con lấy cái tĩnh để xử lý cái động, tuyệt đối không vì sốt ruột, căng thẳng mà làm hỏng việc hay bộc lộ sự cáu gắt ra bên ngoài."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Người tu hành thực sự khi đối diện với chuyện gấp gáp, họ làm việc vô cùng kỹ lưỡng, nhanh nhẹn nhưng gương mặt lại điềm đạm, thanh thản như không có chuyện gì. Nếu ta để sự sốt ruột, hoảng loạn hay hấp tấp cuốn đi, ta rất dễ đưa ra những quyết định dại dột và phá nát bầu không khí bình yên của đại chúng.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Giữ gương mặt điềm đạm, tâm thanh thản khi xử lý công việc gấp gáp.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Đừng có căng thẳng, lo sợ, hấp tấp. Và cũng đừng có rề rà gây chậm trễ... Đừng quá lo sợ đến nỗi mà mặt căng căng đăm đăm làm riết ngã bệnh rồi đi bệnh viện luôn... Kỹ nhưng mà giữ tâm thanh thản... Cái người mà có cái tâm chứng thật sự bên trong, họ làm việc gì cũng kỹ lưỡng nhưng mà nhìn gương mặt họ điềm đạm thanh thản giống như không..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/uIkNxmQ27DM?t=2280" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (38:00 - 39:07) - ID: 3877
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>DOMINO NHÂN QUẢ <br>(Chuỗi Phản Ứng Của Tình Thương)</h2>
+        
+        <p><strong>Phát biểu:</strong> Luật nhân quả không chỉ giới hạn trong một phép tính cộng trừ đơn giản (giúp ai thì người đó trả ơn), mà nó là một <span class="highlight">phương trình đa biến lan tỏa khắp vũ trụ</span>. Khi ta khởi tâm yêu thương và giúp đỡ một người B, ta đã kích hoạt một chuỗi phản ứng dây chuyền vô hình. Hệ thống nhân quả sẽ tự động điều phối một người C đến quan tâm ta, rồi người D lại lo cho người C... Cứ như thế, một hành động từ bi nhỏ bé sẽ làm đẹp cho toàn bộ mạng lưới nhân sinh.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi giúp đỡ hay chăm sóc ai đó, đừng bao giờ đòi hỏi hay mong chờ chính người đó phải biết ơn và báo đáp lại mình. Bạn cứ lặng lẽ gieo tình thương đi, vì <span class="highlight">định luật vũ trụ đã ghi nhận</span> và chắc chắn sẽ phái những "người C, người D" tuyệt vời khác đến để bảo bọc và che chở cho cuộc đời bạn lúc gian nan.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Ta quan tâm người B, tự nhiên có người C quan tâm ta và có người D quan tâm người C, có người E và F quan tâm người họ. Cái <span class="highlight">trùng trùng điệp điệp</span>, trùng trùng điệp điệp, cái luật nhân quả nó khởi động và cuộc đời này từ từ nó đẹp lên. Nhưng ta cứ giữ vững như vậy cho đến cái ngày ta có thể ngồi nói với nhau face to face, nói thẳng với nhau về cái tương tác này. Là chúng ta đã sống với nhau, thương yêu nhau, chăm sóc nhau."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> LIVESTREAM KÍNH MỪNG ĐẠI LỄ VU LAN -THUYẾT GIẢNG & ĐÊM VĂN NGHỆ SINH VIÊN -18h00 - 28/08/2023 - <a href="https://youtu.be/2grUXVqlvQ4?t=3923" target="_blank">https://youtu.be/2grUXVqlvQ4?t=3923</a> (id: 2534)</p>
     </div>
 
 </body>

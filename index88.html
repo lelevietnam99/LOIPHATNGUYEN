@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>06 Đạo Đế - Đặc Tính Người Khiêm Hạ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Hiện Thân Của Đức Phật (Đạo Lý Chăm Sóc Huynh Đệ)</title>
     <style>
-        /* Nền đá cuội dưới dòng nước, biểu tượng sự tự soi rọi để trở nên hiền hòa */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1542385317-02434691475c?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền bàn tay nâng niu đóa sen, biểu tượng cho sự chăm sóc từ bi */
+            background-image: url('https://images.unsplash.com/photo-1594963338039-4e4431521742?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #4a148c; /* Màu tím đậm của tâm khiêm hạ sâu sắc */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #311b92;
-            border-bottom: 2px dashed rgba(49, 27, 146, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(49, 27, 146, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #512da8;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(237, 231, 246, 0.7);
-            border-left: 5px solid #4a148c;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #311b92;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #4a148c;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #4a148c;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #4a148c;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(74, 20, 140, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #311b92;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-undo-alt"></i> 06 Đạo Đế</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khi có bất cứ sự việc đổ vỡ hay xung đột nào xảy ra, phản xạ đầu tiên của con là cúi đầu soi rọi lại để tìm lỗi của chính mình, chứ tuyệt đối không đổ thừa hay oán trách bất kỳ ai."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Bản năng của con người là luôn đẩy cái sai cho người khác để bảo vệ cái "Tôi". Nhưng Sư Phụ dạy, đặc tính của người khiêm hạ chân chính là "luôn luôn nhận lỗi về mình". Kể cả khi mình đi rất đúng đường mà bị người khác đâm sầm vào chửi rủa, người khiêm hạ vẫn xét xem mình có lỗi gì không. Đó là cách đập tan tự ái và diệt ngã tuyệt vời nhất.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Đặc tính của một cái người khiêm hạ chân chính là người luôn luôn nhận lỗi về mình.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Đặc tính của một cái người khiêm hạ chân chính là người luôn luôn nhận lỗi về mình. Khi mà có xung đột, có chuyện gì xảy ra thì ngồi đó xét lỗi mình trước chứ không có trách người..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/7XxrCmvyvC8?t=2673" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (44:33 - 45:40) - ID: 1526
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>HIỆN THÂN CỦA ĐỨC PHẬT <br>(Đạo Lý Chăm Sóc Huynh Đệ)</h2>
+        
+        <p><strong>Phát biểu:</strong> Đức Phật đã thiết lập một phương trình tâm linh tuyệt đối để đánh sập sự phân biệt đối xử của con người: "<span class="highlight">Người nào chăm sóc cho một người huynh đệ của mình bị bệnh, tức là chăm sóc cho Như Lai</span>". Trong một cộng đồng, tình thương yêu và sự chăm sóc vô điều kiện dành cho những người đồng tu, đồng nghiệp không chỉ là tình người, mà đó chính là sự cúng dường trực tiếp và cao thượng nhất lên mười phương chư Phật.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi sống trong gia đình, cơ quan hay đạo tràng, đừng bao giờ để anh em, huynh đệ của mình phải chịu sự cô độc. Khi họ ốm đau, mệt mỏi, hãy ân cần rót ly nước, nấu tô cháo, giặt hộ bộ quần áo. Hãy trân trọng và xem họ như <span class="highlight">hiện thân của Đức Phật</span>, bạn sẽ thâu nhiếp được vô lượng công đức và phước báu.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Đức Phật mới thấy là một số Tỳ kheo quanh đó có vẻ hơi thờ ơ, hơi thờ ơ với việc huynh đệ của mình bị bệnh. Đức Phật mới nói lên một cái bài pháp, mà trong đó Đức Phật có cái câu này: 'Là người nào chăm sóc cho một cái người huynh đệ của mình bị bệnh, tức là chăm sóc cho Như Lai'. Cái câu nói này nó rất là cảm động, là để cho mọi người đừng có phân biệt. À nói rằng cái người bạn mình như mình, mình coi thường cái điều đó là không nên mà Đức Phật đã nói như vậy."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Ý Nghĩa Tuyệt Đối Của Đức Phật - <a href="https://youtu.be/XJR2Orurp9s?t=2890" target="_blank">https://youtu.be/XJR2Orurp9s?t=2890</a> (id: 5091)</p>
     </div>
 
 </body>

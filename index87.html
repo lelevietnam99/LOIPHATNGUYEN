@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Còn Phước Đem Theo - Giấu Kín Công Đức</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Điểm Mù Của Thiền Định (Sự Ẩn Nấp Của Bản Ngã)</title>
     <style>
-        /* Nền hạt giống nảy mầm trong đất, biểu tượng sự âm thầm làm phước */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền hang động sâu kín, biểu tượng cho sự ẩn nấp của bản ngã trong tiềm thức */
+            background-image: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #8bc34a; /* Màu xanh lá mầm của sự phát triển âm thầm */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #558b2f;
-            border-bottom: 2px dashed rgba(85, 139, 47, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(85, 139, 47, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #689f38;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(241, 248, 233, 0.7);
-            border-left: 5px solid #8bc34a;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #558b2f;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #8bc34a;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #8bc34a;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #8bc34a;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(139, 195, 74, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #689f38;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-seedling"></i> Còn Phước Đem Theo</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện mỗi khi làm được một việc thiện, giúp được một ai, con sẽ giấu kín không khoe khoang cho ai biết. Xin cho chính con cũng quên luôn việc tốt mình vừa làm để không bao giờ khởi lên sự tự mãn, kể công."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Kể công là một lưỡi gươm vô hình cắt đứt hết mọi phước báu ta vừa tạo ra. Nếu ta làm phước mà thích khoe, phước sẽ tan biến ngay trong kiếp này. Nhưng nếu ta giấu kín và quên luôn, phước báu đó sẽ được bảo tồn qua mười kiếp, hai mươi kiếp sau.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Kể công làm tan vỡ phước báu, giấu kín giúp phước báu tồn tại lâu dài.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Làm phước mà giấu kín, mà khiêm tốn, không kể công, không nhớ tới công, quên công luôn. Thì người đó hưởng cái phước tới 10 kiếp, 20 kiếp, 30 kiếp vẫn còn. Còn mà gặp ai cũng kể, thì ngay bữa đó, ngay trong kiếp đó, khiến có cái chuyện gì, phước nó phủi sạch tan vỡ hết luôn..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/0WMdejEZGgY?t=190" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (3:10 - 4:20) - ID: 2823
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>ĐIỂM MÙ CỦA THIỀN ĐỊNH <br>(Sự Ẩn Nấp Của Bản Ngã)</h2>
+        
+        <p><strong>Phát biểu:</strong> Kẻ thù lớn nhất trong cuộc đời tu tập chính là "<span class="highlight">Bản ngã bí mật</span>". Theo quy luật của tâm thức, bản ngã nằm ở một tầng sâu hơn rất nhiều so với định lực của chúng ta. Khi hành giả tọa thiền đạt đến trạng thái tâm vắng lặng, không còn suy nghĩ, cảm thấy thân tâm trống rỗng bất động, thì bản ngã vẫn chưa hề bị tiêu diệt mà đang ẩn nấp sâu kín bên trong. Nếu lầm tưởng đây là cảnh giới chứng Thánh, hành giả sẽ lập tức rơi vào đại kiêu mạn và bị điên loạn (tẩu hỏa nhập ma).</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi thực hành thiền định mà thấy tâm trí thanh tịnh, mọi vọng tưởng đều dứt bặt, tuyệt đối đừng tự đắc cho rằng mình đã đắc đạo hay giỏi giang. Ngay lúc đó, hãy lập tức cảnh giác nhủ thầm: "<span class="highlight">Bản ngã vẫn còn rất lớn ở phía sau, mình chưa là gì cả</span>". Hãy tiếp tục giữ lòng khiêm tốn tột cùng và nương tựa vào sự hướng dẫn của bậc Minh Sư để vượt qua cái bẫy nguy hiểm này.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Thậm chí có những người mà khi ngồi thiền, tâm vào định phăng phắc luôn, tâm không khởi niệm, tâm hoàn toàn trống rỗng, định phăng phắc, bất động, cái tâm mình bất động. Xin thưa, <span class="highlight">bản ngã vẫn còn núp ở trong đó</span>, chưa hết bản ngã. Đến chỗ này mà tưởng mình đã chứng đạo là sẽ thoái đọa liền, có khi điên luôn. Tại sao cái người tu thiền bị điên? Là bởi vì khi tâm vào định, tưởng mình đã chứng Thánh. Cho nên đây là cái chỗ mà ta tu phải có thầy. Khi ta nhập được vào định rồi, đến trình cho thầy mình: 'Thưa Thầy, khi con ngồi thiền tâm con được vào định'. Thì ông thầy nói: 'Con chưa được đâu con, bản ngã vẫn còn núp ở trong đó, con phải cẩn thận, nó sẽ quật con, con điên liền'."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> HIỂU VỀ BẢN NGÃ - <a href="https://youtu.be/MUzUAlWvbJ0?t=3129" target="_blank">https://youtu.be/MUzUAlWvbJ0?t=3129</a> (id: 1771)</p>
     </div>
 
 </body>

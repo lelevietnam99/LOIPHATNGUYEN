@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Những Chặng Đường Thiền - Sợ Hãi Những Lỗi Nhỏ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Giải Mã Hận Thù (Nguyên Lý Dập Tắt Xung Đột)</title>
     <style>
-        /* Nền con sóng, biểu tượng nhân quả nhỏ thành lớn */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1505118380757-9195f56336a5?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền dòng nước tĩnh lặng làm dịu ngọn lửa, biểu tượng cho việc lấy tình thương dập tắt hận thù */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #d32f2f; /* Màu đỏ cảnh tỉnh */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #b71c1c;
-            border-bottom: 2px dashed rgba(183, 28, 28, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(183, 28, 28, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #c62828;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(255, 235, 238, 0.7);
-            border-left: 5px solid #d32f2f;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #b71c1c;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #d32f2f;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #d32f2f;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #d32f2f;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #b71c1c;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-exclamation-triangle"></i> Những Chặng Đường Thiền</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện có được trí tuệ để nhìn thấy sự nguy hiểm tột cùng trong từng lỗi lầm bé nhỏ nhất. Xin Phật gia hộ cho con biết sợ hãi và tránh xa những sai phạm nhỏ nhoi, không bao giờ cho phép mình dễ duôi hay tự bào chữa."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Sư Phụ phân tích câu kinh nổi tiếng của Đức Phật: "Vị tỳ kheo phải thấy sự nguy hiểm trong từng lỗi nhỏ nhặt". Một phần ba bát cơm ăn bỏ dở, một ánh mắt lườm nguýt, một thái độ vùng vằng với cha mẹ... tưởng chừng vô hại, nhưng nó ẩn chứa quả báo nghèo đói và đọa lạc khủng khiếp trong tương lai. Không xem thường lỗi nhỏ chính là người có trí tuệ thấu suốt nhân quả.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Phải thấy sự nguy hiểm trong từng lỗi nhỏ nhặt để tránh quả báo lớn.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "...Đức Phật gom hết tất cả đạo đức của thế gian lại trong một câu rất nhỏ: Thấy sự nguy hiểm trong từng lỗi nhỏ nhặt. Để hiểu được cái câu này thì ta phải tu vài trăm kiếp... Những cái lỗi bé bé nó ẩn chứa một quả báo lớn về sau."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/Ud-QTJWoYC8?t=1433" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (23:53 - 25:39) - ID: 5891
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>GIẢI MÃ HẬN THÙ <br>(Nguyên Lý Dập Tắt Xung Đột)</h2>
+        
+        <p><strong>Phát biểu:</strong> Khi bị một ai đó xúc phạm, hãm hại hay cướp đoạt, phản xạ thông thường của bản ngã là ôm ấp niềm đau đó và nuôi dưỡng ý chí trả thù. Nhưng theo phương trình của Pháp Cú, "<span class="highlight">ôm ấp hận thù = thù hận không thể nguôi</span>" và "<span class="highlight">buông bỏ hận thù = thù hận tự diệt</span>". Lấy oán báo oán chỉ tạo ra một vòng lặp nhân quả đau khổ vô tận. Chỉ có tình thương chân thật mới có khả năng triệt tiêu oán thù vĩnh viễn.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi có người mắng chửi hay làm hại bạn, hãy tập quan sát cơn giận của mình và lập tức <span class="highlight">cắt đứt mọi dòng suy nghĩ oán trách</span>. Đừng bao giờ đay nghiến lặp lại nỗi đau đó trong tâm. Hãy khởi lòng thương xót và cầu nguyện cho họ, vì chính họ đang gieo ác nghiệp và sẽ phải chịu quả báo nặng nề.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Nó mắng tôi, đánh tôi, nó hại tôi, cướp tôi. Ai ôm ấp niệm ấy, hận thù không thể nguôi. Một bài nó ngược lại: nó mắng tôi, đánh tôi, nó hại tôi, cướp tôi, không ôm ấp niệm ấy, hận thù sẽ tự nguôi. Cái bài này, và ta học thêm một bài thứ ba, một bài nổi tiếng nhất của Pháp Cú: Lửa không tắt được lửa, thù không diệt được thù, tình thương diệt thù hận, là định luật ngàn thu."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> 02 Hiềm Hận - <a href="https://youtu.be/dnNgSLFjEKk?t=153" target="_blank">https://youtu.be/dnNgSLFjEKk?t=153</a> (id: 3850)</p>
     </div>
 
 </body>

@@ -3,152 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuyển Hóa Nghiệp Chướng - Hoan Hỷ Trong Vất Vả</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Hơi Thở Thiền Định (Phương Trình Của Sự Tỉnh Giác)</title>
     <style>
-        /* Nền nước gột rửa, biểu tượng sự sám hối qua lao động */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền bầu trời trong vắt, tượng trưng cho sự tự nhiên, nhẹ nhàng của hơi thở */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #5d4037; /* Màu nâu đất vững chãi */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #3e2723;
-            border-bottom: 2px dashed rgba(62, 39, 35, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(62, 39, 35, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #4e342e;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(239, 235, 233, 0.7);
-            border-left: 5px solid #5d4037;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #3e2723;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #5d4037;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #5d4037;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-spa"></i> Hoan Hỷ Trong Lao Động & Sám Hối</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện xem những vất vả, cực nhọc hôm nay là cơ hội quý báu để chuộc lại những lỗi lầm từ vô lượng kiếp. Mỗi giọt mồ hôi rơi xuống, xin cho con được sám hối nghiệp chướng vô minh, tuyệt đối không một lời than van hay tính toán."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Khi phải làm những việc nặng nhọc chân tay, dọn dẹp vệ sinh hay khuân vác, bản ngã ta rất dễ sinh ra bực dọc, than thở "sao tôi cực quá". Sư Phụ dạy, nếu làm cực mà than thì rớt mất phước. Nhưng nếu ta xem sự cực nhọc đó là để "trả nghiệp" và tự nguyện làm với tâm hoan hỷ, thì nghiệp chướng tiêu trừ rất nhanh, phước báu tăng lên đột biến.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Biến sự vất vả thành cơ hội trả nghiệp và tích lũy phước báu.
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>HƠI THỞ THIỀN ĐỊNH <br>(Phương Trình Của Sự Tỉnh Giác)</h2>
+        
+        <p><strong>Phát biểu:</strong> Trong thiền định, chìa khóa nhiếp tâm được vận hành bằng một phương trình vô cùng tinh tế: "<span class="highlight">Biết rõ hơi thở + Tuyệt đối không điều khiển</span>". Bản năng của phàm phu là hễ để ý đến hơi thở thì lập tức muốn can thiệp, ép nó phải dài hay ngắn, mạnh hay nhẹ theo ý mình. Nhưng thiền định yêu cầu ta tách biệt hoàn toàn cái "Biết" ra khỏi cái "Điều khiển". Cơ thể tự thở thế nào, ta chỉ thản nhiên quan sát thế ấy. Đó là bản lĩnh để mở ra mọi sự mầu nhiệm của tâm linh.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi thực hành tọa thiền, đừng bao giờ cố gắng gồng ép hay bắt ép hơi thở phải đều đặn. Hãy chỉ dùng tâm tỉnh giác quan sát một cách khách quan: hơi thở đi vào thì biết đi vào, đi ra thì biết đi ra. Dù nó có thô hay êm, ta vẫn để mặc nó tự nhiên. Chính sự thả lỏng và quan sát tinh tế này sẽ giúp tâm bớt dần loạn động và tiến sâu vào định.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Khi ta để ý hơi thở, ta thấy hơi thở tự nhiên nó mạnh hơn bình thường đúng không ạ? Mình không để ý thì nó thở sao mình không nghe, nhưng mình vừa để ý tới nó, bắt đầu nó thở có vẻ mạnh hơn. Và trong cái mạnh hơn đó, ta bắt đầu có cái cố ý ta điều khiển. À mình thở vào, giờ mình tới khi anh thở ra... cố ý anh thở vào, cố ý anh thở ra. Thì cái biết ta đang thở là đúng, mà cái cố ý điều khiển, thở ra thở vào là sai. Thì cái người tu thiền nó khéo là chỗ này: biết thôi hơi thở vào, biết thôi hơi thở ra, không điều khiển. Đây là bản lĩnh của người tu thiền. Chỗ này nó đòi hỏi khéo. Vì ta không cần điều khiển, cơ thể ta vẫn phải tự thở ra, tự thở vào. Vì nếu không thở thì chết làm sao? Buộc nó tự thở, ta chỉ cần biết mà thôi. Đó là ưu trị của thiền, và đó là điều mở ra mọi điều tốt đẹp trong Thiền định."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Đạo đức và triết lý kinh doanh B - <a href="https://youtu.be/G0w88JcC9h8?t=3025" target="_blank">https://youtu.be/G0w88JcC9h8?t=3025</a> (id: 1778)</p>
     </div>
 
 </body>

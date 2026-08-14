@@ -3,158 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>02 Làm Việc Với Người Ngang Cấp - Chủ Động Ráp Nối Công Việc</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Buông Lỏng (Phương Trình Khống Chế Cảm Xúc)</title>
     <style>
-        /* Nền đàn chim bay lượn đồng điệu, biểu tượng sự phối hợp nhịp nhàng */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền mặt nước phẳng lặng, tượng trưng cho sự thả lỏng và tĩnh tại */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #ff8f00; /* Màu cam năng động của sự chủ động */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #e65100;
-            border-bottom: 2px dashed rgba(230, 81, 0, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(230, 81, 0, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #f57c00;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(255, 248, 225, 0.7);
-            border-left: 5px solid #ff8f00;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #e65100;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #ff8f00;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #ff8f00;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-people-carry"></i> 02 Làm Việc Với Người Ngang Cấp</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khi có sự việc đột xuất xảy ra mà chưa kịp có người phân công, con sẽ tự động quan sát, nhanh trí bắt tay vào việc và ăn khớp nhịp nhàng với mọi người. Xin cho con biết lấp vào những chỗ trống, huynh đệ làm việc này thì con lo việc khác để cùng nhau hoàn thành nhiệm vụ."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Trong những lúc cấp bách hoặc có khách lớn đột ngột ghé thăm, sẽ không có đủ thời gian để chờ bề trên phân công từng việc. Lúc đó, mỗi người phải tự biết quan sát và ráp nối đồng bộ. Người này lo việc này thì người kia tự động lo việc khác, không giẫm chân lên nhau. Sức mạnh của tập thể nằm ở sự chủ động tuyệt vời này.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Khi có sự việc bất ngờ, phải tự động quan sát và ráp nối công việc với huynh đệ mà không chờ chỉ đạo.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Nghe có một vị tôn túc tới chùa, thì lúc đó không có thầy để mà phân công, thì tự mỗi người phải biết làm... mắt mình phải liếc phải không, để mình đứng gần cái chuông mình chạy lên mình cầm cái dùi lên liền... mà mình liếc mắt mình thấy huynh đệ kia cầm cái dùi rồi thì mình không cần phải chạy lên... mà mình chạy lại lo bàn nước... Tự động ráp nối công việc, nghĩa là mình làm việc mình nhưng mà để ý theo dõi việc của huynh đệ..."
-                    </span>
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>BUÔNG LỎNG <br>(Phương Trình Khống Chế Cảm Xúc)</h2>
+        
+        <p><strong>Phát biểu:</strong> Giữa một biến cố trái ý nghịch lòng và sự phát sinh của trí tuệ, có một biến số trung gian mang tính quyết định gọi là "<span class="highlight">Sự buông lỏng toàn thân</span>". Nếu phản ứng ngay lập tức bằng sự căng cứng của cơ thể, ta sẽ bị vô minh và bản năng sân hận dẫn dắt. Nhưng chỉ cần thêm vào phương trình một nhịp "quay lại buông lỏng", tự nhiên thân sẽ mềm mại, não bộ được giải phóng và trí tuệ sẽ lập tức bừng sáng để đưa ra cách xử lý hoàn hảo nhất.</p>
+        
+        <p><strong>Ứng dụng:</strong> Trong công việc hay gia đình, mỗi khi gặp người nói nặng lời hay đối mặt với một tình huống bực tức tột độ, nguyên tắc sinh tử là: Tuyệt đối không được mở miệng trả lời ngay. Hãy lập tức im lặng, quay vào bên trong quan sát và <span class="highlight">buông lỏng toàn bộ cơ thể</span>. Khi thân đã mềm ra và tâm đã dịu lại, bạn mới được phép lên tiếng. Lúc đó, mọi lời nói của bạn đều là chánh ngữ.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Chỉ cái buông lỏng này thôi mà ta xử lý được rất nhiều vấn đề trong cuộc sống. Mỗi khi ta gặp một chuyện gì trái lòng, ta chỉ buông lỏng toàn thân trước rồi hãy xử lý sau. Gặp ai vừa nói nặng, nói nhẹ mình, đừng trả lời. Mà quay lại buông lỏng toàn thân trước, rồi sẽ có thái độ sau. Nhớ nhé. Là buông lỏng toàn thân một cái, là tự nhiên trí tuệ đã phát sinh. Ta sẽ đối nhân xử thế nhẹ nhàng, đúng mức. Nên chỉ nội cái buông lỏng toàn thân thôi, là bắt đầu mở ra cái điều kỳ diệu."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Con đường Thiền Định - <a href="https://youtu.be/Hez2cEY40RA?t=2485" target="_blank">https://youtu.be/Hez2cEY40RA?t=2485</a> (id: 1861)</p>
     </div>
 
 </body>
