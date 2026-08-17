@@ -3,142 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Công Phu Rèn Luyện - Tinh Tấn & Sắc Bén</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Lăng Kính Từ Bi (Phép Toán Nhân Quả Chân Chính)</title>
     <style>
-        /* Nền võ đường tĩnh lặng, biểu trưng cho công phu rèn luyện bền bỉ */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền bàn tay nâng đỡ, biểu tượng cho lòng từ bi */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #bf360c; /* Màu cam đỏ của sự nhiệt huyết và rèn luyện */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #bf360c;
-            border-bottom: 2px dashed rgba(191, 54, 12, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(191, 54, 12, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #d84315;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(251, 233, 231, 0.7);
-            border-left: 5px solid #bf360c;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #bf360c;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #d84315;
-            font-size: 18px;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-dumbbell"></i> Công Phu Rèn Luyện - Tinh Tấn & Sắc Bén</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con thấu hiểu một đòn võ lỏng lẻo là do công phu rèn luyện của con chưa đủ độ chín. Con xin nguyện dẹp bỏ sự lười biếng, sẵn sàng nhẫn nại lặp đi lặp lại một đòn thế hàng ngàn, hàng vạn lần cho đến khi biến thành phản xạ tự nhiên, tinh xảo và sắc bén."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Việc tu tập hay học võ đều đòi hỏi sự tinh tấn tột độ. Không có đòn đánh nào tự nhiên mà chắc chắn. Tất cả đều phải đổi bằng những giọt mồ hôi đầm đìa và sự kiên trì lặp lại không ngừng nghỉ mỗi ngày.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Nỗ lực tinh tấn rèn luyện, nhẫn nại lặp lại đòn thế để đạt đến độ chín muồi và phản xạ sắc bén.
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>LĂNG KÍNH TỪ BI <br>(Phép Toán Nhân Quả Chân Chính)</h2>
+        
+        <p><strong>Phát biểu:</strong> Một trong những lỗi lớn nhất của người học Phật là dùng nhân quả để bao biện cho sự vô cảm. Họ lập phương trình sai lệch: "<span class="highlight">Người ta đang khổ = Người ta đang trả nghiệp = Mình không được cứu vì sẽ cản nghiệp</span>". Thực tế, phương trình đúng của vũ trụ là: "<span class="highlight">Quả báo (cái khổ) của người khác tìm đến ta = Cơ hội để ta gieo nhân làm phước</span>". Việc nhìn vào nhân quả của người khác để phê phán và từ chối giúp đỡ chính là một sự tàn nhẫn đánh mất lòng từ bi.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi thấy ai đó gặp hoạn nạn, bệnh tật hay nghèo túng, tuyệt đối đừng buông lời phán xét "tại kiếp trước họ ác nên giờ chịu". Hãy lập tức dang tay giúp đỡ trong khả năng của mình, vì sự xuất hiện của họ trước mặt bạn chính là một bài thi nhân quả mà vũ trụ gửi đến để kiểm tra lòng từ bi của bạn.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Bởi vì luật nhân quả không phải là để cho ta tàn nhẫn nhìn mọi người đau khổ mà bỏ đi, mà luật nhân quả là gì? Bắt ta phải cứu người để làm phước. Cái khổ của người khác đến với ta là cơ hội để ta gieo nhân làm phước. Nhưng ta lại không nhìn cái nhân quả của ta mà ta nhìn cái nhân quả của người, nói tại anh ác cho nên anh khổ. Ta nhìn nhân quả của người để ta phê phán họ, nhưng ta không thấy cái nhân quả đang đến với ta. Cái khổ của người đến với ta là nhân quả của ta, chứ không phải khi không."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Lái Xe An Toàn - <a href="https://youtu.be/W66FghFZXRs?t=621" target="_blank">https://youtu.be/W66FghFZXRs?t=621</a> (id: 6371)</p>
     </div>
 
 </body>

@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>68 Cẩn Thận - Lường Trước Rủi Ro</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Lăng Kính Nhân Quả (Chốt Chặn Cơn Giận)</title>
     <style>
-        /* Nền hải đăng soi sáng, biểu trưng cho sự sáng suốt và lường trước */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền núi non vững chãi, biểu tượng cho sự bình an trước sóng gió */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #455a64; /* Màu xám đá chuyên nghiệp và cẩn trọng */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #263238;
-            border-bottom: 2px dashed rgba(38, 50, 56, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(38, 50, 56, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #37474f;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(236, 239, 241, 0.7);
-            border-left: 5px solid #455a64;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #263238;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #455a64;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #455a64;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #455a64;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(69, 90, 100, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #263238;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-eye"></i> 68 Cẩn Thận</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con thấu hiểu cẩn thận là một đạo đức vô cùng lớn lao. Con xin nguyện khi nhận bất cứ nhiệm vụ gì, luôn tập dự báo, lường trước mọi rủi ro, nguy hiểm hay biến động có thể xảy ra, để từ đó chuẩn bị sẵn sàng các phương án dự phòng, bảo vệ sự an toàn cho mọi người."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Người thông minh và có đạo đức là người luôn lường trước rủi ro để khắc phục. Phàm phu thường chủ quan, không thấy trước nguy hiểm nên lúc xảy ra sự cố không có biện pháp đối phó. Khi ta giao việc hay làm việc, phải dự liệu các phương án dự phòng để kịp thời tháo gỡ.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Cẩn thận là lường trước rủi ro và chuẩn bị sẵn biện pháp khắc phục.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Cẩn thận Nghĩa là lường trước những nguy hiểm rủi ro có thể xảy ra Và chuẩn bị sẵn các biện pháp khắc phục từ đầu Người cẩn thận là người thông minh Vị có khả năng lường trước các nguy hiểm rủi ro, còn người ngu thì không thấy trước những điều đó nên chủ quan, không làm gì để khắc phục... Giao cho ai công việc gì, phải lường trước các rủi ro mà họ có thể bị vướng phải, để từ bây giờ có biện pháp tháo gỡ..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/QtFuZP8c0M8?t=174" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (2:54 - 4:08) - ID: 4896
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>LĂNG KÍNH NHÂN QUẢ <br>(Chốt Chặn Cơn Giận)</h2>
+        
+        <p><strong>Phát biểu:</strong> Bản năng của con người được lập trình theo một thuật toán ích kỷ: "Khi có rắc rối xảy ra = 100% lỗi luôn thuộc về người kia". Việc không hiểu nhân quả dẫn đến sự oán trách, sân hận và cãi vã. Nhưng khi lắp lăng kính Nhân Quả vào, phương trình lập tức thay đổi: "<span class="highlight">Mọi sự va chạm hiện tại = Kết quả của sự vướng mắc, nợ nần từ kiếp trước của cả hai bên</span>". Nhận ra "lỗi của cả hai" chính là chốt chặn để dập tắt ngay lập tức cơn giận dữ.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi có người vô cớ chửi mắng, tông xe vào bạn, hay chơi xấu bạn, đừng vội vàng đỏ mặt tía tai chửi lại. Hãy đứng lại một nhịp và nhẩm định lý này: "<span class="highlight">Chắc kiếp xưa mình cũng từng 'nặng nhẹ' với họ nên kiếp này mới va vào nhau</span>". Khi bạn biết đem nhân quả ra tự soi lại mình, tự nhiên tâm bạn sẽ bình an, bao dung và hóa giải được mọi ân oán.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Người ta thấy lỗi của người khác một cách rất tự nhiên, không ai thấy lỗi mình cả, ai cũng vậy, lạ vậy. Nhưng mà nếu ta hiểu luật nhân quả thì lỗi tại ai? Thì nếu có cái gì rắc rối, thì lỗi của cả hai. Ngày xưa chắc cũng đã giơ tay giơ chân gì với nhau một chút, người hai bên có nợ nhau một chút ở kiếp xưa, cho nên bây giờ va vào nhau một chút, cả hai đều có vướng. Cho nên ví dụ khi ta mở cửa bước ra, ông xe máy ông tới, ông tông cái rầm, cái hai người xây xẩm hết trơn. Ông đứng lên ông chửi liền, tại ông không biết nhân quả, đui hay sao? Mình cười cười, nói thôi xin lỗi bác, tại con cũng đui thật, con không thấy bác làm cho bác lỡ việc. Tại mình hiểu nhân quả rồi, bất cứ việc gì tới mình, mình đều lấy nhân quả ra mình soi, tâm mình bình an liền, không sân, không si, không phiền, không giận. Còn ông kia không hiểu nhân quả, mặt ông đỏ phừng phừng, ông chửi tùm lum hết trơn, rất là tội."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> TỨ DIỆU ĐẾ 17 - ĐẠO ĐẾ, CHÁNH KIẾN 02 - <a href="https://youtu.be/2OL45BKOUNA?t=2011" target="_blank">https://youtu.be/2OL45BKOUNA?t=2011</a> (id: 3253)</p>
     </div>
 
 </body>

@@ -3,158 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lên Kế Hoạch Cho Cuộc Đời - Tổ Chức Kỹ Lưỡng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Sám Hối Nghiệp Chướng (Chiếc Vé Cắt Hộ Khẩu Địa Ngục)</title>
     <style>
-        /* Nền chiến lược và thời gian, biểu trưng cho sự tổ chức chi tiết */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền núi non vững chãi, biểu tượng cho sức mạnh của sự chân thật và cúi đầu */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #00695c; /* Màu xanh cổ vịt chuyên nghiệp và chuẩn mực */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #004d40;
-            border-bottom: 2px dashed rgba(0, 77, 64, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(0, 77, 64, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #00695c;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(224, 242, 241, 0.7);
-            border-left: 5px solid #00695c;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #004d40;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #00695c;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #00695c;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-clipboard-list"></i> Lên Kế Hoạch Cho Cuộc Đời</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện rèn luyện tư duy bao quát, tính toán kỹ lưỡng đến từng chi tiết nhỏ nhất. Xin cho con khi sắp xếp công việc sẽ thấy rõ ràng từng người làm việc gì, giờ phút nào làm gì, để khi vào thực tế mọi người tự động ráp nối trơn tru mà không ai bị bỡ ngỡ."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Đỉnh cao của tổ chức là khả năng nhìn trước và sắp xếp chi tiết đến từng phút. Khi ta giao việc, phải yêu cầu mỗi người viết chi tiết kế hoạch ra và đối chiếu lại với nhau. Nhờ sự chuẩn bị cực kỳ kỹ lưỡng ấy, công việc lớn đến mấy cũng trở nên thanh thản, nhẹ nhàng.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Tổ chức kỹ lưỡng, viết chi tiết công việc cho từng người để không ai bị bỡ ngỡ.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Viết chi tiết ra mỗi người, đem đối chiếu lại hết Nên đến khi bước vào công việc Không còn ai bỡ ngỡ Cái gọi là cái công tác tổ chức Cực kỳ kỹ lưỡng Nên nhiều người nói tại sao chùa mình mọi cái tổ chức hay Bởi vì ta Dự báo Nhìn trước lên kế hoạch Cực kỳ chi tiết từng điểm nhỏ Phật tử về dự lễ mình thấy mình thanh thản thôi Bởi vì mọi chuyện đã được chuẩn bị Cực kỳ kỹ lưỡng..."
-                    </span>
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>SÁM HỐI NGHIỆP CHƯỚNG <br>(Chiếc Vé Cắt Hộ Khẩu Địa Ngục)</h2>
+        
+        <p><strong>Phát biểu:</strong> Lỗi lầm là biến số tất yếu của phàm phu, nhưng việc từ chối nhận lỗi, che giấu tội lỗi mới chính là chiếc vé đi thẳng xuống địa ngục. Ngài Phổ Hiền dạy hạnh thứ 4 "Tứ giả sám hối nghiệp chướng" bằng một nguyên lý tuyệt đối: "<span class="highlight">Biết nhận lỗi = Cắt hộ khẩu địa ngục</span>". Kể cả những ác nghiệp từ vô lượng kiếp trước mà ta không thể nhớ nổi, chỉ cần ta quỳ xuống và thành tâm sám hối "những lỗi mà con không biết", mọi cánh cửa đọa đày đều lập tức khép lại.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng đợi người khác chỉ trích mới miễn cưỡng nhận lỗi. Đừng tự bào chữa hay che giấu khuyết điểm để bảo vệ sĩ diện. Mỗi ngày, hãy <span class="highlight">quỳ trước Phật và chủ động sám hối cả những lỗi lầm sâu kín nhất</span> trong vô thủy kiếp. Người biết cúi đầu nhận lỗi là người mạnh mẽ nhất và an toàn tuyệt đối trước mọi luật nhân quả.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Ai sống trên đời cũng có phạm lỗi, nhưng mà nếu biết lỗi, người đó tuyệt đối không xuống địa ngục. Bởi vì địa ngục là nơi dành cho người không nhận lỗi, còn người biết nhận lỗi không bao giờ xuống địa ngục. Nên vì vậy, cứ mỗi kỳ một tháng hai lần, ta đến chùa ta sám hối, trong đó có cái câu là: 'Vãng tích sở tạo chư ác nghiệp, giai do vô thủy tham sân si'. Nghĩa là từ ngàn xưa đến nay, con đã tạo rất nhiều ác nghiệp, đều do cái gốc tham sân si từ vô thủy rất lâu, mà chính con cũng không biết. Cái sám hối trong đạo Phật có cái hay thế này, là dù mình không biết rõ mình phạm lỗi gì mà vẫn nhận lỗi... Trong đạo Phật, ta sám hối cả những lỗi mà ta không biết ta có phạm hay không mà vẫn nhận lỗi."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Ý Nghĩa Cầu Siêu - <a href="https://youtu.be/MXD8IL6IYs0?t=569" target="_blank">https://youtu.be/MXD8IL6IYs0?t=569</a> (id: 3971)</p>
     </div>
 
 </body>

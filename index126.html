@@ -3,142 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sức Mạnh Đoàn Kết & Tình Huynh Đệ Ban Võ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Xưng Tán Như Lai (Công Thức Tích Lũy Công Đức)</title>
     <style>
-        /* Nền ánh bình minh và sự gắn kết, biểu tượng tình huynh đệ sắt son */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền ánh sáng lan tỏa, tượng trưng cho phước báu từ lời khen ngợi chân thật */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #d84315; /* Màu đỏ cam của tinh thần nhiệt huyết và đoàn kết */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #bf360c;
-            border-bottom: 2px dashed rgba(191, 54, 12, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(191, 54, 12, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #d84315;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(251, 233, 231, 0.7);
-            border-left: 5px solid #d84315;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #bf360c;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #d84315;
-            font-size: 18px;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-users-cog"></i> Sức Mạnh Đoàn Kết & Tình Huynh Đệ</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện luôn giữ sợi dây gắn kết bền chặt với tất cả huynh đệ trong chúng. Xin cho con không chỉ hoàn thành việc của mình, mà biết nhìn xa, lường trước và gánh vác cả những nỗi lo của huynh đệ từ sớm. Dẫu công việc có áp lực, chúng con vẫn nắm chặt tay nhau, che chở và cùng nhau bảo vệ sự bình yên cho Đạo pháp."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Sức mạnh của Ban Võ không chỉ nằm ở võ thuật hay quyền hành, mà nằm ở sự đoàn kết và tình yêu thương. Khi ta biết quan sát, tự động ráp nối công việc, lấp vào những khoảng trống và lo cho cái lo của huynh đệ từ sớm, ta đang phá vỡ sự ích kỷ của bản ngã để tạo nên một khối sức mạnh tập thể vô địch.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Gắn kết tình huynh đệ, chủ động gánh vác công việc và chia sẻ mọi áp lực để kiến tạo sức mạnh tập thể vững chãi trong Ban Võ.
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>XƯNG TÁN NHƯ LAI <br>(Công Thức Tích Lũy Công Đức)</h2>
+        
+        <p><strong>Phát biểu:</strong> Lời nói vận hành theo một phương trình nhân quả rất nhanh: "<span class="highlight">Chê bai = Tiêu mòn phước báu; Ca ngợi Bậc Thánh = Mở ra kho tàng công đức</span>". Phàm phu thường mắc một lỗi rất nặng là mở miệng ra chỉ thích chê bai, chỉ trích người khác để thỏa mãn tự ngã. Bồ Tát Phổ Hiền đưa ra hạnh thứ 2 "Nhị giả xưng tán Như Lai" để cảnh tỉnh: Việc dùng lời nói để ca ngợi Đức Phật và những bậc chân tu mới là cỗ máy khổng lồ sinh ra vô lượng phước báu, giúp hành giả sau này dễ dàng nhiếp hóa được chúng sinh.</p>
+        
+        <p><strong>Ứng dụng:</strong> Hãy kiểm soát chặt chẽ miệng lưỡi của mình. Đừng bao giờ hùa theo đám đông để chê bai hay nói xấu bất kỳ ai. Thay vào đó, hãy nghiên cứu kỹ về cuộc đời Đức Phật, về giáo pháp để đi đâu cũng có thể dùng những <span class="highlight">ngôn từ sâu sắc, cảm động nhất ca ngợi Thế Tôn</span> và gieo duyên lành cho mọi người.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Nhất giả là lễ kính chư Phật, nhị giả xưng tán Như Lai. Ta phải ca ngợi về Đức Phật để cho cả cái thế giới này theo Phật, phước ta là vô tận. Nên người nào biết ca ngợi Đức Phật, người đó từ từ mọi công đức mở ra dần dần, vượt lên, vượt lên từ từ đi tới những thành công... Nên khi mình kể về Đức Phật, mình ca ngợi Đức Phật, người nghe bị thuyết phục liền. Nếu muốn làm công hạnh xưng tán Như Lai, ta phải đọc kinh rất là nhiều, đọc về cuộc đời Đức Phật rất là nhiều. Mà nếu xưng tán được Như Lai, phước của ta rất là lớn."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> LỜI KHEN TIẾNG CHÊ LÀM THAY ĐỔI THẾ GIỚI - <a href="https://youtu.be/YMApAG6iR1s?t=4965" target="_blank">https://youtu.be/YMApAG6iR1s?t=4965</a> (id: 1816)</p>
     </div>
 
 </body>

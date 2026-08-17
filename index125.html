@@ -3,142 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hạnh Phúc Của Người Hộ Pháp - Hy Sinh & Lặng Thầm</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Giá Trị Tuyệt Đối (Ngộ Nhận Về Quảng Tu Cúng Dường)</title>
     <style>
-        /* Nền sương sớm và ánh sáng bình yên, biểu tượng sự hy sinh thầm lặng của Hộ pháp */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền ánh sáng thiêng liêng, tượng trưng cho tâm cúng dường chân chính */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #455a64; /* Màu xám đá vững chãi của người bảo vệ */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #263238;
-            border-bottom: 2px dashed rgba(38, 50, 56, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(38, 50, 56, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #37474f;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(236, 239, 241, 0.7);
-            border-left: 5px solid #455a64;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #263238;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #455a64;
-            font-size: 18px;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-shield-alt"></i> Hạnh Phúc Của Người Hộ Pháp</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con thấu hiểu hạnh phúc lớn nhất của người Hộ pháp là nhìn thấy đại chúng được bình an tu hành. Con xin nguyện dẫu phải đứng gác ngoài sương gió, hy sinh những giờ phút an nhàn thiền định của cá nhân, lòng con vẫn ngập tràn hoan hỷ. Xin cho con lấy công việc bảo vệ làm pháp môn tu, giữ chánh niệm vững vàng ngay trong từng bước đi và ánh mắt."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Khi đại chúng đang an tọa trong chánh điện, thì bên ngoài phải có những người thầm lặng đứng gác, lo an ninh trật tự. Đừng nghĩ rằng mình không được ngồi thiền là mất mát; chính cái tâm hy sinh bảo vệ bình yên cho đại chúng tu tập lại là một công đức Hộ pháp vĩ đại, mang lại phước báu vô lượng cho đời đời kiếp kiếp.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Lấy công tác bảo vệ, Hộ pháp làm pháp môn tu tập, hoan hỷ hy sinh vì sự bình an và tu hành của đại chúng.
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>GIÁ TRỊ TUYỆT ĐỐI <br>(Ngộ Nhận Về Quảng Tu Cúng Dường)</h2>
+        
+        <p><strong>Phát biểu:</strong> Nhiều người tu mắc một lỗi tư duy rất thiển cận là thiết lập phương trình: "Cúng dường = Đem tiền bạc, nhang đèn, trái cây dâng lên bàn Phật". Sự bám chấp vào vật chất này khiến công đức bị giới hạn. Hạnh thứ 3 "Tam giả quảng tu cúng dường" đã thăng hoa khái niệm này thành một chân lý tuyệt đối: "<span class="highlight">Pháp cúng dường là tối thượng</span>". Thực hành lời Phật dạy và dấn thân phụng sự chúng sinh mới chính là phẩm vật cúng dường vĩ đại nhất dâng lên mười phương chư Phật.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng chỉ tự hào khi mình cúng được nhiều tiền xây chùa hay mua hoa quả đắt tiền dâng Phật. Ngay trong lúc đi làm, quét rác, hay xả thân giúp đỡ một người bất hạnh, hãy giữ cái tâm tĩnh lặng và nhủ thầm: "<span class="highlight">Con xin đem việc làm lợi ích này để cúng dường lên Đức Thế Tôn</span>". Đó mới là sự cúng dường của những bậc Bồ Tát.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Tuy nhiên, Phẩm Phổ Hiền đã thăng hoa ý nghĩa cúng dường trở nên cao cả hơn như sau: Thiện Nam Tử! Trong các cách cúng dường, thì Pháp cúng dường là tuyệt vời hơn cả. Đó là tu hành theo lời Phật dạy để cúng dường, làm lợi ích cho chúng sinh để cúng dường, chấp nhận giữ gìn chúng sinh để cúng dường, chịu khổ thay cho chúng sinh để cúng dường, siêng năng tu tập căn lành để cúng dường..."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Luận Về Nhân Quả 07 - <a href="https://youtu.be/mes6wkDbpng?t=882" target="_blank">https://youtu.be/mes6wkDbpng?t=882</a> (id: 4186)</p>
     </div>
 
 </body>

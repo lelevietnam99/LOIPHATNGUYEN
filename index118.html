@@ -3,142 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khoan Dung & Tình Huynh Đệ Không Biên Giới</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Tham Vọng Độc Tôn (Cạm Bẫy Của Việc Giáo Hóa)</title>
     <style>
-        /* Nền hoàng hôn ấm áp, biểu tượng sự khoan dung và hòa hợp */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền sương mù trên núi, tượng trưng cho việc ẩn mình và khiêm hạ */
+            background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #d84315; /* Màu cam ấm áp của tình anh em */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #bf360c;
-            border-bottom: 2px dashed rgba(191, 54, 12, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(191, 54, 12, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #d84315;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(251, 233, 231, 0.7);
-            border-left: 5px solid #d84315;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #bf360c;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #d84315;
-            font-size: 18px;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-heart"></i> Khoan Dung & Tình Huynh Đệ Không Biên Giới</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện mở rộng trái tim, xem 1300 huynh đệ võ sinh Algeria như anh em ruột thịt của mình. Xin cho con dẹp bỏ mọi rào cản về tôn giáo, quốc gia hay văn hóa, để dùng tình yêu thương chân thành nhất chăm sóc, gắn kết và mang lại sự bình an cho những người bạn đạo Hồi vừa gia nhập môn phái."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Trong thế giới hiện đại, sự khoan dung là thước đo vĩ đại của đạo đức. Đạo Phật không bao giờ dạy ta phân biệt hay ghét bỏ người khác tín ngưỡng. Ngược lại, thế giới của sự khoan dung là nơi con người chấp nhận sự khác biệt và sống hòa bình với nhau. Đạo đức cốt lõi của loài người là phải thương nhau, tuyệt đối không được lấy tôn giáo làm thành trì ngăn cách.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Lấy sự khoan dung làm cốt lõi, xóa nhòa rào cản tôn giáo để yêu thương và gắn kết huynh đệ khắp năm châu như một nhà.
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>THAM VỌNG ĐỘC TÔN <br>(Cạm Bẫy Của Việc Giáo Hóa)</h2>
+        
+        <p><strong>Phát biểu:</strong> Nhiều người tu mắc một lỗi rất vi tế nhưng vô cùng nguy hiểm: Ham thích được đứng ra thuyết pháp, làm thầy thiên hạ để thỏa mãn cái ngã. Nếu cứ lao lên phía trước để trực tiếp giáo hóa, họ sẽ rơi vào hàm số của "Tham vọng độc tôn". Ngài Phổ Hiền dạy cách phá giải cạm bẫy này bằng hạnh thứ 6 (Lục giả thỉnh chuyển pháp luân): <span class="highlight">Hãy lùi lại, khiêm hạ thỉnh mời Đức Phật hay vị thầy khác giảng pháp</span>. Đứng ẩn mình ở phía sau để diệt trừ triệt để tham vọng làm số 1.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng nôn nóng muốn thể hiện đạo lý mình biết để người khác phải nể phục. Khi có cơ hội, hãy giới thiệu những Bậc Minh Sư, những vị chân tu để họ giảng pháp thay vì mình tranh giành sự nổi bật. Khi bạn biết lùi lại phía sau và hoàn toàn trống vắng tham vọng độc tôn, <span class="highlight">tự nhiên nhân quả sẽ đưa bạn lên vị trí xứng đáng nhất</span>.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Cứ đứng phía sau, đứng phía sau, đứng phía sau. Nhưng mà đứng phía sau mãi thì như Chúa Giê-xu nói, người mà dành ở phía sau thì phải bị đưa lên tới đằng trước. Nên cứ là một vị Bồ-Tát, đứng ở phía sau, thì một ngày nào công viên quả mãn, mình cũng phải thành người đứng thứ nhất. Nhưng mà thẳm sâu trong tâm hồn mình không có sự độc tôn, tham vọng. Còn nếu mình không đi qua cái bước này mà cứ đòi trực tiếp phải giáo hóa, thì không ngờ mỗi một ngày phát một lời nguyện là mỗi một ngày mình nuôi cái tâm tham vọng độc tôn. Cái sự tinh tế sâu xa là như vậy."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> 06 - Lục Giả Thỉnh Chuyển Pháp Luân - <a href="https://youtu.be/xyMFJK8STUQ?t=3809" target="_blank">https://youtu.be/xyMFJK8STUQ?t=3809</a> (id: 4112)</p>
     </div>
 
 </body>

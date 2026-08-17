@@ -3,142 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thân Giáo & Tình Thương - Ngôn Ngữ Xóa Nhòa Biên Giới</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Bài Phát Nguyện Giữ Gìn Sự Trong Sạch Của Tâm Hồn</title>
     <style>
-        /* Nền bình minh rực rỡ trên núi, biểu tượng thân giáo và sức mạnh tình thương */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền thanh tịnh, tượng trưng cho sự trong sạch của tâm hồn */
+            background-image: url('https://images.unsplash.com/photo-1518173946687-a4c88986a987?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #00acc1; /* Màu xanh ngọc của sự hòa bình và thấu hiểu */
-        }
-
-        .success-factor h1 {
-            font-size: 28px;
-            color: #006064;
-            border-bottom: 2px dashed rgba(0, 96, 100, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
-            text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(0, 96, 100, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #00838f;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
-        }
-
-        .teaching-section {
-            background: rgba(224, 247, 250, 0.7);
-            border-left: 5px solid #00acc1;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
+            background-color: rgba(10, 15, 30, 0.78); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             line-height: 1.8;
-            font-size: 17px;
+            font-size: 1.12rem;
         }
 
-        .teaching-section strong {
-            color: #006064;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        .subtitle {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
 
-        .details-list li {
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        ol {
             margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
+            padding-left: 20px;
         }
 
-        .details-list strong {
-            color: #00acc1;
-            font-size: 18px;
+        li {
+            margin-bottom: 12px;
+            text-align: justify;
         }
 
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        .closing {
+            text-align: center;
+            font-weight: bold;
+            color: #ffd700;
+            font-size: 1.3rem;
+            margin-top: 30px;
+            letter-spacing: 1px;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-hands-helping"></i> Thân Giáo & Sức Mạnh Tình Thần</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con thấu hiểu ngôn ngữ có thể bất đồng, nhưng tình thương và hành động thì ai cũng cảm nhận được. Con xin nguyện đem sự khiêm hạ, tận tụy và tinh thần võ đạo cao thượng của Phật Quang Quyền làm tấm gương sáng. Xin cho con dùng chính đời sống mẫu mực của mình để âm thầm cảm hóa trái tim của các huynh đệ Algeria."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Cách cảm hóa người của tôn giáo bạn hay nhất không phải là tranh luận giáo lý, mà là bằng "thân giáo" – lối sống hiền thiện, đạo đức và vị tha. Khi họ nhìn thấy sự khiêm cung, tử tế và tinh thần xả kỷ của người đệ tử Phật, tự nhiên họ sẽ khởi tâm kính trọng và bị thu hút. Đạo đức chính là ngôn ngữ chung có sức mạnh xóa nhòa mọi biên giới.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Cảm hóa người khác bằng "thân giáo", lối sống đạo đức mẫu mực và tình thương vô ngã thay vì tranh luận giáo lý.
-                </li>
-            </ul>
-        </div>
+        <h1>Bài Phát Nguyện</h1>
+        <div class="subtitle">Giữ Gìn Sự Trong Sạch Của Tâm Hồn</div>
+        
+        <p>Hôm nay quỳ trước Phật đài, con xin thành tâm phát nguyện trước Tam Bảo, xin Phật gia hộ cho con:</p>
+        
+        <ol>
+            <li>Con nguyện giữ tâm hồn trong sáng, luôn biết giữ khoảng cách giữa nam nữ, biết quý trọng phẩm giá và tương lai của chính mình và mọi người.</li>
+            <li>Con nguyện không vướng vào tình cảm nam nữ làm xao lãng việc học tập, tu dưỡng và phụng sự.</li>
+            <li>Con nguyện không chạy theo những cảm xúc bồng bột, những ham muốn ái dục nhất thời hay những lời rủ rê ô nhiễm từ người khác.</li>
+            <li>Con nguyện mạnh dạn nhắc nhở, khuyên can và hỗ trợ huynh đệ cùng giữ gìn giới hạnh, không để ai vì thiếu hiểu biết hay yếu lòng mà vướng vào ái dục.</li>
+            <li>Con nguyện biết tôn trọng mọi người bằng tình thương chân thành, trong sáng và đúng mực; không khởi tâm đắm nhiễm hay làm tổn thương người khác vì tình cảm riêng tư.</li>
+            <li>Con nguyện dành tuổi trẻ để học tập, rèn luyện đạo đức, phụng sự đất nước, đạo pháp và mọi người xung quanh.</li>
+            <li>Con nguyện siêng năng làm việc thiện, kính trọng mọi người, biết sống khiêm hạ, chân thật và có trách nhiệm.</li>
+            <li>Con nguyện cho tất cả huynh đệ của con và mọi người luôn giữ gìn giới hạnh, bảo vệ sự trong sạch của thân tâm như gìn giữ một viên ngọc quý, để đủ sức vượt qua mọi cám dỗ và trở thành người có ích cho cuộc đời.</li>
+        </ol>
+        
+        <div class="closing">Nam Mô Bổn Sư Thích Ca Mâu Ni Phật.</div>
     </div>
 
 </body>

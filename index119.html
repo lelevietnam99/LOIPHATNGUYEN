@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tri Ân Sư Phụ - Sắt Son Một Lòng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Ảo Giác Chấp Không (Sự Triệt Tiêu Động Lực Tinh Tấn)</title>
     <style>
-        /* Nền ngọn đuốc, biểu tượng ánh sáng Chánh Pháp và sự nhiệt huyết */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1543163521-1bf539caffe5?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền dòng nước tĩnh lặng nhưng sâu thẳm, biểu tượng cho sức mạnh tiềm ẩn của tâm thức */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #fbc02d; /* Màu vàng kim của sự quý giá, trí tuệ */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #b8860b;
-            border-bottom: 2px dashed rgba(184, 134, 11, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(184, 134, 11, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #daa520;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(255, 247, 209, 0.7);
-            border-left: 5px solid #fbc02d;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #b8860b;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #daa520;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #fbc02d;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #fbc02d;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(251, 192, 45, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #daa520;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-fire"></i> Tri Ân Sư Phụ</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện suốt đời ghi khắc ân tình và lý tưởng vĩ đại của Sư Phụ. Dẫu muôn kiếp luân hồi, xin cho con mãi mãi là đệ tử của Người, cùng đại chúng đoàn kết thành một khối sắt son, đem đạo lý thắp sáng mọi ngõ ngách, hoàn thành ước mơ đại đồng của Sư Phụ."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Sư Phụ là người đã dùng cả cuộc đời và tâm huyết để mở ra con đường Bát Chánh Đạo sáng ngời. Tình thương của Sư Phụ dành cho đệ tử là tình thương vô điều kiện. Trách nhiệm của chúng ta là phải nương tựa vào nhau, mồi ngọn lửa nhiệt huyết từ trái tim Sư Phụ để truyền bá Chánh Pháp, giữ gìn mạng mạch Đạo Phật đến ngàn sau.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Đoàn kết cùng nhau giáo hóa chúng sinh, nguyện mãi mãi là đệ tử trung kiên của Sư Phụ.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Nhiệm vụ của tụi con là đoàn kết nhau, hỗ trợ nhau mà giáo hóa chúng sinh đem cái chân lý, đem cái lẽ phải đến cho cuộc đời. Sư phụ ơi, mãi mãi chúng con xin được làm đệ tử sư phụ, xin được sắt son, trung kiên theo bước chân người đến vô lượng kiếp sau. Ước mong sao, một ngày bóng tối sẽ lùi dần, hào quang lan tỏa mọi miền, chánh pháp thắp sáng nơi nơi..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/N18WYzhDNGQ?t=211" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (3:31 - 6:13) - ID: 432
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>ẢO GIÁC CHẤP KHÔNG <br>(Sự Triệt Tiêu Động Lực Tinh Tấn)</h2>
+        
+        <p><strong>Phát biểu:</strong> Khi hành giả rơi vào "Tà kiến chấp không" – tức là xem mọi vọng tưởng, mọi hiện tượng đều là ảo ảnh không có tác dụng gì – họ sẽ tự động kích hoạt một hàm số "triệt tiêu sự tinh tấn". Việc nghĩ rằng mọi thứ đều là "không" khiến họ trở nên buông lung, lười biếng. Trong khi đó, tâm thức vốn không cố định: nếu khéo nỗ lực tu (tinh tấn) thì tâm an tịnh, nếu buông trôi (chấp không) thì tâm sẽ lăng xăng và tạo ác nghiệp dễ dàng.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng bao giờ mượn lý lẽ "tất cả là hư vô, là không" để ngụy biện cho sự lười biếng tu tập hay sống vô trách nhiệm. Vọng tưởng tuy vô hình nhưng nếu không kiểm soát, nó có sức mạnh "<span class="highlight">lật úp thuyền bè, giết người đốt nhà</span>". Hãy luôn tinh tấn, nỗ lực hết mình trong từng phút giây để giữ gìn tâm ý.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Nếu ông cho rằng vọng tưởng không có tác dụng, biết ông rơi vào tà kiến chấp không. Có thể ông được sức tỉnh giác để kiểm soát vọng tưởng dễ dàng, nhưng nếu vì thế mà ông cho rằng vọng tưởng không có tác dụng thì rơi vào tà kiến chấp không. Khi sống lặng yên, thì ta cho rằng sống không có tác dụng. Nhưng nếu nó vùng dậy, thì có thể lật úp thuyền bè, cuốn trôi nhà cửa. Vì tâm lăng xăng thì dường như không có tác dụng, nhưng nếu nó vùng dậy thì chẳng chuyện gì mà không làm: giết người, đốt nhà, trút cổ là chuyện dễ dàng. Nếu chấp không như ông, thì đánh mất sự tinh tấn của mọi người."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Luận Về Nhân Quả 06 - <a href="https://youtu.be/i3ov5sKvIOg?t=1800" target="_blank">https://youtu.be/i3ov5sKvIOg?t=1800</a> (id: 4829)</p>
     </div>
 
 </body>

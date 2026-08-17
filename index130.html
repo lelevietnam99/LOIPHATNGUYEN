@@ -3,142 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Võ Đạo Chân Chính - Khiêm Hạ & Vững Chãi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Quyền Năng Nhân Quả (Viết Lại Số Phận)</title>
     <style>
-        /* Nền võ đường thanh tịnh, biểu trưng cho sự rèn luyện chân chất và khiêm hạ */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền bầu trời rộng mở, biểu tượng cho việc làm chủ tương lai */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #4e342e; /* Màu nâu trầm ấm của sự vững chãi và khiêm cung */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #3e2723;
-            border-bottom: 2px dashed rgba(62, 39, 35, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(62, 39, 35, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #5d4037;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(239, 235, 233, 0.7);
-            border-left: 5px solid #4e342e;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #3e2723;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #4e342e;
-            font-size: 18px;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-fist-raised"></i> Võ Đạo Chân Chính - Khiêm Hạ & Vững Chãi</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện dẫu đòn đánh có chưa chắc, con cũng không vì tự ái mà gồng mình che giấu. Xin cho con giữ tâm khiêm hạ, luôn biết lắng nghe sự uốn nắn của huấn luyện viên và huynh đệ, không múa may phô trương hình thức mà đánh mất đi cái hồn cốt vững chãi, tĩnh tại của người đệ tử Phật."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Võ thuật là phương tiện để rèn đạo đức. Người thích phô trương sẽ đánh rất nhanh, múa rất đẹp nhưng bên trong rỗng tuếch, yếu ớt. Người khiêm hạ thì chậm mà chắc, luôn biết nhìn nhận khuyết điểm của mình để từng bước hoàn thiện bản thân.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Rèn luyện võ thuật bằng sự khiêm hạ, không phô trương hình thức, luôn lắng nghe và sửa đổi để vun bồi nội lực vững chắc.
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>QUYỀN NĂNG NHÂN QUẢ <br>(Viết Lại Số Phận)</h2>
+        
+        <p><strong>Phát biểu:</strong> Người tu rất hay rơi vào sai lầm của thuyết định mệnh: "Mọi thứ đã được an bài = Tôi chỉ việc cam chịu". Phương trình thực sự của Nhân quả không bao giờ là một hằng số chết, mà nó luôn mang biến số để thay đổi: "<span class="highlight">Biết quả báo xấu từ quá khứ + Chủ động gieo nhân tốt hiện tại = Viết lại số phận tương lai</span>". Nhân quả trao cho ta quyền năng tối thượng để tự thiết kế lại cuộc đời mình, không bắt ta phải ngồi chờ thời hay chịu trận.</p>
+        
+        <p><strong>Ứng dụng:</strong> Nếu hiện tại bạn đang học dở, nghèo khó, hay bệnh tật... đừng tặc lưỡi buông xuôi đổ thừa cho nghiệp kiếp trước rồi bỏ phế bản thân. Hãy dùng chính hiểu biết đó làm động lực bật rễ: Đang nghèo thì ráng bố thí từng ngàn lẻ, dốt thì ráng học và chỉ bài cho người khác. <span class="highlight">Quyền năng quyết định cuộc đời luôn nằm trong tay bạn ngay ở giây phút này.</span></p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Nhân quả là để cho ta thay đổi, chứ không phải là nhân quả là để cho ta an phận. Hiểu vậy là sai rồi. Tại trong nhân quả nó có yếu tố tất nhiên và ngẫu nhiên. Ví dụ như mình dốt, biết là đời xưa mình gieo cái nhân lầm, thì bây giờ mình ráng mình gieo cái nhân mới để nó sửa cái dốt đó đi. Ví dụ bây giờ mình nghèo, thì đó là cái nhân quả kiếp trước, bây giờ mình ráng mình gieo nhân để sửa cái nhân đó đi, để cho ngay trong kiếp này mình bớt nghèo và kiếp sau mình rất giàu. Luật nhân quả là để cho ta điều chỉnh cuộc đời của mình theo ý mình, theo ý mình, không theo ý ai hết. Mình gieo nhân gì sẽ gặt quả đó và mình muốn mình như thế nào, mình biết cái nhân để mình trồng, mình gieo. Nên luật nhân quả cho ta cái quyền để quyết định cuộc đời mình."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> 71 Đào Hoa - <a href="https://youtu.be/NgNA4ba9AuM?t=6279" target="_blank">https://youtu.be/NgNA4ba9AuM?t=6279</a> (id: 4702)</p>
     </div>
 
 </body>
