@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nghiệp Cứ Trả Phước Cứ Làm Đạo Cứ Tu - Ánh Mắt Dịu Dàng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Nghịch Lý Căn Cơ (Phương Trình Dụng Công Sai)</title>
     <style>
-        /* Nền ánh mắt dịu dàng, biểu tượng sự rèn luyện tình thương */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền núi non vững chãi, biểu tượng cho việc đi đúng lộ trình tu tập */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #d84315; /* Màu đỏ cam của tình thương nhiệt huyết */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #bf360c;
-            border-bottom: 2px dashed rgba(191, 54, 12, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(191, 54, 12, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #d84315;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(251, 233, 231, 0.7);
-            border-left: 5px solid #d84315;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #bf360c;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #d84315;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #d84315;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #d84315;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(216, 67, 21, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #bf360c;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-eye"></i> Nghiệp Cứ Trả Phước Cứ Làm Đạo Cứ Tu</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện luôn kiểm soát chặt chẽ đôi mắt của mình, tuyệt đối không bao giờ dùng ánh mắt hung dữ, trừng trừng hay lạnh lùng để nhìn người khác. Xin cho con mỗi khi nhìn ai cũng mang một ánh mắt dịu dàng, trìu mến và ngập tràn tình thương yêu, để không bao giờ làm vỡ nát đạo tâm của bất kỳ chúng sinh nào."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Khi hiểu về nhân quả, ta sẽ thấy nhúc nhích một ánh mắt cũng có thể tạo thành tội. Chỉ một cái trừng mắt dữ tợn của ta cũng có thể làm người ta sợ hãi, tổn thương và mất đạo tâm, không dám đến chùa nữa. Người tu phải đứng trước gương tập luyện đôi mắt mình mỗi ngày cho đến khi ánh mắt trở nên dịu dàng, ngọt ngào và tử tế.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Ánh mắt nhúc nhích cũng thành tội, phải luyện đôi mắt dịu dàng trước gương.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... từ cái ánh mắt, cái nhìn, tay chân nhúc nhích gì cũng phải được cái trí tuệ đó kiểm soát, bởi vì nhúc nhích cái thành tội. Ví dụ một người họ đến chùa, mình trừng mắt họ nhìn một cái, nghĩa là làm mất đạo tâm của họ phải hai, ba tháng... Cho nên khi mà người hiểu đạo rồi về phải luyện cái gì? Luyện đôi mắt. Đứng trước gương nhìn, mình cứ nhìn mình sửa đôi mắt từ từ... bắt đầu nó nhìn nó dịu dàng, yêu thương, trìu mến..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/Cc7JIEwUNdk?t=1935" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (32:15 - 33:29) - ID: 302
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>NGHỊCH LÝ CĂN CƠ <br>(Phương Trình Dụng Công Sai)</h2>
+        
+        <p><strong>Phát biểu:</strong> Một sai lầm cực kỳ phổ biến và nguy hiểm của người tu là "Dụng công sai với trình độ". Khi căn cơ (nền tảng đạo đức, phước báu) của ta chỉ ở bậc thấp nhưng vì tham lam, nôn nóng đắc đạo mà ta ép tâm mình thực hành những pháp môn cao siêu. Sự lệch pha này sẽ tạo ra ngõ cụt bí mật trong tâm, khiến đường tu bị tắc nghẽn, thậm chí qua kiếp sau tụt mất phước báu mà không rõ lý do.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng vội vàng ham thích những pháp tu cao siêu hay ép mình ngồi thiền hàng giờ khi tâm còn đầy rẫy sự ganh ghét, tham lam. <span class="highlight">Hãy biết mình đang ở đâu.</span> Hãy bắt đầu từ những việc nhỏ nhất: nhặt rác, làm phước, nhẫn nhục, lễ kính Phật. Khi nền tảng đạo đức vững chắc, sự tu tập mới tự nhiên thăng tiến mà không bị rớt đài.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Ta để ý nè, cái lỗi của người tu là mình dụng công sai với căn cơ của mình. Mình ở thứ 2, thứ 3 mà mình đòi dụng công của người thứ 6, thứ 7 là sai... Còn cái lỗi của cái người tu nữa đó, là dụng công sai bí mật trong tâm, không ai biết để gỡ ra."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Những Căn Cơ Tu Thiền - <a href="https://youtu.be/2DgWsF7DpJc?t=4839" target="_blank">https://youtu.be/2DgWsF7DpJc?t=4839</a> (id: 4548)</p>
     </div>
 
 </body>

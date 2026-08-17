@@ -3,142 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gieo Rắc Chân Lý Nhân Quả - Trí Tuệ & Khéo Léo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Cấu Trúc Đổ Vỡ (Sự Phô Trương Và Nội Tâm)</title>
     <style>
-        /* Nền ánh nắng xuyên qua tán lá, biểu tượng quy luật tự nhiên phổ quát */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền sương mù trên núi, tượng trưng cho chiều sâu nội tâm cần khám phá */
+            background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #f57f17; /* Màu vàng ấm áp của ánh nắng tri thức */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #e65100;
-            border-bottom: 2px dashed rgba(230, 81, 0, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(230, 81, 0, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #f57c00;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(255, 248, 225, 0.7);
-            border-left: 5px solid #f57f17;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #e65100;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #f57f17;
-            font-size: 18px;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-seedling"></i> Gieo Rắc Chân Lý Nhân Quả</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện dẫu không bàn luận về sự khác biệt tín ngưỡng, nhưng sẽ luôn tìm cơ hội khéo léo gieo rắc chân lý Nhân quả cho các huynh đệ võ sinh. Xin cho con bằng trí tuệ và sự tinh tế, giúp họ nhận ra rằng làm việc thiện, tránh việc ác và tin sâu vào nhân quả là chiếc chìa khóa vạn năng mang lại hạnh phúc cho mọi sinh linh."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Luật nhân quả không phải là tài sản riêng của Đạo Phật, mà là quy luật công bằng của cả vũ trụ. Người đệ tử Phật khi tiếp xúc với các tôn giáo khác phải mạnh dạn nhưng cực kỳ khéo léo giới thiệu Luật nhân quả. Đây là cốt lõi để giúp họ sống có trách nhiệm hơn, mở rộng trí tuệ và từng bước chuyển hóa những quan niệm cực đoan.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Khéo léo giới thiệu quy luật Nhân quả phổ quát đến các huynh đệ võ sinh để giúp họ sống thiện lành, chuyển hóa quan niệm và mở rộng trí tuệ.
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>CẤU TRÚC ĐỔ VỠ <br>(Sự Phô Trương Và Nội Tâm)</h2>
+        
+        <p><strong>Phát biểu:</strong> Quá trình tu hành là một cuộc đại tu sửa cấu trúc nội tâm. Phương trình cốt lõi là: "<span class="highlight">Gọt rửa bản ngã = Đạo lý thăng hoa</span>". Một sai lầm thảm khốc mà nhiều người mắc phải là bỏ qua bước gọt rửa nội tâm, chỉ thích chạy theo những hào nhoáng, phô trương hình thức bên ngoài. Khi lớp vỏ bên ngoài được củng cố nhưng bên trong lại rỗng tuếch, chỉ cần một biến cố nhỏ tác động, toàn bộ bản năng tham sân si sẽ bùng nổ, kéo theo sự sụp đổ của toàn bộ công phu tu tập.</p>
+        
+        <p><strong>Ứng dụng:</strong> Đừng vội vàng ham thích xây dựng một hình ảnh tu hành bóng bẩy, hay cố thể hiện mình tài giỏi để được người khác tung hô. Hãy <span class="highlight">âm thầm đối diện với những góc tối trong tâm hồn mình</span>. Dành thời gian sửa chữa sự đố kỵ, tính sân si, ích kỷ trước khi tính đến chuyện làm những việc lớn lao bề nổi. Nội tâm vững chắc thì đạo nghiệp mới bền lâu.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Nhất là khi một người mà không chịu cải tạo nội tâm của mình cho tốt mà thích làm những chuyện hào nhoáng, phô trương bên ngoài thì bản ngã càng lúc càng được củng cố và càng không chịu tu. Nên lẽ ra Thầy phải xếp họ vào tu, bắt họ vào tu cho nghiêm túc, gọt rửa cái bản ngã họ cho nhỏ xuống, để rồi tự cái đạo lý trong lòng họ sẽ thăng hoa, sẽ lớn dậy. Nhưng Thầy đã luôn chịu, Thầy đã để yên và cứ tiếp tục khai thác, phát huy họ ở những cái thế mạnh của họ, những cái thế mà hào nhoáng ở bên ngoài mà không xây sâu sự tu tập nội tâm ở bên trong. Nên khi đụng chuyện, toàn bộ những bản năng sân si, ích kỷ họ nổi lên, rồi kéo phe, kéo nhóm lẫn nhau, rồi rồi hư, đổ, vỡ, sụp đổ tất cả luôn."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Lắng Nghe Ai - <a href="https://youtu.be/EutAz_Oqtb4?t=1275" target="_blank">https://youtu.be/EutAz_Oqtb4?t=1275</a> (id: 3842)</p>
     </div>
 
 </body>

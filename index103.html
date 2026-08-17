@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sống Nhanh Sống Chậm - Khẩn Trương & Kỹ Lưỡng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Nghịch Lý Kiêu Mạn Và Khiêm Hạ</title>
     <style>
-        /* Nền chuyển động ánh sáng, biểu tượng tác phong nhanh nhẹn và sắc bén */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền sương mù trên núi, biểu tượng cho sự khiêm hạ và tầm nhìn xa */
+            background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #ef6c00; /* Màu cam nhiệt huyết */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #e65100;
-            border-bottom: 2px dashed rgba(230, 81, 0, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(230, 81, 0, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #f57c00;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(255, 243, 224, 0.7);
-            border-left: 5px solid #ef6c00;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #e65100;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #ef6c00;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #ef6c00;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #ef6c00;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(239, 108, 0, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #e65100;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-bolt"></i> Sống Nhanh Sống Chậm</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khi đối mặt với những công việc đột xuất, gấp gáp, con sẽ xem đó là cơ hội tuyệt vời để rèn luyện tác phong 'sống nhanh'. Xin cho đôi tay con thoăn thoắt, làm việc với tốc độ cao nhất nhưng vẫn giữ được sự tỉ mỉ, đẹp đẽ và gọn gàng, tuyệt đối không vì nhanh mà ẩu tả."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Trong thời đại này, ta phải tập làm việc khẩn trương, căng thẳng, nhanh tay lẹ mắt để giải quyết công việc trong chớp mắt. Nhưng cái hay là làm cực nhanh mà đâu ra đó, đồ vật sắp xếp đẹp đẽ, gọn gàng. Đó chính là lúc ta rèn luyện bản lĩnh để không bao giờ bị thua sút trong cuộc đời.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Dùng những công việc gấp gáp để tập tác phong làm việc khẩn trương, nhanh mà vẫn kỹ lưỡng, gọn gàng.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Nhưng mà đó là những cơ hội để tập cái làm việc khẩn trương... Tụi con làm đi bước đi có nhanh hay không, rồi có làm cho sắp vào chỗ có gọn, nhanh tay, mà đồ nào ra đồ đó... nhanh thật nhanh, mà đẹp thật đẹp, gọn thật gọn... Đó là những lúc ta rèn luyện như vậy. Hiện nay ta bị thiếu cái này nên ta phải tập dữ lắm..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/L033ghinHv8?t=1126" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (18:46 - 19:53) - ID: 6385
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>NGHỊCH LÝ KIÊU MẠN VÀ KHIÊM HẠ</h2>
+        
+        <p><strong>Phát biểu:</strong> Tâm thức con người vận hành theo một phương trình nghịch lý: "<span class="highlight">Kiêu mạn = Khoái trí nhất thời = Đốt sạch công đức; Khiêm hạ = Thấy mình thấp kém = Tích lũy phước báu bền vững</span>". Kiêu mạn là một loại bản năng thích chê bai, nạt nộ người khác để thỏa mãn sự khoái trá của cái ngã, và nó là kẻ thù số 1 đánh sập mọi sự nghiệp. Chỉ có khiêm hạ, luôn tự thấy mình tầm thường và sẵn sàng phục vụ người khác mới giữ được phước báu mãi mãi.</p>
+        
+        <p><strong>Ứng dụng:</strong> Dù bạn đang đứng trên đỉnh cao của sự nghiệp, quyền lực hay tu hành, hãy luôn tự nhắc nhở bản thân chỉ là cát bụi. Hãy luôn tôn trọng cái hay và che giấu cái dở của người khác. Mỗi khi thấy mình giỏi hơn người, lập tức phải kềm cái tự mãn lại. Sự <span class="highlight">khiêm nhường tột độ</span> đó sẽ giúp phước báu và tài năng của bạn tồn tại bền bỉ không bao giờ sụp đổ.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Hãy kiêu mạn, ta mất phước rất lẹ, nhưng mà hãy khiêm hạ thì ta tích phước dần dần. Cái kiêu mạn nó là một bản năng, nó làm cho ta có cảm giác khoái chí, cái vui khoái chí, khoái trá và chính nhiều người mê cái khoái chí này nên thích giữ cái thái độ kiêu mạn. À, mình chê người này, mình nạt người kia, nó có cái khoái chí, nên cứ thích như vậy hoài, đâu có ngờ rằng đốt sạch cái công đức của mình. Còn cái khiêm hạ là mình tôn trọng cái hay của người khác, mình che đậy cái dở của người khác, mình dìu dắt cái người từ sai trở thành đúng, lúc nào cũng tự thấy mình còn kém cỏi, lúc nào cũng tự biết mình chỉ là tầm thường. Thì cái đó nó không tạo ra một cảm giác khoái trá, khoái chí, nhưng nó tạo ra một cảm giác gì? Làm cảm giác gì? Ai có khiêm hạ thì phải thấy cảm giác này. Khi ta khiêm hạ, ta phục vụ người khác được."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Kiêu Mạn Và Khiêm Hạ - <a href="https://youtu.be/SXNQbGMeiPM?t=2653" target="_blank">https://youtu.be/SXNQbGMeiPM?t=2653</a> (id: 4653)</p>
     </div>
 
 </body>

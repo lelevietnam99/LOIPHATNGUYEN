@@ -3,158 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giữ Gìn Sự Bình An Cho Nhau - Ái Dục & Sự Động Loạn</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Tỷ Lệ Đảo Của Sự Kiêu Mạn (Thước Đo Bậc Thánh)</title>
     <style>
-        /* Nền băng mỏng, biểu tượng sự cảnh giác đối với ái dục */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1478479401825-1e072f5349e5?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền núi non hướng thượng, biểu tượng cho sự kính lễ và khiêm hạ tột cùng */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #546e7a; /* Màu xanh xám của sự lạnh lùng, cảnh giác */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #37474f;
-            border-bottom: 2px dashed rgba(55, 71, 79, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(55, 71, 79, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #455a64;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(236, 239, 241, 0.7);
-            border-left: 5px solid #546e7a;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #37474f;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #546e7a;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #546e7a;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-shield-alt"></i> Giữ Gìn Sự Bình An Cho Nhau</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con thấu hiểu ái dục là một bản năng vô cùng mãnh liệt và nguy hiểm. Con xin nguyện không bao giờ chủ quan hay tự cao cho rằng mình đã vững vàng. Xin cho con luôn xem sự ái luyến như đi trên băng mỏng, như lưỡi dao sắc bén để tuyệt đối tránh xa những duyên cớ làm động tâm."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Phàm phu thường coi tình yêu hay sắc dục là chuyện bình thường của tự nhiên. Nhưng khi ái dục vừa khởi lên trong tâm, nó lập tức kéo theo hàng triệu những phiền động và xáo trộn khác, phá nát sự thanh tịnh. Hễ còn để tâm ái nhiễm thì con đường bước lên quả vị Thánh sẽ vĩnh viễn bị chặn đứng.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Ái dục kéo theo vô số phiền toái và động loạn trong tâm, tuyệt đối không được coi thường.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Nên mình ái là mình đã động tâm. Rồi mình tìm cách mình làm cho người ta cũng khởi cái ái lên, kéo lên vô số phiền não lên trong tâm một con người... Tâm kéo lên không biết bao nhiêu sự động loạn. Mà thầy nói cái ái vậy đó, còn cái dục khủng khiếp nữa. Chúng ta nói 'ờ cái dục là cái bản năng sinh lý bình thường của con người'. Không có bình thường đâu! Khi cái dục khởi lên rồi, có mấy triệu những cái phiền động trong tâm khởi lên theo. Đó là lý do mà hễ thấy còn dục thì biết người này con đường làm Thánh còn bị ngăn cản rất nhiều..."
-                    </span>
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>TỶ LỆ ĐẢO CỦA SỰ KIÊU MẠN <br>(Thước Đo Bậc Thánh)</h2>
+        
+        <p><strong>Phát biểu:</strong> Có một sự nhầm lẫn lớn trong việc đánh giá trình độ tu tập: Kẻ phàm phu học được chút ít thì kiêu mạn, cho rằng "Tôi với Phật bằng nhau, Phật là Phật đã thành, tôi là Phật sẽ thành". Nhưng luật nhân quả vận hành theo tỷ lệ thuận với sự khiêm hạ: "<span class="highlight">Đạo hạnh càng cao siêu = Sự tôn kính Phật càng tuyệt đối</span>". Bậc Bồ Tát tu đến đỉnh cao vẫn xem việc lễ kính Chư Phật là hạnh nguyện số 1 (Nhất giả lễ kính chư Phật), tuyệt đối không bao giờ dám xem thường hay đánh đồng mình ngang hàng với Phật.</p>
+        
+        <p><strong>Ứng dụng:</strong> Nếu có ai đó tu hành xưng danh xưng tánh, vỗ ngực cho mình ngang hàng với Phật hay không thèm lạy Phật nữa, hãy lập tức nhận diện đó là sự tà kiến sai lầm ("cái người đó là vứt đi"). Càng thấy mình tiến bộ, ta càng phải khiêm hạ và <span class="highlight">cúi đầu sát đất trước ân đức của Thế Tôn</span>. Đó mới là đi đúng đường.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Ở lòng tôn kính, tôn kính Phật, đó chỗ này là dễ lấy phước lắm. Nên ngày nào Bồ Tát cũng phải lễ Phật, mỗi ngày ai lễ Phật người đó là Bồ Tát... Cho nên trong 10 hạnh Phổ Hiền, cái đầu tiên là gì? Nhất giả lễ kính chư Phật, tuyệt vời, không có cái chân lý nào qua chỗ này được. Nên phải nhớ như vậy, nhất giả lễ kính chư Phật, vì tu mà nếu thiếu lễ kính Phật thì người này mất căn bản, không đúng đường. Càng cao siêu chừng nào thì người ta lại càng tôn kính Phật chừng nấy. Còn mà nó cao siêu rồi, tôi với Phật cũng như nhau, Phật là Phật đã thành, tôi là Phật sẽ thành... cái người đó là vứt đi, nói bậy!"
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> KINH NIKAYA 123 - Kinh Hữu Học - <a href="https://youtu.be/4100" target="_blank">https://youtu.be/4100</a> (id: 4100)</p>
     </div>
 
 </body>

@@ -3,142 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cái Nhìn Trí Tuệ - Thấu Suốt Nghiệp Quả</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Cội Nguồn Công Đức (Phương Trình Sinh Lời Vô Hạn)</title>
     <style>
-        /* Nền ánh sáng xuyên qua mây, biểu tượng trí tuệ thấu thị */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền ánh sáng thiêng liêng, tượng trưng cho tâm hướng Phật */
+            background-image: url('https://images.unsplash.com/photo-1518173946687-a4c88986a987?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #00acc1; /* Màu xanh ngọc của trí tuệ sâu sắc */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #006064;
-            border-bottom: 2px dashed rgba(0, 96, 100, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(0, 96, 100, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #00838f;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(224, 247, 250, 0.7);
-            border-left: 5px solid #00acc1;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
         }
 
-        .teaching-section strong {
-            color: #006064;
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #00acc1;
-            font-size: 18px;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-eye"></i> Cái Nhìn Trí Tuệ & Thấu Thị</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện dẹp bỏ cái nhìn hời hợt của phàm phu. Xin cho con khi nhìn bất kỳ ai, không chỉ thấy hình tướng sinh lý bề ngoài hay vui buồn tâm lý hiện tại, mà bằng trí tuệ, con có thể nhìn thấu suốt cả nghiệp quả quá khứ, tương lai của họ, để từ đó con biết cách thương yêu và độ hóa họ trọn vẹn nhất."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Cái nhìn sinh học chỉ đánh giá con người qua chiều cao, cân nặng, nhan sắc. Nhưng người có trí tuệ vĩ đại sẽ nhìn xuyên qua tất cả, thấy trọn vẹn bản chất nội tâm, thấy cả quá khứ họ đã gieo nhân gì và vị lai họ sẽ đi về đâu. Đó là cái nhìn thấu thị của từ bi và giác ngộ, giúp họ đưa ra những lời khuyên và sự giáo hóa chính xác tuyệt đối.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Vượt qua cái nhìn sinh học bề ngoài để phát triển tuệ nhãn thấu suốt nhân quả và độ hóa chúng sinh.
-                </li>
-            </ul>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>CỘI NGUỒN CÔNG ĐỨC <br>(Phương Trình Sinh Lời Vô Hạn)</h2>
+        
+        <p><strong>Phát biểu:</strong> Lòng tôn kính Phật đóng vai trò là "Công đức gốc" (Công đức mẫu) để tự động sinh ra vô lượng công đức khác. Quy luật nhân quả vận hành theo tỷ lệ thuận tuyệt đối: "<span class="highlight">Lòng tôn kính Phật lớn chừng nào = Đạo quả về sau lớn chừng đó</span>". Nếu phương trình tu tập mà thiếu đi biến số "Lễ kính Phật", thì dù bạn có thực hành pháp môn cao siêu nào đi nữa, toàn bộ công phu đó cuối cùng cũng sẽ sụp đổ, mất căn bản và "hư hết".</p>
+        
+        <p><strong>Ứng dụng:</strong> Trên bước đường tu, đừng vội ham chứng đắc những điều kỳ bí hay lơ là việc lạy Phật hằng ngày. Hãy đặt việc quỳ dưới chân Phật và thiết tha lễ kính lên vị trí số 1. Chỉ khi nào bạn khơi dậy được <span class="highlight">cảm xúc thiêng liêng</span>, thấy Phật luôn hiện diện trong tâm mình, thì đó mới là bảo chứng vững chắc nhất cho mọi phước báu của bạn trong tương lai.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Mà ở đây chúng ta may mắn, chúng ta có được một bậc Thánh tuyệt vời. Đức Phật là vị Thánh vượt lên trên mọi vị Thánh, vẹn toàn vô cùng hoàn hảo, không có một điểm sơ hở nhỏ. Nên lòng chúng ta tôn kính Phật nhiều chừng nào thì cái đạo quả của mình về sau lớn chừng đó. Nên người tu phải ráng lễ kính Phật hàng ngày, nhất là có những thời khóa lễ riêng. Bởi vì lúc mà mình lễ chung với đại chúng, mình sẽ bị phân tâm, mình sẽ phải theo lên xuống cho đều, nên có những thời khóa lễ Phật riêng, khá nhanh. Cũng nên một mình vào chánh điện, với tâm thế ai lễ với sự tha thiết của mình, khởi tâm thật mạnh, thật tha thiết, mà tôn kính Phật, để đến ngày nào mình đạt được cảm xúc thiêng liêng luôn. Trong đời sống của mình lúc nào cũng cảm thấy như có Đức Phật hiện diện, tâm mình lúc nào cũng hướng về Phật, với lòng tha thiết, đó là đúng. Nên hạnh lễ kính Phật cực kỳ quan trọng. Đây là công đức mà tạo ra vô lượng công đức khác. Không có công đức lễ Phật là phải hư nha."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> 02. Người xuất gia và công phu tu tập - <a href="https://youtu.be/unSfq-94ido?t=2087" target="_blank">https://youtu.be/unSfq-94ido?t=2087</a> (id: 1171)</p>
     </div>
 
 </body>

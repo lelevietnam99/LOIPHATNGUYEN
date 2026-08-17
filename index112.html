@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Tại Gia - Ánh Mắt Từ Bi, Không Phân Biệt</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Che Giấu Hình Tướng (Nghịch Lý Của Sự Bộc Lộ)</title>
     <style>
-        /* Nền cánh hoa dịu nhẹ, biểu tượng sự tĩnh tại và tình thương */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1596489379685-c5112f4648a1?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền sương mù che phủ, tượng trưng cho sự ẩn tu, che giấu hình tướng */
+            background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #81c784; /* Màu xanh lá dịu mát của tình thương */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #2e7d32;
-            border-bottom: 2px dashed rgba(46, 125, 50, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(46, 125, 50, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #388e3c;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(232, 245, 233, 0.7);
-            border-left: 5px solid #81c784;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #2e7d32;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #81c784;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #81c784;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #81c784;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(129, 199, 132, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #66bb6a;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-eye"></i> Tu Tại Gia</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện mỗi khi mở mắt nhìn cuộc đời, con sẽ thu nhiếp tâm trí, không để mình bị cuốn theo sự phân biệt, soi mói hay đánh giá vẻ bề ngoài của bất kỳ ai. Xin cho con dùng đôi mắt chỉ với một mục đích duy nhất: lan tỏa tình yêu thương và sự kính trọng đồng đều đến mọi người."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Phàm phu mở mắt ra là bắt đầu phân tích, soi mói người này mập, người kia ốm, người nọ xấu đẹp. Sự phân biệt đó làm hoạt động của mắt tăng lên và làm tâm bị động, xao xuyến. Người biết tu nhiếp tâm thì dẫu mở mắt nhìn, họ không còn phân biệt ngoại hình, mà chỉ dùng ánh mắt đó để trải tình thương và sự tôn kính.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Nhìn mọi người không phân biệt soi mói, chỉ để thương yêu và kính trọng.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... khi tôi nhìn, tôi cứ phân tích, tôi chăm chú, tôi soi mói. Thì đó là gì? Đó là mình tăng cái hoạt động của con mắt lên và làm động cái tâm mình... Nhưng mà bây giờ ngược lại, mắt tôi cũng mở tôi nhìn các Phật tử này, tôi không soi mói được gì, không cần biết ai là ai, tôi chỉ biết là tôi cố gắng tôi thương được mọi người, tôi kính trọng được mọi người thôi... thì như vậy tôi nhìn mà cái nhìn nó đã bớt..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/DJ4FMOgBFic?t=2680" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (44:40 - 45:48) - ID: 3989
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>CHE GIẤU HÌNH TƯỚNG <br>(Nghịch Lý Của Sự Bộc Lộ)</h2>
+        
+        <p><strong>Phát biểu:</strong> Việc tu tập của một người tuân theo định luật bảo toàn sinh thái của nhân quả: Nếu năng lượng đạo đức bên trong chưa đủ sâu dày mà đã vội vàng bộc lộ hình tướng ra bên ngoài cho thiên hạ biết, thì ngay lập tức những chướng ngại sẽ ập tới làm rớt đài. "<span class="highlight">Thầm lặng tu tập = Phước báu được niêm phong bảo vệ; Phô trương tu tập = Rò rỉ và mất sạch công phu</span>".</p>
+        
+        <p><strong>Ứng dụng:</strong> Nếu bạn đang nỗ lực ăn chay, ngồi thiền, hay phát nguyện nhập thất, hãy cố gắng giấu thật kín, đừng đi kể hay khoe khoang cho ai biết. Việc tu mà bị lộ ra ngoài hình tướng một cách ồn ào thì trước sau gì cũng "bể". Hãy sống bình thường như mọi người, nhưng bên trong âm thầm giữ chặt công phu. Nhờ sự <span class="highlight">kín đáo tuyệt đối</span> đó, bạn mới được an ổn tu hành lâu dài mà không bị ma chướng phá hoại.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Vì cái gì mà nó lộ ra ngoài hình tướng rồi thì bên trong nó bị giảm bớt, giảm bớt cái hên. Nếu bị tranh tu từ xưa đến giờ cũng vậy, đến chừng mà các ngài đắc đạo, từ từ các ngài đi giáo hóa mà mới nghe. Còn lúc mà ngài đang ẩn tu thì hoàn toàn ngài biến mất khỏi sự quan tâm của mọi người, không ai biết ngài đâu. Những người đó tu trong cái thầm lặng, còn người tu mà nói ít bữa nữa tui nhập thất nha, tui nhập thất không có tiếp ai hết à, tui tịnh khẩu à. Ba bữa bể nè. Cái gì quý phải giấu cái sự tu hành như vậy, mà nói ra là mất. Mình tu hành vậy trong làng, trong xóm, mà ít người biết mình là người cư sĩ ăn chay trường, đi chùa nhiều, thì lại là tốt. Thầm lặng, thầm lặng không ai hay ai biết mà bền tu hoài được."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> KINH PHÁP HOA 09 - Phẩm Thọ Học - Vô Học Nhơn Ký - <a href="https://youtu.be/tYIwYn50wFU?t=1573" target="_blank">https://youtu.be/tYIwYn50wFU?t=1573</a> (id: 1481)</p>
     </div>
 
 </body>
