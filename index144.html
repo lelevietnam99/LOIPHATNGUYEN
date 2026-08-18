@@ -3,162 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài Tập Nhảy Cóc Khí Công - Nội Lực & Sức Mạnh</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Nhân Quả Của Lời Mắng Nhiếc Thánh Tăng (Bài Học Về Lời Nói)</title>
     <style>
-        /* Nền thiên nhiên khoáng đạt, biểu trưng cho sự linh hoạt và sinh lực */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền núi non vững chãi, biểu tượng cho sự nghiêm túc của luật nhân quả */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
+            background-color: rgba(10, 15, 30, 0.82); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
             max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #2e7d32; /* Màu xanh lá của sự sống và vận động */
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.12rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #1b5e20;
-            border-bottom: 2px dashed rgba(27, 94, 32, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .steps-section {
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(27, 94, 32, 0.2);
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 1.9rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
         }
 
         h2 {
-            font-size: 22px;
-            color: #2e7d32;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
             margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .steps-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.8;
-            font-size: 18px;
-        }
-
-        .steps-list li {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: rgba(232, 245, 233, 0.5);
-            border-radius: 10px;
-        }
-
-        .teaching-section {
-            background: rgba(232, 245, 233, 0.7);
-            border-left: 5px solid #2e7d32;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
-        }
-
-        .teaching-section strong {
-            color: #1b5e20;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #2e7d32;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #2e7d32;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #1b5e20;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        .source {
+            text-align: center;
+            font-style: italic;
+            color: #d1e1f0;
+            margin-top: 35px;
+            font-size: 1.1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-frog"></i> Bài Tập Nhảy Cóc Khí Công</h1>
-
-            <div class="steps-section">
-                <h2><i class="fas fa-list-ol"></i> Các Bước Thực Hiện</h2>
-                <ul class="steps-list">
-                    <li><strong>Chuẩn bị:</strong> Ngồi xổm, dùng hai bàn tay nắm chặt lấy hai đầu ngón chân cái.</li>
-                    <li><strong>Hít & Nín:</strong> Hít một hơi thật đầy vào bụng và nín thở giữ hơi lại.</li>
-                    <li><strong>Vận động:</strong> Khi đang nín thở, chồm nhảy về phía trước 3 cái liên tục.</li>
-                    <li><strong>Thở ra:</strong> Dừng lại và thở ra nhẹ nhàng. Lặp lại chu kỳ.</li>
-                </ul>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Ý Nghĩa</h2>
-                <p>Đây là một trong 8 động tác khí công cơ bản, không chỉ giúp đôi chân trở nên khỏe mạnh, vững chãi mà còn là phương pháp giúp tích lũy nội lực cực kỳ nhanh chóng.</p>
-            </div>
-
-            <ul class="steps-list" style="list-style: none; padding: 0;">
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Động tác khác. Hít hơi vào, giữ hơi lại, nắm hai đầu ngón chân. Nhảy 3 cái chúng ta thở ra... Ngồi xuống. Rồi bắt đầu nha. Hít hơi vào, giữ hơi lại, nắm hai đầu ngón chân cái, nhảy 1, 2, 3, thở ra, hít vào nhảy 1, 2, 3..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/ckbtQQrEF6U?t=2879" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (47:59 - 49:31) - ID: 5555
-            </a>
+        <h1>Định Lý</h1>
+        <h2>Nhân Quả Của Lời Mắng Nhiếc Thánh Tăng (Bài Học Về Lời Nói)</h2>
+        
+        <p><strong>Phát biểu:</strong> Người đời thường nghĩ chửi mắng chỉ là cho sướng miệng rồi tan vào gió. Nhưng vũ trụ lại vận hành theo phương trình: "<span class="highlight">Lời trù ẻo ác độc + Báng bổ bậc Thánh = Quả báo lặp lại y hệt trong vô lượng kiếp</span>". Một vị tu sĩ kiếp xưa vì ganh tị đã mắng một vị Thánh Tăng là "thứ ăn phân, lỏa lồ, nằm đất". Quả báo ập xuống không sai một chữ, khiến ông đọa địa ngục rồi nhiều đời sinh ra phải sống như thú hoang, chịu đựng đúng 3 điều dơ bẩn đó suốt mấy chục năm trời, cho đến tận kiếp cuối cùng gặp Phật mới được hóa giải.</p>
+        
+        <p><strong>Ứng dụng:</strong> Nhân quả không bao giờ bỏ sót một lời nói nào của chúng ta. Đừng vì một phút nóng giận, ganh tị mà buông lời nhục mạ, trù ẻo người khác (nhất là những người có đạo đức). <span class="highlight">Hãy cẩn trọng từng lời ăn tiếng nói, vì những gì bạn gieo rắc vào vũ trụ hôm nay sẽ là chính bản án cuộc đời mà bạn phải gánh chịu trong tương lai.</span></p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Ông nói ông chửi để cho người ta đi để cho cái ông thánh nó đi khỏi làng để cho ông ở lại một mình ông hưởng cái sự cúng dường của làng mà ông chửi bằng những cái điều rất là tệ hại ông chửi cho ông kia quê mà bỏ đi ông chửi là ông thứ đồ ăn ăn phân nên là lỏa lồ đừng mặc quần áo đừng ở trên giường nằm dưới đất đi Tức là ông chửi bằng 3 cái thứ đó mà chửi nhằm ông vị thánh Tức là sau đó khi đó ông bị chết ông xuống địa ngục rồi Khi ông trở lên làm người bao nhiêu kiếp cứ phải sống theo ba cái đó Tức là cứ phải ăn phân lỏa lồ và Và nằm dưới đất Cho đến cái kiếp mà Phật xuất hiện Lúc cái kiếp đó ông cũng trả hết nghiệp Thì ông cũng phải chịu đựng Cái ba cái điều đó trong suốt mấy chục 55 năm trời Thế lúc 55 tuổi Lúc hết nghiệp Phật mới tới để đưa ông vào tăng đoàn xuất gia trở lại"
         </div>
+        
+        <div class="source">Nguồn: 26 Gánh Hoa Lài - <a href="https://youtu.be/BN6QvnmE9Dg?t=4392" target="_blank" style="color: #8bbceb; text-decoration: none;">https://youtu.be/BN6QvnmE9Dg?t=4392</a> (id: 4583)</div>
     </div>
 
 </body>

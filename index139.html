@@ -3,142 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nghệ Thuật Tọa Thiền - Cương Nhu Hài Hòa</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Ái Ngữ Và Sự Khước Từ (Bài Học Từ Câu Chuyện Magandiya)</title>
     <style>
-        /* Nền dòng suối và đá vững chãi, biểu trưng cho sự cương nhu hài hòa khi tọa thiền */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền núi non vững chãi, biểu tượng cho sự nhẫn nhục và điềm nhiên trước phỉ báng */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
+            background-color: rgba(10, 15, 30, 0.82); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
             max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #00796b; /* Màu xanh ngọc đậm của sự tỉnh thức và tĩnh lặng */
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.12rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #004d40;
-            border-bottom: 2px dashed rgba(0, 77, 64, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(0, 77, 64, 0.2);
+            color: #ffd700;
+            font-size: 1.9rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
         }
 
         h2 {
-            font-size: 22px;
-            color: #00796b;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(224, 242, 241, 0.7);
-            border-left: 5px solid #00796b;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        .source {
+            text-align: center;
+            font-style: italic;
+            color: #d1e1f0;
+            margin-top: 35px;
+            font-size: 1.1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            letter-spacing: 1px;
         }
 
-        .teaching-section strong {
-            color: #004d40;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #00796b;
-            font-size: 18px;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-yin-yang"></i> Nghệ Thuật Tọa Thiền - Cương Nhu Hài Hòa</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện dẫu phải liên tục kéo tay về và dựng thẳng lưng lên nhiều lần trong thời thiền, nội tâm con vẫn luôn giữ sự êm ái, nhẫn nại tuyệt đối. Xin cho con không bực dọc hay gồng cứng cơ bắp, mà chỉ dùng sự buông lỏng, mềm mại để đưa cơ thể về lại đúng chuẩn mực của người tu."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Khi phát hiện mình sai tư thế, ta phải sửa đổi ngay, nhưng tuyệt đối không được bực bội hay dùng sức gồng cứng. Gồng cứng sẽ làm bản ngã tăng trưởng. Ta phải điều chỉnh lại tư thế một cách êm ái, buông lỏng toàn thân. Sự kết hợp giữa việc giữ thân thẳng tắp (cương) và cơ bắp buông lỏng (nhu) là đỉnh cao của nghệ thuật tọa thiền.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Điều chỉnh tư thế thiền bằng sự nhẫn nại và buông lỏng, kết hợp nhịp nhàng giữa thân thẳng (cương) và cơ thả lỏng (nhu).
-                </li>
-            </ul>
+        <h1>Định Lý</h1>
+        <h2>Ái Ngữ Và Sự Khước Từ (Bài Học Từ Câu Chuyện Magandiya)</h2>
+        
+        <p><strong>Phát biểu:</strong> Một lời nói từ chối thẳng thừng chạm vào bản ngã của người khác có thể tạo ra một phương trình oan trái khốc liệt: "<span class="highlight">Bị khước từ thẳng thừng + Lòng tự ái tổn thương = Ôm hận báo thù bằng mọi giá</span>". Khi Đức Phật từ chối cô gái Magandiya bằng một câu rất thẳng, lòng kiêu hãnh đã khiến cô ghim hận đến khi làm Hoàng phi, vung tiền thuê người chửi rủa Phật suốt cả tháng trời. Nhưng đối diện với bão táp phỉ báng, Đức Phật thị hiện sự tĩnh lặng tuyệt đối, ôm bát đi thẳng vào con đường bị chửi để nhẫn nhục trả cho xong món nợ nghiệp cũ.</p>
+        
+        <p><strong>Ứng dụng:</strong> Trong giao tiếp, dù bạn có lý do chính đáng để từ chối hay chê trách ai, hãy cố gắng dùng ái ngữ khéo léo để không cứa vào lòng tự trọng của họ, tránh gieo rắc sự oán hận thầm kín. Và nếu lỡ bị hàm oan, mắng chửi, hãy học hạnh của Đức Thế Tôn: <span class="highlight">điềm nhiên đối diện, không trốn tránh, không phản kháng bằng sân hận</span>, vì đó là cách dứt nghiệp nhanh nhất và cao thượng nhất.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Mà không thèm dùng chân đụng tới. Nghĩa là cô không nghe cái đạo lý rõ ràng. Mà cô cứ nghĩ là Phật chê cô ở dơ. Thế là cô ôm mặt cô khóc cô chạy đi. Từ đó cô mang mối hận. Sau này cô lên tới làm hoàng phi... Cô phát hiện ra là Đức Phật quay lại cái xứ đó... Thế là cô kích động, thuê mướn dân cứ đón đường chửi Phật. Cứ sáng Đức Phật đi khất thực là đứng hai bên đường chửi. Chửi hay lắm, chửi có câu có kệ có ý có tứ. Chửi nhục nhã mà nói sâu nó cay nó đắng... Suốt cả gần một tháng như vậy. Người ta cứ đứng đón đường chửi. Đức Phật ôm bát đi ngang qua cái chỗ để nghe chửi. Không tránh né. Mà đi đúng vào cái con đường mà họ đón đường. Chỗ nào mà họ đứng đón để chửi, thì Đức Phật ôm bát đi vào chỗ đó."
         </div>
+        
+        <div class="source">Nguồn: Ý Nghĩa Phóng Sinh - (id: 3137)</div>
     </div>
 
 </body>

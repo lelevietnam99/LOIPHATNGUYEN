@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11 Pháp Số 11 - Nội Lực Tự Nhiên</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Mật Hạnh Đệ Nhất (Đạo Đức Từ Những Điều Nhỏ Bé)</title>
     <style>
-        /* Nền ánh sáng nhẹ nhàng, biểu trưng cho sự buông thư và nội lực tự nhiên */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền giọt sương trên lá, biểu tượng cho sự tinh tế, mật hạnh */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #8d6e63; /* Màu nâu nhẹ nhàng của sự buông lỏng */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #5d4037;
-            border-bottom: 2px dashed rgba(93, 64, 55, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(93, 64, 55, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #6d4c41;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(239, 235, 233, 0.7);
-            border-left: 5px solid #8d6e63;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #5d4037;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #8d6e63;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #8d6e63;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #8d6e63;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(141, 110, 99, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #6d4c41;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-spa"></i> 11 Pháp Số 11</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện dẫu chưa để tâm được xuống xương cùng, lòng con vẫn không nôn nóng, buồn bực. Xin cho con biết buông lỏng toàn thân, giữ nội tâm êm ái và nhẹ nhàng hướng sự chú ý về vùng xương cùng, kiên nhẫn chờ đợi một nội lực tự nhiên xuất hiện nâng đỡ cơ thể."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Thay vì gồng lưng, ta chỉ cần buông lỏng và nhẹ nhàng hướng cái biết (để tâm) về vùng xương cùng (dưới thắt lưng). Khi ta để tâm đúng chỗ và nhẹ nhàng, tự nhiên sẽ có một nguồn nội lực vô hình xuất hiện từ gốc xương cùng, tự động dựng đứng sống lưng ta lên mà không cần một chút sức lực cưỡng ép nào.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Để tâm nhẹ nhàng ở xương cùng, tự nhiên nội lực xuất hiện dựng thẳng lưng.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Để tâm ở cái xương cùng. Sư phụ dặn hoài. Để tâm xương cùng tự nhiên nó xuất hiện cái nội lực nó dựng cái lưng mình lên lại. Không cần phải ưỡn lưng. Không cần cố gắng ưỡn lưng. Chỉ để tâm ở xương cùng nhẹ nhàng là một nội lực nó xuất hiện dựng cái lưng mình lên lại liền..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/S6x8_pKVc5o?t=5553" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (1:32:33 - 1:33:55) - ID: 6024
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>MẬT HẠNH ĐỆ NHẤT <br>(Đạo Đức Từ Những Điều Nhỏ Bé)</h2>
+        
+        <p><strong>Phát biểu:</strong> Phàm phu làm việc tốt thường mong muốn người khác biết đến, nhưng đạo đức của một vị Thánh Tăng tuân theo phương trình tuyệt đối: "<span class="highlight">Hành động nhỏ nhất (bước đi, ăn cơm) + Vô ngã = Mật hạnh tột cùng vì chúng sinh</span>". Tôn giả La Hầu La sau khi đắc quả A-La-Hán đã đạt đến cảnh giới mà từng oai nghi, từng cái nhấc tay, từng lời nói đều hướng về lợi ích cho người khác, không sót lại một mảy may vị kỷ nào.</p>
+        
+        <p><strong>Ứng dụng:</strong> Để xưng tán và học theo các bậc Thánh, ta không cần phải tìm kiếm những điều đao to búa lớn. Hãy bắt đầu từ những "<span class="highlight">mật hạnh</span>" nhỏ nhất trong đời sống thường ngày: để dép gọn gàng cho người sau dễ bước, nói một lời sao cho người nghe được ấm lòng, ăn một bữa cơm sao cho người khác đỡ phần dọn dẹp. Đạo đức thực sự chính là sự tinh tế vì người khác trong từng chi tiết nhỏ bé, vô hình.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Ngài ráng tu sau này Ngài đắc A-La-Hán. Mà khi Ngài đắc A-La-Hán rồi thì Ngài có cái mật hạnh đặc biệt. Từng cái oai nghi, từng lời nói của Ngài đều là một cái đạo đức vô biên làm cho mọi người vô cùng kính nể. Tức là từ Ngài đứng một bước, Ngài nói một tiếng, Ngài ăn miếng cơm, Ngài cầm một cái vật gì, Ngài cho ai điều gì thì đều vì người khác mà Ngài làm, chứ không bao giờ vì mình nữa. Là cái đạo đức của Ngài tới chỗ tột cùng không thể tưởng tượng được... Đặc điểm của Ngài là mật hạnh đệ nhất. Cái mật hạnh đệ nhất tức là cái đạo đức của Ngài mà sống vì chúng sinh, vì người đó là tột cùng không có một chút nào sơ hở."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Nước - <a href="https://youtu.be/SarRp3-ZYYM?t=1037" target="_blank">https://youtu.be/SarRp3-ZYYM?t=1037</a> (id: 3858)</p>
     </div>
 
 </body>

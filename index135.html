@@ -3,183 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Những Căn Cơ Tu Thiền - Mảnh Xương Cùng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Sự Tuyệt Đối Của Đức Phật (Phá Vỡ Giới Hạn Vũ Trụ)</title>
     <style>
-        /* Nền thiên nhiên sâu lắng, biểu trưng cho sự lắng đọng và kết nối cội rễ */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền vũ trụ bao la, biểu tượng cho sức mạnh vô biên của Đức Phật */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #5d4037; /* Màu nâu đất của cội gốc */
+            background-color: rgba(10, 15, 30, 0.75); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 800px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #3e2723;
-            border-bottom: 2px dashed rgba(62, 39, 35, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(62, 39, 35, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #4e342e;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
+            color: #e0eaf5;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+        h2 {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
-        .teaching-section {
-            background: rgba(239, 235, 233, 0.7);
-            border-left: 5px solid #5d4037;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .teaching-section strong {
-            color: #3e2723;
-        }
-
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #5d4037;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #5d4037;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #5d4037;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #3e2723;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* Định dạng cho link */
+        a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-seedling"></i> Những Căn Cơ Tu Thiền</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện trong từng thời thiền, luôn ghi nhớ mảnh xương cùng chính là cội gốc của cái biết toàn thân. Xin cho con lấy sự khiêm hạ làm nền tảng, đưa cái biết của mình lắng sâu xuống tận cùng cơ thể, để từ cội rễ ấy, trí tuệ và đạo lực của con được nuôi dưỡng vững vàng."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Mảnh xương cùng hình tam giác nằm ở dưới thắt lưng chính là "gốc của toàn thân". Người tu thiền muốn biết được toàn thân một cách trọn vẹn thì không bao giờ được quên mảnh xương cùng này. Nó là chân âm của cơ thể, là nền tảng vững chắc nhất để ta nhiếp tâm mà không bị trôi nổi trong vọng tưởng.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Mảnh xương cùng là gốc của toàn thân, phải luôn biết đến nó khi thiền.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Khi mà biết toàn thân, vui lòng cố gắng biết luôn tới mảnh xương cùng. Tại cái mảnh xương cùng nó là cái gốc của toàn thân, nó sẽ đi theo ta gần suốt cuộc đời. Đừng quên cái mảnh xương cùng. Hãy biết toàn thân thì phải biết tới luôn cái mảnh xương cùng. Vì mảnh xương cùng cũng là ở trong thân nhưng là gốc của cái biết. Rất là quan trọng..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/2DgWsF7DpJc?t=2796" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (46:36 - 47:58) - ID: 4548
-            </a>
+        <h1>ĐỊNH LÝ</h1>
+        <h2>SỰ TUYỆT ĐỐI CỦA ĐỨC PHẬT <br>(Phá Vỡ Giới Hạn Vũ Trụ)</h2>
+        
+        <p><strong>Phát biểu:</strong> Sự vĩ đại của Đức Phật là một đại lượng vô cực phá vỡ mọi giới hạn đo lường của không gian và thời gian. Khi Tôn giả A-Nan kinh ngạc trước thần lực của một vị thị giả có tiếng rống vang cả một thiên hà (tam thiên đại thiên thế giới), Đức Phật đã thiết lập lại phương trình giác ngộ: "<span class="highlight">Thần lực đệ nhất của A-la-hán = Chỉ là một giọt nước so với đại dương thần lực vô lượng vô biên của Đức Thế Tôn</span>". Ngay lập tức, Đức Phật thị hiện sức mạnh chấn động và ánh sáng phủ trùm khắp vô lượng vũ trụ để chứng minh sự tuyệt đối vĩ đại của Ngài.</p>
+        
+        <p><strong>Ứng dụng:</strong> Mỗi khi lạy Phật, hãy nhắm mắt lại và quán tưởng đến sức mạnh chấn động rung chuyển cả vô lượng vô biên vũ trụ của Ngài. Đừng chỉ coi Đức Phật là một bức tượng trên bàn thờ. Khi bạn khởi lên lòng tôn kính tột độ hướng về đấng tuyệt đối vĩ đại ấy, tâm hồn bạn cũng sẽ hòa vào <span class="highlight">tần số rung động thiêng liêng đó</span>, giúp tiêu trừ vô vàn nghiệp chướng và mở ra con đường trí tuệ vô biên.</p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Lúc đó Đức Phật mới tiết lộ một chút nữa, Đức Phật mới nói: Chỉ là một thị giả của Đức Phật thôi A-nan à. Ngài A-nan nghe nói vậy là biết rằng nếu là Đức Phật thì còn vĩ đại hơn nữa. Thì Ngài mới mừng quá, Ngài lật đật Ngài quỳ xuống đảnh lễ liền. Nói: Xin Phật cho con biết, nếu là Phật thì còn cỡ nào nữa... Đức Phật mới nói là: Nếu là một Đức Như Lai thì có thể làm cho ánh sáng và cái chấn động của mình cho tới vô lượng vô lượng trong vũ trụ này, chứ không phải chỉ là một thiên hà. Mình dùng cái chữ Tam thiên đại thiên thế giới là một thiên hà... Và lúc đó Đức Phật Ngài thị hiện thần thông liền."
         </div>
+        
+        <p><strong>Nguồn bài giảng:</strong> Sự tuyệt đối của Đức Phật - <a href="https://youtu.be/XJR2Orurp9s?t=1975" target="_blank">https://youtu.be/XJR2Orurp9s?t=1975</a> (id: 1605)</p>
     </div>
 
 </body>

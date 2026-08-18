@@ -3,162 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài Tập Hít Đất Khí Công - Sức Mạnh & Hơi Thở</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Hạnh Nguyện Bồ Tát Của Tôn Giả A Nan</title>
     <style>
-        /* Nền vững chãi và tĩnh tại, biểu trưng cho sự hòa quyện giữa lực và khí */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền vũ trụ và ánh sáng thanh tịnh, biểu tượng cho từ bi vô lượng */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
+            background-color: rgba(10, 15, 30, 0.82); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
             max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #5d4037; /* Màu nâu trầm của sự bền bỉ */
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.12rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #3e2723;
-            border-bottom: 2px dashed rgba(62, 39, 35, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .steps-section {
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(62, 39, 35, 0.2);
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 1.9rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
         }
 
         h2 {
-            font-size: 22px;
-            color: #5d4037;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
             margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .steps-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.8;
-            font-size: 18px;
-        }
-
-        .steps-list li {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: rgba(239, 235, 233, 0.5);
-            border-radius: 10px;
-        }
-
-        .teaching-section {
-            background: rgba(239, 235, 233, 0.7);
-            border-left: 5px solid #5d4037;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
-        }
-
-        .teaching-section strong {
-            color: #3e2723;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #5d4037;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #5d4037;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #3e2723;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
+        .source {
+            text-align: center;
+            font-style: italic;
+            color: #d1e1f0;
+            margin-top: 35px;
+            font-size: 1.1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-hand-paper"></i> Bài Tập Hít Đất Khí Công</h1>
-
-            <div class="steps-section">
-                <h2><i class="fas fa-list-ol"></i> Hướng Dẫn Thực Hiện</h2>
-                <ul class="steps-list">
-                    <li><strong>Chuẩn bị:</strong> Chống hai ức bàn tay và hai mũi chân, giữ lưng thẳng.</li>
-                    <li><strong>Hạ người:</strong> Từ từ hạ thân người xuống, đồng thời thở ra chậm rãi.</li>
-                    <li><strong>Đẩy lên:</strong> Dùng lực đẩy người lên, đồng thời hít vào đầy lồng ngực.</li>
-                    <li><strong>Lưu ý:</strong> Nam không chạm đất khi xuống; Nữ có thể nằm hẳn xuống trước khi đẩy lên.</li>
-                </ul>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Bí Quyết</h2>
-                <p>Cứ nương tâm thanh tịnh theo hơi thở, tập một lúc sẽ thấy rất thích và quên đi sự mệt mỏi. Đây là cách làm cho cơ tay cực kỳ khỏe mạnh mà không tiêu hao năng lượng như hít đất thể thao thông thường.</p>
-            </div>
-
-            <ul class="steps-list" style="list-style: none; padding: 0;">
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... Hít đất làm cho cái cơ tay của chúng ta nó sẽ rất là khỏe... Nam á thì khi mà xuống là không được đụng đất, rồi hít vào thì đẩy lên. Còn nữ thì cho phép là xuống rồi nằm luôn, rồi lên thì mới chống lên. Tập á tâm mình thanh tịnh theo hơi thở từ từ bắt đầu mình thấy thích, thấy quên mệt. Xuống thở ra, lên hít vào..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/ckbtQQrEF6U?t=2879" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (47:59 - 49:31) - ID: 5555
-            </a>
+        <h1>Định Lý</h1>
+        <h2>Hạnh Nguyện Bồ Tát Của Tôn Giả A Nan</h2>
+        
+        <p><strong>Phát biểu:</strong> Người tu bình thường xem sự giải thoát (nhập Niết Bàn) là mục tiêu tối thượng để chấm dứt đau khổ. Nhưng với một Bậc Bồ Tát, phương trình này được mở rộng đến vô hạn: "<span class="highlight">Ngộ đạo + Chấp nhận dấn thân vào đời ngũ trược (xấu ác nhất) = Quyết không nhập Niết Bàn khi chúng sinh chưa thành Phật</span>". Tôn giả A Nan tự nguyện trì hoãn hạnh phúc tuyệt đối của riêng mình để tiếp tục lang thang trong luân hồi sinh tử, cam kết nắm tay từng chúng sinh đưa qua bờ giác. Lòng từ bi đó làm chấn động cả pháp giới.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi ta đạt được một chút thành công, bình an hay hiểu biết về đạo lý, đừng vội đóng cửa tận hưởng cho riêng mình. Hãy mở rộng trái tim ra, phát một lời thệ nguyện muốn đem sự bình an và đạo lý đó chia sẻ, nâng đỡ cho tất cả những người chung quanh. <span class="highlight">Sống vị tha đến tận cùng chính là con đường tắt nhanh nhất để bước vào quả vị giác ngộ.</span></p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Trong cái bài Kinh Lăng Nghiêm mà Ngài A Nan Ngài nói: Ngũ trược ác thế thệ tiên nhập, Như nhất chúng sinh vị thành Phật, Chung bất ư thử thủ nê hoàn. Ngài nói rằng sau khi mà Ngài gọi là ngộ đạo với Đức Phật rồi, Ngài cảm động, Ngài thấy Ngài được lợi ích này, Ngài chợt nghĩ tới vô số chúng sinh còn đau khổ. Ngài phát lời thề đối với Phật là trong cái đời ác ngũ trược, con xin vào trước. Mà nếu còn chúng sinh nào mà chưa thành Phật, thì con không có nhập Niết Bàn. Cái hạnh nguyện vĩ đại, tức là lang thang trong luân hồi sinh tử cho tới vô tận... Và như vậy với cái lời nguyện này, Ngài không bao giờ an trú trong sự giải thoát nữa, cứ lang thang đi mãi."
         </div>
+        
+        <div class="source">Nguồn: Bồ Tát Sơ Phát Tâm - <a href="https://youtu.be/toFKTSQC5EU?t=536" target="_blank" style="color: #8bbceb; text-decoration: none;">https://youtu.be/toFKTSQC5EU?t=536</a> (id: 4098)</div>
     </div>
 
 </body>

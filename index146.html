@@ -3,159 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khí Công Tâm Pháp - Tuyệt Kỹ Nối Liền Thân Và Tâm</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Đốn Ngộ Trong Cơn Đau Khổ Tột Cùng (Bài Học Từ Quan Đại Thần Santati)</title>
     <style>
-        /* Nền ánh sáng tĩnh lặng, biểu trưng cho sự hòa quyện thân tâm */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền núi non thanh tịnh, tượng trưng cho sự chuyển hóa nỗi đau thành trí tuệ */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
+            background-color: rgba(10, 15, 30, 0.82); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
             max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #5d4037;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.12rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #3e2723;
-            border-bottom: 2px dashed rgba(62, 39, 35, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .steps-section {
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(62, 39, 35, 0.2);
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 1.9rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
         }
 
         h2 {
-            font-size: 22px;
-            color: #4e342e;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
             margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .steps-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.8;
-            font-size: 18px;
-        }
-
-        .steps-list li {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: rgba(239, 235, 233, 0.5);
-            border-radius: 10px;
-        }
-
-        .teaching-section {
-            background: rgba(239, 235, 233, 0.7);
-            border-left: 5px solid #5d4037;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
-        }
-
-        .teaching-section strong {
-            color: #3e2723;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #5d4037;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #5d4037;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #3e2723;
-            transform: translateY(-3px);
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .source {
+            text-align: center;
+            font-style: italic;
+            color: #d1e1f0;
+            margin-top: 35px;
+            font-size: 1.1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-yin-yang"></i> Khí Công Tâm Pháp</h1>
-
-            <div class="steps-section">
-                <h2><i class="fas fa-list-ol"></i> Động Tác & Tâm Pháp</h2>
-                <ul class="steps-list">
-                    <li><strong>Tư thế:</strong> Ngồi thẳng lưng (như thiền) hoặc đứng buông lỏng.</li>
-                    <li><strong>Để tâm:</strong> Nhẹ nhàng chú ý vào vùng bụng dưới hoặc cuối xương sống dưới.</li>
-                    <li><strong>Hít vào:</strong> Biết rõ hơi thở vào, để tâm tại vùng đã chọn.</li>
-                    <li><strong>Thở ra:</strong> Biết rõ hơi thở ra, giữ tâm tại đó.</li>
-                </ul>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-exclamation-circle"></i> Bí Quyết Sống Còn</h2>
-                <p>Tuyệt đối chỉ <strong>"để ý nhẹ nhàng"</strong>. Không được dùng ý điều khiển hay dẫn hơi thở đi. Hãy kiên trì tập luyện, tâm sẽ tự nhiên trở nên trống rỗng, thanh tịnh và nội lực sẽ xuất hiện mạnh mẽ.</p>
-            </div>
-
-            <ul class="steps-list" style="list-style: none; padding: 0;">
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "Khi hít vào để tâm ở đó, thở ra để tâm ở đó. Đó là khí công tâm pháp... Làm thế nào cho khéo mà không bị tâm điều khiển, thì chỉ để ý nhẹ nhàng thôi chứ không có dẫn hơi đi."
-                    </span>
-                </li>
-            </ul>
-            
-            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                <a href="https://youtu.be/B5-TNgbztVc?t=177" target="_blank" class="youtube-btn">
-                    <i class="fab fa-youtube"></i> Xem Khí Công Tâm Pháp (ID: 4217)
-                </a>
-            </div>
+        <h1>Định Lý</h1>
+        <h2>Đốn Ngộ Trong Cơn Đau Khổ Tột Cùng</h2>
+        
+        <p><strong>Phát biểu:</strong> Phàm phu khi gặp đau khổ tột cùng thường rơi vào tuyệt vọng, bế tắc. Nhưng dưới sự giáo hóa của Phật, phương trình nhân duyên chín muồi lại hoạt động: "<span class="highlight">Đau khổ tận cùng + Dục vọng mong manh + Một lời pháp của Phật = Quả vị A-la-hán giải thoát</span>". Quan đại thần Santati vừa thắng trận về, đang chìm đắm trong lạc thú thế gian thì người yêu qua đời khiến ông đau khổ tột độ. Nhờ thiện căn sâu dày từ 90 kiếp trước, chỉ nghe một bài kệ cực ngắn của Phật, ông lập tức đốn ngộ chứng A-la-hán và tự tại bay lên hư không nhập Niết Bàn.</p>
+        
+        <p><strong>Ứng dụng:</strong> Khi cuộc đời đẩy bạn vào những biến cố bi thương, mất mát tột cùng, đừng để bản thân chìm đắm trong oán hận hay gục ngã. <span class="highlight">Hãy dùng chính nỗi đau đó làm sức bật để nhìn thấu bản chất vô thường của thế gian. Khi buông xả được mọi chấp trước trong giây phút tận cùng, đó là lúc trí tuệ và sự bình an thực sự mở ra.</span></p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Có người đang hưởng thụ dục vọng, vừa mới đánh giặc sát sinh không biết bao nhiêu loài, đau khổ tột cùng vì người yêu mất. Nghe xong bài kệ cực kỳ ngắn chứng A-la-hán liền. Vừa chứng A-la-hán xong, ông chợt nhớ hết tất cả tiền kiếp của mình. Và ông cũng thấy luôn là mình đã tới lúc phải nhập Niết bàn luôn, nhân duyên tới luôn. Ông xin phép Bạch Thế Tôn: 'Mọi cái sinh đã tận, con xin phép được nhập Niết bàn'. Ông bay lên giữa hư không nói về nhân duyên này cho mọi người nghe..."
         </div>
+        
+        <div class="source">Nguồn: 46 Biết Phục Thiện - <a href="https://youtu.be/v0ofXMYnp24?t=3177" target="_blank" style="color: #8bbceb; text-decoration: none;">https://youtu.be/v0ofXMYnp24?t=3177</a> (id: 4674)</div>
     </div>
 
 </body>

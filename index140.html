@@ -3,142 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cột Sống Ngay Thẳng - Trí Tuệ Sáng Ngời</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Định Lý - Nhân Quả Hành Hạ Chúng Sinh (Bài Học Về Trưởng Lão Putigatta)</title>
     <style>
-        /* Nền núi vững chãi vươn thẳng, biểu trưng cho cột sống ngay thẳng và trí tuệ */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền núi non thanh tịnh, tượng trưng cho sự giải thoát và chuyển hóa nghiệp lực */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
+            background-color: rgba(10, 15, 30, 0.82); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
             max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #00695c; /* Màu xanh cổ vịt chuyên nghiệp, vững chãi */
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.12rem;
         }
 
-        .success-factor h1 {
-            font-size: 28px;
-            color: #004d40;
-            border-bottom: 2px dashed rgba(0, 77, 64, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
+        h1 {
             text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(0, 77, 64, 0.2);
+            color: #ffd700;
+            font-size: 1.9rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
         }
 
         h2 {
-            font-size: 22px;
-            color: #00695c;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Định dạng riêng cho đoạn trích dẫn */
+        .quote {
             font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .teaching-section {
-            background: rgba(224, 242, 241, 0.7);
-            border-left: 5px solid #00695c;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
-            line-height: 1.8;
-            font-size: 17px;
+        .source {
+            text-align: center;
+            font-style: italic;
+            color: #d1e1f0;
+            margin-top: 35px;
+            font-size: 1.1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            letter-spacing: 1px;
         }
 
-        .teaching-section strong {
-            color: #004d40;
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
-        }
-
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #00695c;
-            font-size: 18px;
-        }
-
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-feather-alt"></i> Cột Sống Ngay Thẳng - Trí Tuệ Sáng Ngời</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con xin nguyện khắc cốt ghi tâm mối liên hệ mật thiết giữa tư thế và nội tâm. Xin cho con luôn nhớ rằng khi lưng chùng xuống thì trí tuệ cũng tối tăm mờ mịt. Nguyện cho cột sống con luôn ngay thẳng để khí lực lưu thông thông suốt, nuôi dưỡng bộ脑 luôn sáng ngời và thanh tịnh."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Cột sống là trục năng lượng chính của cơ thể. Khi ta ngồi thẳng lưng, luồng khí dễ dàng lưu thông, giúp đầu óc cực kỳ tỉnh táo. Ngược lại, khi lưng bị chùng (gù) xuống, lồng ngực bị ép lại, hơi thở ngắn đi và não thiếu oxy, dẫn đến trạng thái mờ mịt, tà kiến dễ sinh khởi.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Giữ cột sống ngay thẳng trong tọa thiền để khí lực lưu thông, nuôi dưỡng bộ não tỉnh táo và phát triển trí tuệ.
-                </li>
-            </ul>
+        <h1>Định Lý</h1>
+        <h2>Nhân Quả Hành Hạ Chúng Sinh (Bài Học Về Trưởng Lão Putigatta)</h2>
+        
+        <p><strong>Phát biểu:</strong> Nghiệp ác từ việc hành hạ thân xác chúng sinh không bao giờ bị thời gian xóa nhòa. Phương trình nhân quả quy định: "<span class="highlight">Bẻ gãy cánh và chân muôn loài trong quá khứ = Thân thể lở loét, đau đớn rên xiết trong hiện tại</span>". Trưởng lão Putigatta kiếp trước làm nghề bẫy chim, để chim không bay đi, ông nhẫn tâm bẻ gãy cả chân và cánh chúng rồi nhét vào giỏ. Quả báo khiến thân xác ông ở kiếp cuối cùng bị lở loét, hôi thối tột cùng. Nhưng nhờ thiện căn từng cúng dường vị Độc Giác Phật, Đức Thế Tôn đã đích thân đến chăm sóc và đọc một bài kệ, giúp nỗi đau thể xác biến mất, nhường chỗ cho sự đốn ngộ của một vị A-La-Hán.</p>
+        
+        <p><strong>Ứng dụng:</strong> Những ốm đau, bệnh tật thể xác mà ta đang gánh chịu hôm nay chính là món nợ nhân quả từ việc làm tổn thương sinh linh trong quá khứ. Đừng oán trời trách đất. Hãy nhẫn nhục sám hối và mở rộng lòng từ bi yêu thương muôn loài. <span class="highlight">Khi tâm bạn hướng thiện và tu tập đúng đường, ánh sáng đạo lý sẽ giúp bạn vượt qua mọi nỗi đau của thân tứ đại.</span></p>
+        
+        <div class="quote">
+            <strong>Trích dẫn nguyên văn:</strong> "Đọc xong bài đó Trưởng lão chứng đạo liền rồi nhẹ nhàng bỏ thân mình nhập Niết Bàn luôn. Lúc đó các Tỳ Kheo mới ngạc nhiên là thấy trước giây phút đó cái vị Tỳ Kheo bạn của mình còn rên, còn những tiếng rên khe khẽ rồi có vẻ đau đớn và bất an, nhưng mà chỉ sau khi được Đức Phật chăm sóc đọc một bài kệ ngắn bốn câu thì lập tức ông mỉm cười và ra đi thanh thản... Đức Phật mới nói đây là cái nhân duyên của nhiều kiếp xa xưa... trưởng lão của Putigatta này là một người sống bằng cái nghề bẫy chim... khi mà bắt được con chim xong thì việc đầu tiên là Ngài bẻ hai cái cánh nó cho gãy, bẻ hai chân nó để nó khỏi đi, cho nằm bỏ trong đống ở trong cái giỏ. Rồi cứ chờ, chờ từ từ bán được hết thì thôi... Thì cái quả báo đó là cũng rất là thê thảm."
         </div>
+        
+        <div class="source">Nguồn: Bài giảng No title - (id: 3557)</div>
     </div>
 
 </body>

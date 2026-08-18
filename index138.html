@@ -3,183 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sám Hối Để Khai Mở Tâm Thiền</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Bảo Vệ Phật Pháp - TT. TS. Thích Chân Quang</title>
     <style>
-        /* Nền hoa sen, biểu trưng cho sự sám hối và tịnh hóa */
-        body {
+        /* Thiết lập nền cho toàn trang */
+        body, html {
             margin: 0;
-            padding: 60px 20px;
-            background-image: url('https://images.unsplash.com/photo-1543163521-1bf539caffe5?q=80&w=2000&auto=format&fit=crop');
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền thanh tịnh, trang nghiêm mang sắc màu uy lực bảo pháp */
+            background-image: url('https://images.unsplash.com/photo-1518173946687-a4c88986a987?q=80&w=2500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            font-family: 'Nunito', sans-serif;
-            color: #2c3e50;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
         .container {
+            background-color: rgba(10, 15, 30, 0.84); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
             max-width: 850px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top: 10px solid #fbc02d; /* Màu vàng kim của sự quý giá và trí tuệ */
-        }
-
-        .success-factor h1 {
-            font-size: 28px;
-            color: #b8860b;
-            border-bottom: 2px dashed rgba(184, 134, 11, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .vow-section {
-            text-align: center;
-            margin-bottom: 45px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(184, 134, 11, 0.2);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #daa520;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .vow-section h2 {
-            justify-content: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .vow-text {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.7;
-            color: #3e2723;
-            padding: 0 15px;
-        }
-
-        .teaching-section {
-            background: rgba(255, 247, 209, 0.7);
-            border-left: 5px solid #fbc02d;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin-bottom: 45px;
+            padding: 40px 50px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             line-height: 1.8;
-            font-size: 17px;
+            font-size: 1.12rem;
         }
 
-        .teaching-section strong {
-            color: #b8860b;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 1.9rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
-            line-height: 1.9;
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .details-list li {
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .details-list strong {
-            color: #daa520;
-            font-size: 18px;
-        }
-
-        .snippet-text {
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            color: #2c3e50;
-            display: block;
-            margin-top: 10px;
-            padding-left: 18px;
-            border-left: 3px solid #fbc02d;
-        }
-
-        .youtube-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #fbc02d;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .highlight {
+            color: #ffd700;
             font-weight: bold;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(251, 192, 45, 0.3);
         }
 
-        .youtube-btn:hover {
-            background: #daa520;
-            transform: translateY(-3px);
+        .quote-box {
+            font-style: italic;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+            margin: 25px 0;
+            color: #d1e1f0;
+            background-color: rgba(255, 255, 255, 0.04);
+            padding-top: 12px;
+            padding-bottom: 12px;
+            border-radius: 0 8px 8px 0;
         }
 
+        .author {
+            text-align: right;
+            font-weight: bold;
+            color: #ffd700;
+            margin-top: 35px;
+            font-size: 1.15rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
         @media (max-width: 600px) {
-            .container { padding: 30px; }
-            .vow-text { font-size: 18px; }
-            .youtube-btn { width: 100%; justify-content: center; }
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="success-factor">
-            <h1><i class="fas fa-praying-hands"></i> Sám Hối Để Khai Mở Tâm Thiền</h1>
-
-            <div class="vow-section">
-                <h2><i class="fas fa-hands-praying"></i> Lời Phát Nguyện</h2>
-                <div class="vow-text">
-                    "Con thấu hiểu việc chưa thể nhiếp tâm xuống dưới xương cùng là do nghiệp chướng từ quá khứ còn nặng nề. Con xin nguyện siêng năng lễ Phật, thiết tha sám hối mọi lỗi lầm để xin ơn trên tháo gỡ những bế tắc trong tâm hồn, giúp con sớm tìm được sự tĩnh lặng và đúng đường lối tu tập."
-                </div>
-            </div>
-
-            <div class="teaching-section">
-                <h2><i class="fas fa-dharmachakra"></i> Đạo lý từ Sư Phụ</h2>
-                <p>Việc chưa để tâm được ở dưới xương cùng không hẳn là do ta thiếu kỹ thuật, mà đôi khi đó là một cái nghiệp cản trở sự tu hành. Ta không thể dùng sức ép hay kỹ thuật nào để ép tâm xuống được, mà giải pháp duy nhất là phải quỳ xuống lễ Phật, thành tâm sám hối tội lỗi quá khứ thì một lúc nào đó bỗng nhiên ta sẽ đặt tâm được rất nhẹ nhàng.</p>
-            </div>
-
-            <ul class="details-list">
-                <li>
-                    <strong>Chủ đề:</strong> Chưa để tâm được dưới xương cùng là một cái nghiệp, phải sám hối xin Phật chứ không dùng kỹ thuật cưỡng ép.
-                </li>
-                <li>
-                    <strong>Snippet:</strong>
-                    <span class="snippet-text">
-                        "... cũng là một cái nghiệp phải sám hối và xin Phật chứ không có kỹ thuật... Không dùng một kỹ thuật để tạo ra điều đó được. Mà chỉ có cái là xin Phật thôi. Trước đây mình cũng có làm gì sai, giờ cứ lễ Phật sám hối cho con để tâm được ở dưới. Từ từ bỗng nhiên để được. Để được rồi, nhẹ nhàng..."
-                    </span>
-                </li>
-            </ul>
-            
-            <a href="https://youtu.be/S6x8_pKVc5o?t=5553" target="_blank" class="youtube-btn">
-                <i class="fab fa-youtube"></i> Xem Video (1:32:33 - 1:33:55) - ID: 6024
-            </a>
+        <h1>Bảo Vệ Phật Pháp</h1>
+        
+        <p>Nếu thấy Phật pháp mà suy yếu bị nguy biến mà không bảo vệ thì vĩnh viễn muôn đời muôn kiếp không bao giờ gặp đạo Phật nữa! Đó là <span class="highlight">nhân quả</span>. Thầy không nói ai sai, ai đúng. Thầy nói quả báo cho biết thôi!</p>
+        
+        <p>Còn người mà quyết lòng bảo vệ Phật pháp thì người đó đời đời kiếp kiếp sinh vào đâu cũng gặp Bồ Tát dạy cho mình tu hết... Nhớ như vậy! Nhân quả là vậy thôi, không nói ai đúng ai sai.</p>
+        
+        <p>Mà đôi khi phải rất cứng rắn, vì hình hộ pháp mà cầm gươm là đức Phật cho ta biết có những lúc phải rất cứng rắn.</p>
+        
+        <p>Trong một Trường Bộ kinh có nói: có những lúc Phật đã dùng tới sức mạnh luôn để trấn áp một người bướng bỉnh cứng đầu...</p>
+        
+        <p>Chuyện là người đó đến nói với Phật là họ cao quý hơn Phật tại vì họ là dòng dõi Bà La Môn.</p>
+        
+        <p>Đức Phật mới hỏi họ là: <em>“Tổ tiên ngươi tên gì?”</em></p>
+        
+        <p>Người đó nói: <em>“Tổ tên là KanHa”</em></p>
+        
+        <p>Đức Phật nói: <em>“Nếu tổ tiên ngươi là KanHa, thì tổ tiên ngươi là đầy tớ của dòng họ Thích Ca”</em></p>
+        
+        <p>Rồi đức Phật mới kể lại vào thời xưa KanHa là một người hầu của dòng họ Thích Ca. Cho nên đừng đến đây mà lên mặt.</p>
+        
+        <p>Tuy nhiên khi đức Phật hỏi tổ tiên ngươi tên gì thì người đó không trả lời, tại vì người đó cũng biết nếu nói ra thì cái dòng dõi của mình là dòng dõi tôi tớ của dòng họ Thích Ca, nên không chịu trả lời.</p>
+        
+        <p>Đức Phật nói: <em>“Ta hỏi ngươi lần thứ 3, nếu lần thứ 3 này ngươi vẫn im lặng không trả lời, thì đầu ngươi sẽ vỡ thành 7 mảnh!”</em></p>
+        
+        <p>Đức Phật hỏi lần thứ 3: <em>“Tổ tiên ngươi tên gì?”</em></p>
+        
+        <p>Và ngay lúc đó ông này không muốn trả lời thì trong cái linh ảnh ông thấy một vị thần Kim Cương cầm cái chày đứng đó và thái độ rất hung dữ, và nếu ông không nói người kia đánh vỡ đầu liền. Trong kinh Phật vẫn ghi.</p>
+        
+        <p>Tức là có những lúc Phật đã dùng sự cứng rắn buộc người đó phải chấp nhận và lúc đó người đó nói.</p>
+        
+        <p>Rồi Đức Phật mới nói: <em>"Tổ tiên ngươi là tôi tớ của dòng họ Thích Ca nhưng mà tổ tiên ngươi, người tên là KanHa đó sau này có đi tu pháp thuật để về trở lại làm tế sư Bà La Môn cho dòng họ Thích Ca."</em></p>
+        
+        <p>Rồi đức Phật mới giải từ từ, từ từ và đức Phật khuyên là đừng bao giờ chấp vào giai cấp của mình.</p>
+        
+        <div class="quote-box">
+            “CÁI ĐÁNG QUÝ CON NGƯỜI LÀ CÁI ĐỨC HẠNH TRONG HIỆN TẠI, ĐỪNG Ỷ VÀO DÒNG MÁU HAY GIAI CẤP”.
         </div>
+        
+        <p>Bài kinh đó đức Phật nói rất cứng rắn... Nhớ như vậy. Chứ sống trên đời mà hiền hiền, nhu nhu; nhược nhược thì không phải luôn luôn là chân lý đâu, không phải!</p>
+        
+        <div class="author">TT. TS. Thích Chân Quang</div>
     </div>
 
 </body>
