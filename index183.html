@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tư Thế Kiết Già Và Lưng Thẳng</title>
+    <!-- Phông chữ serif mang lại cảm giác tĩnh tại, sâu sắc -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Lớp nền thiên nhiên - Rừng tre vươn thẳng, tượng trưng cho cột sống thẳng và sự tĩnh lặng */
+        .bg-image {
+            background-image: url('https://images.unsplash.com/photo-1559825481-12a05cc00344?q=80&w=2560&auto=format&fit=crop');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100%;
+            
+            /* Căn giữa khung nội dung */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Khung kính mờ (glassmorphism) */
+        .quote-box {
+            background-color: rgba(20, 30, 20, 0.65); /* Tone xanh lục đậm mờ, hài hòa với rừng tre */
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            color: #f4f8f4;
+            padding: 55px 65px;
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Định dạng nội dung */
+        .quote-text {
+            font-size: 1.6rem;
+            line-height: 1.85;
+            font-style: italic;
+            text-align: justify;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Bỏ khoảng cách dưới cùng của đoạn cuối */
+        .quote-text:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Hiệu ứng xuất hiện mượt mà */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Thích ứng hiển thị trên điện thoại */
+        @media (max-width: 768px) {
+            .quote-box {
+                padding: 40px 30px;
+            }
+            .quote-text {
+                font-size: 1.25rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="quote-box">
+            <p class="quote-text">
+                "Điều đặc biệt là khi ta ngồi cái tư thế kiết già đó: hai lòng bàn tay, hai lòng bàn chân và cái bụng dưới tụ lại một chỗ. Đó là cái ý chỉ mà không có một tư thế nào khác có bằng được. Ta bắt chéo hai cái chân là hai lòng bàn chân xích lại gần bụng. Ta đặt hai cái bàn tay lên với nhau ngay trước hai bàn chân là hai cái lòng bàn tay cũng tụ về chỗ đó luôn. Nên nghĩa là 'ngũ tâm quy tụ': một cái bụng dưới cũng gọi là một cái tâm, hai lòng bàn tay, hai lòng bàn chân là bốn cái tâm, là năm cái tâm tụ lại một chỗ."
+            </p>
+            <p class="quote-text">
+                "Khi ta ngồi ta giữ cái lưng cho thẳng, vì ngồi cái lưng còng rồi cái khí lực nó không chạy điều hòa. Mà đừng có ưỡn quá, ưỡn quá thành ra dằn ép nó sẽ căng não. Nên cái độ thẳng của xương sống nó là ở một cái độ chính xác mà ta tự cảm nhận. Cái này phải khôn ngoan thôi không ai dạy mình được... Nếu mình chùng quá nó không phát huy được tác dụng, cái khí lực của mình và sự tỉnh giác nó sẽ giảm bớt liền. Nên cái độ thẳng của lưng tự mình biết..."
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

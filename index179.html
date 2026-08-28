@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tâm Hạnh Và Tâm Quán Trong Thiền Định</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Lớp nền thiên nhiên - rừng cây xanh tịnh mịch chìm trong sương */
+        .bg-image {
+            background-image: url('https://images.unsplash.com/photo-1511497584788-8767611136f6?q=80&w=2560&auto=format&fit=crop');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100%;
+            
+            /* Căn giữa khung nội dung */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Khung kính mờ (glassmorphism) */
+        .quote-box {
+            background-color: rgba(18, 28, 22, 0.55); /* Tone xanh đen mờ hài hòa với rừng cây */
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
+            color: #f4f6f4;
+            padding: 50px 60px;
+            border-radius: 16px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Định dạng nội dung */
+        .quote-text {
+            font-size: 1.6rem;
+            line-height: 1.85;
+            font-style: italic;
+            text-align: justify;
+            margin-top: 0;
+            margin-bottom: 28px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Bỏ khoảng cách dưới cùng của đoạn cuối */
+        .quote-text:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Hiệu ứng xuất hiện mượt mà */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Thích ứng hiển thị trên điện thoại */
+        @media (max-width: 768px) {
+            .quote-box {
+                padding: 35px 25px;
+            }
+            .quote-text {
+                font-size: 1.25rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="quote-box">
+            <p class="quote-text">
+                "Khi bắt chân vào ngồi thiền ta tác ý ba cái tâm hạnh căn bản. Một là gì? Tôn kính Phật tuyệt đối. Hai là gì? Từ bi yêu thương tất cả chúng sinh. Ba là gì? Giữ tâm khiêm hạ tột cùng... lúc nào cũng thấy mình như là cát bụi, như cỏ rác."
+            </p>
+            <p class="quote-text">
+                "Quán là để đối trị vọng tưởng có nguồn gốc của tâm lý... Khi ta loạn biết mình loạn thì bớt loạn. Khi ta chấp mà biết mình chấp thì bớt chấp. Khi ta sân biết mình sân thì bớt sân. Khi ta tham biết mình tham thì bớt tham. Biết đúng cái lỗi của mình thì cái đó tắt. Đó là nguyên tắc."
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

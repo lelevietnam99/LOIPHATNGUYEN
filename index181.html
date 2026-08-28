@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chánh Tinh Tấn - Chánh Niệm - Chánh Định</title>
+    <!-- Phông chữ serif thanh lịch, mang cảm giác bình yên -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Lớp nền thiên nhiên - phong cảnh mây núi thênh thang, tự tại */
+        .bg-image {
+            background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2560&auto=format&fit=crop');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100%;
+            
+            /* Căn giữa khung nội dung */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Khung kính mờ (glassmorphism) */
+        .quote-box {
+            background-color: rgba(25, 35, 45, 0.55); /* Tone xanh xám mờ mát mẻ, êm dịu */
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            color: #f0f4f8;
+            padding: 55px 65px;
+            border-radius: 16px;
+            max-width: 850px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Định dạng nội dung */
+        .quote-text {
+            font-size: 1.6rem;
+            line-height: 1.85;
+            font-style: italic;
+            text-align: justify;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Bỏ khoảng cách dưới cùng của đoạn cuối */
+        .quote-text:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Hiệu ứng xuất hiện mượt mà */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Thích ứng hiển thị trên điện thoại */
+        @media (max-width: 768px) {
+            .quote-box {
+                padding: 40px 30px;
+            }
+            .quote-text {
+                font-size: 1.3rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="quote-box">
+            <p class="quote-text">
+                "Chánh tinh tấn là bắt đầu dụng công thiền định. Chánh niệm là bắt đầu có kết quả và chánh định là có kết quả hẳn hoi... Ta phân biệt thế này: Chánh tinh tấn là ta phải dụng công vất vả để giữ tâm đừng cho loạn động. Phần chánh định là không giữ tâm nữa, tâm tự vào yên định luôn, nhập định luôn không cần dụng công. Còn cái phần ở giữa là chánh niệm là cái phần hơi hơi nhẹ nhàng nhẹ nhàng. Ta khéo giữ nhẹ nhàng nhẹ nhàng là tâm sẽ được thanh tịnh..."
+            </p>
+            <p class="quote-text">
+                "Khi ta bắt đầu bước qua chánh niệm là không cần phải dụng công nhiều mà đời sống đã bắt đầu ung dung tự tại. Thực sự ta đã là một con người khác, đã sống một đời sống khác... Lúc đó tiền bạc không mua chuộc được, uy vũ không khuất phục được... Họ thấy hiền lành nhưng mà cái sức mạnh của họ vô hình không có gì có thể phá được. Con người bắt đầu có chánh niệm, còn tới chánh định thì thôi không nói nữa, không dụng công gì tâm yên luôn, không cần làm gì..."
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

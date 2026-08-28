@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bí Mật Của Vọng Tưởng Và Đạo Học Phương Đông</title>
+    <!-- Phông chữ serif mang lại cảm giác sâu sắc, uyên thâm -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Lớp nền thiên nhiên - Lá dương xỉ trong sương, gợi sự kết nối của mạng lưới tự nhiên và sự êm dịu */
+        .bg-image {
+            background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2560&auto=format&fit=crop');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100%;
+            
+            /* Căn giữa khung nội dung */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Khung kính mờ (glassmorphism) */
+        .quote-box {
+            background-color: rgba(15, 25, 20, 0.65); /* Tone xanh đen mờ, tĩnh lặng và huyền bí */
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            color: #e8eee8;
+            padding: 55px 65px;
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Định dạng nội dung */
+        .quote-text {
+            font-size: 1.6rem;
+            line-height: 1.85;
+            font-style: italic;
+            text-align: justify;
+            margin-top: 0;
+            margin-bottom: 0; /* Chỉ có một đoạn nên không cần margin dưới */
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Hiệu ứng xuất hiện mượt mà */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Thích ứng hiển thị trên điện thoại */
+        @media (max-width: 768px) {
+            .quote-box {
+                padding: 40px 30px;
+            }
+            .quote-text {
+                font-size: 1.25rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="quote-box">
+            <p class="quote-text">
+                "Bất ngờ khoa học phát hiện ra là dưới ruột ta có neuron thần kinh... Và cái kết nối giữa neuron thần kinh dưới ruột với neuron thần kinh ở trên đầu là cái gì? Thì đây câu trả lời nằm trong đạo học của phương Đông chứ khoa học cũng chưa tìm thấy: Nó chính là gốc của vọng tưởng. Mọi cái suy nghĩ trên đầu thực sự là do dưới bụng nó đi lên. Mà khi dưới bụng ta không được kiểm soát, không được an trú thì nó cứ tuôn cái mầm đưa lên não và kích động não suy nghĩ. Đây là một bí mật. Cho nên ngày hôm nay khi ta an trú ở dưới bụng là ta đang vỗ về các neuron thần kinh dưới ruột, làm trên não ta bắt đầu êm dịu từ từ, bớt vọng tưởng..."
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

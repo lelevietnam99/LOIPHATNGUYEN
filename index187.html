@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiếc Neo Của Thiền Định</title>
+    <!-- Phông chữ serif mang lại cảm giác sâu sắc, tĩnh tại -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Lớp nền thiên nhiên - mặt hồ phẳng lặng và vách đá vững chãi, tượng trưng cho cái neo */
+        .bg-image {
+            background-image: url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2560&auto=format&fit=crop');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100%;
+            
+            /* Căn giữa khung nội dung */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Khung kính mờ (glassmorphism) */
+        .quote-box {
+            background-color: rgba(20, 28, 35, 0.6); /* Tone xanh biển thẫm mờ, tĩnh mịch và sâu lắng */
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            color: #f0f4f8;
+            padding: 55px 65px;
+            border-radius: 16px;
+            max-width: 950px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Định dạng nội dung */
+        .quote-text {
+            font-size: 1.55rem;
+            line-height: 1.8;
+            font-style: italic;
+            text-align: justify;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Bỏ khoảng cách dưới cùng của đoạn cuối */
+        .quote-text:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Hiệu ứng xuất hiện mượt mà */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Thích ứng hiển thị trên điện thoại */
+        @media (max-width: 768px) {
+            .quote-box {
+                padding: 40px 30px;
+            }
+            .quote-text {
+                font-size: 1.25rem;
+                line-height: 1.65;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="quote-box">
+            <p class="quote-text">
+                "Một là khi ngồi thiền ta để tâm ở cái mảnh xương cùng ở phía sau dưới thắt lưng... Khi ta để tâm nhẹ nhàng ở đó nó làm phát sinh nội lực liền... Toàn bộ hệ thống cấu trúc xương của ta nó chắc lại và nó tạo một cái nội lực ngầm ngầm bảo vệ bộ não ta luôn."
+            </p>
+            <p class="quote-text">
+                "Cái thứ hai nữa là ta để tâm ở dưới đáy bụng nơi hội âm... Khi để tâm ở dưới đáy bụng hội âm nó chữa hết bộ não của ta... Nó chữa những cái bệnh tiềm tàng ở trong bộ não của ta, làm cho mình thông minh hơn, điềm tĩnh hơn, khôn hơn một chút..."
+            </p>
+            <p class="quote-text">
+                "Kinh xưa gọi Canda: Sáu phân dưới rốn ở ngoài da, một điểm kinh xưa gọi Canda, giữ tâm nơi ấy không thay đổi, vọng tưởng tự nhiên không đi xa... Ta cần cái cọc rất là cứng ở trên bờ và một sợi dây cột cái thuyền neo lại... Nó không có cái gì á, hoàn toàn nó vô hình, không cảm xúc, mà mình định vị nó bằng trí tuệ mà thôi... Nhưng nó làm cái neo, vọng tưởng bị cột về đó hết... Và đây là cánh cửa để nhập định luôn."
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh Thần Thép Và Hành Trình Thiền Định</title>
+    <!-- Phông chữ serif mang lại cảm giác kiên định, sâu lắng -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Lớp nền thiên nhiên - Vách núi đá sừng sững trong sương, biểu tượng của ý chí kiên định */
+        .bg-image {
+            background-image: url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?q=80&w=2560&auto=format&fit=crop');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100%;
+            
+            /* Căn giữa khung nội dung */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Khung kính mờ (glassmorphism) */
+        .quote-box {
+            background-color: rgba(20, 24, 28, 0.7); /* Tone xám đen mờ, mạnh mẽ và thâm trầm */
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            color: #eceff1;
+            padding: 55px 65px;
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Định dạng nội dung */
+        .quote-text {
+            font-size: 1.6rem;
+            line-height: 1.85;
+            font-style: italic;
+            text-align: justify;
+            margin-top: 0;
+            margin-bottom: 0; /* Chỉ có một đoạn nên không cần margin dưới */
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Hiệu ứng xuất hiện mượt mà */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Thích ứng hiển thị trên điện thoại */
+        @media (max-width: 768px) {
+            .quote-box {
+                padding: 40px 30px;
+            }
+            .quote-text {
+                font-size: 1.25rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="quote-box">
+            <p class="quote-text">
+                "Khi ta bắt đầu tu tập thiền định là bắt đầu vào một hành trình phức tạp và khó khăn. Đó là lý do mà cái chi phần chuẩn bị đi vào thiền định Phật gọi là chánh tinh tấn. Nghĩa là cực lắm, vất vả vô cùng. Cái vất vả mà bên ngoài ta nhìn không thấy, nó không giống như một người đi cày ruộng, một người lặn dưới biển sâu, leo lên núi cao chiến đấu với kẻ thù ở ngoài chiến tuyến. Không phải, nó là một cái gì vô hình, âm thầm lặng lẽ nhưng cực kỳ vất vả. Nếu không phải là người có cái tinh thần thép, không ai đủ sức để tu tập thiền định..."
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

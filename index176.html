@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trạng thái buông lỏng</title>
+    <!-- Sử dụng font chữ có chân (serif) để tạo cảm giác nhẹ nhàng, sâu sắc -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Lớp nền thiên nhiên */
+        .bg-image {
+            /* Đường dẫn đến ảnh nền rừng cây tĩnh lặng chất lượng cao */
+            background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            
+            /* Flexbox để căn giữa khung chữ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung kính mờ chứa nội dung */
+        .quote-box {
+            background-color: rgba(0, 0, 0, 0.45); /* Nền đen mờ */
+            backdrop-filter: blur(8px); /* Hiệu ứng làm mờ cảnh phía sau */
+            -webkit-backdrop-filter: blur(8px);
+            color: #ffffff;
+            padding: 50px 60px;
+            border-radius: 16px;
+            max-width: 80%;
+            width: 750px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Định dạng chữ */
+        .quote-text {
+            font-size: 1.8rem;
+            line-height: 1.8;
+            font-style: italic;
+            text-align: justify;
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6); /* Đổ bóng nhẹ giúp chữ dễ đọc hơn */
+        }
+
+        /* Hiệu ứng xuất hiện từ từ */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Điều chỉnh cho màn hình điện thoại nhỏ */
+        @media (max-width: 768px) {
+            .quote-box {
+                padding: 30px 25px;
+                width: 90%;
+            }
+            .quote-text {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="quote-box">
+            <p class="quote-text">
+                "...không nhúc nhích mà toàn thân vẫn phải mềm mại buông lỏng. Ta cứ gồng này gồng kia... tác ý thứ hai kiểm tra hết, buông lỏng nó xuống hết, buông lỏng hết toàn bộ mà vẫn không nhúc nhích. Cái trạng thái đó rất là hay. Mà khi ta đạt được trạng thái đó rồi, ta cũng cảm thấy mình bắt đầu rất dễ chịu, tâm bắt đầu thư thái..."
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

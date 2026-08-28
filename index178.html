@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biết Hơi Thở Và Neo Giữ Tâm</title>
+    <!-- Phông chữ serif cổ điển mang lại cảm giác tĩnh tại -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Lớp nền thiên nhiên - phong cảnh mặt nước/rừng tĩnh lặng tuyệt đối */
+        .bg-image {
+            background-image: url('https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=2560&auto=format&fit=crop');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100%;
+            
+            /* Flexbox để căn giữa khung chữ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Khung kính mờ chứa nội dung */
+        .quote-box {
+            background-color: rgba(20, 25, 20, 0.5); /* Nền tối mờ, hơi ánh rêu tự nhiên */
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            color: #f0f4f0;
+            padding: 55px 65px;
+            border-radius: 16px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Định dạng từng đoạn chữ */
+        .quote-text {
+            font-size: 1.65rem;
+            line-height: 1.8;
+            font-style: italic;
+            text-align: justify;
+            margin-top: 0;
+            margin-bottom: 28px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* Giúp chữ nổi bật trên nền mờ */
+        }
+
+        /* Bỏ khoảng cách dưới của đoạn cuối cùng */
+        .quote-text:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Hiệu ứng xuất hiện */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Thích ứng cho thiết bị di động */
+        @media (max-width: 768px) {
+            .quote-box {
+                padding: 40px 30px;
+            }
+            .quote-text {
+                font-size: 1.3rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="quote-box">
+            <p class="quote-text">
+                "Biết hơi thở mà không điều khiển... tập lúc đó ta ngồi thiền biết toàn thân rồi biết bụng dưới rồi bắt đầu ta để ý hơi thở. Hơi thở vào hơi thở ra biết mà không điều khiển. Dễ không? Khó! Phải thông minh lắm... Không điều khiển nhưng phải khéo điều khiển để hơi thở chậm, ít, êm... Ít mà ít vừa thôi. Đúng cái ít thôi thì tâm nhiếp liền. Chỗ này là một sự cảm nhận cực kỳ tinh tế và phải rất là thông minh."
+            </p>
+            <p class="quote-text">
+                "...giữ tâm nơi ấy không thay đổi, vọng tưởng tự nhiên không đi xa. Sáu phân dưới rốn ở ngoài da, một điểm đó thôi... định vị nó bằng trí tuệ mà thôi. Không có một cái cảm giác gì, không cảm xúc... Nhưng nó làm cái neo vọng tưởng bị cột về đó hết... Và đây là cánh cửa để nhập định luôn."
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

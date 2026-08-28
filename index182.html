@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chánh Tinh Tấn Và Phương Pháp Thiền Định</title>
+    <!-- Phông chữ serif mang lại cảm giác trí tuệ, uyên thâm -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Lớp nền thiên nhiên - rừng cây với những tia nắng chiếu xuống như tấm lưới ánh sáng */
+        .bg-image {
+            background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2560&auto=format&fit=crop');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100%;
+            
+            /* Căn giữa khung nội dung */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Khung kính mờ (glassmorphism) */
+        .quote-box {
+            background-color: rgba(20, 25, 22, 0.6); /* Tone màu xanh lục tối mờ, hài hòa với ánh sáng rừng */
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            color: #f4f7f4;
+            padding: 55px 65px;
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Định dạng nội dung */
+        .quote-text {
+            font-size: 1.6rem;
+            line-height: 1.85;
+            font-style: italic;
+            text-align: justify;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Bỏ khoảng cách dưới cùng của đoạn cuối */
+        .quote-text:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Hiệu ứng xuất hiện mượt mà */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Thích ứng hiển thị trên điện thoại */
+        @media (max-width: 768px) {
+            .quote-box {
+                padding: 40px 30px;
+            }
+            .quote-text {
+                font-size: 1.25rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="quote-box">
+            <p class="quote-text">
+                "Cái quan trọng của chánh tinh tấn á: Cái chữ 'chánh' là đúng, cái 'tinh tấn' là dụng công. Dụng công cho đúng. Đúng này là đúng cái gì? Đúng phương pháp. Vì nếu sai phương pháp tu hoài không có kết quả mà ráng thêm nữa hư cái đầu, bệnh luôn... Vì nếu ta tà tinh tấn ngang đó cuộc đời ta tan vỡ, bắt đầu bệnh tâm thần liền, não hư liền... Còn cái người mà tu chánh tinh tấn á, có thể chưa đủ phước thì chưa chứng nhưng bảo đảm không điên, không hư não..."
+            </p>
+            <p class="quote-text">
+                "Ta cần một phương pháp giống như một cái lưới của Phạm Thiên á, tung ra một cái lưới thì cá lớn cá bé gì bị gom lại hết... Ta cần cái loại lưới mắt nhỏ. Tung ra một cái thì cá nhỏ cá lớn gì bắt hết. Chúng ta là cá mà, cái lưới đó là gì? Là phương pháp thiền định. Ta cần một phương pháp thiền định đầy đủ là lưới mắt nhỏ đó, chụp một cái dính mình liền. Đó là mình là con cá nhỏ, mình là cái sơ cơ, nhưng mà cái phương pháp nó chu đáo quá, cái phương pháp chỉ quán nó chặt chẽ quá, thế là mình không thoát được là mình ứng dụng cái phương pháp đó có kết quả liền..."
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

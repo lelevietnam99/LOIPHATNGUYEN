@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quán Chiếu Sự Thật</title>
+    <!-- Phông chữ serif mang lại cảm giác sâu sắc, tĩnh tại -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Lớp nền thiên nhiên - Rừng thu sương mù, biểu tượng của sự vô thường và thanh tịnh */
+        .bg-image {
+            background-image: url('https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?q=80&w=2560&auto=format&fit=crop');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100%;
+            
+            /* Căn giữa khung nội dung */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Khung kính mờ (glassmorphism) */
+        .quote-box {
+            background-color: rgba(30, 25, 20, 0.7); /* Tone nâu đen mờ, trầm mặc và sâu lắng */
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            color: #f4f1ea;
+            padding: 50px 60px;
+            border-radius: 16px;
+            max-width: 950px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Tiêu đề chính */
+        .quote-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 35px;
+            color: #ffffff;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Nhóm từng phần quán chiếu */
+        .quote-section {
+            margin-bottom: 30px;
+        }
+
+        /* Bỏ khoảng cách dưới cùng của đoạn cuối */
+        .quote-section:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Tiêu đề phụ (Quán thân vô thường...) */
+        .quote-subtitle {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #dfcdad; /* Màu vàng cát/vàng thu nhẹ nhàng tạo điểm nhấn */
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Định dạng nội dung */
+        .quote-text {
+            font-size: 1.55rem;
+            line-height: 1.8;
+            font-style: italic;
+            text-align: justify;
+            margin: 0;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Hiệu ứng xuất hiện mượt mà */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Thích ứng hiển thị trên điện thoại */
+        @media (max-width: 768px) {
+            .quote-box {
+                padding: 40px 25px;
+            }
+            .quote-title {
+                font-size: 1.4rem;
+                margin-bottom: 25px;
+            }
+            .quote-subtitle {
+                font-size: 1.25rem;
+            }
+            .quote-text {
+                font-size: 1.25rem;
+                line-height: 1.65;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="quote-box">
+            <div class="quote-title">
+                Quán chiếu sự thật để tâm tự động sinh khởi tỉnh giác và dứt trừ mê đắm:
+            </div>
+            
+            <div class="quote-section">
+                <div class="quote-subtitle">Quán thân vô thường:</div>
+                <p class="quote-text">
+                    "Khi ta chánh niệm được cái chấp thân, biết thân này là vô thường, ta bớt yêu thân, bớt chấp thân, bớt tham sân si quanh cái thân, vọng tưởng bớt liền và xuất hiện một sự tỉnh giác. Chỉ cần ngồi quán biết thân này vô thường, thân này sẽ già, sẽ bệnh, sẽ chết, bỗng nhiên cũng xuất hiện tỉnh giác cũng như bớt vọng tưởng liền."
+                </p>
+            </div>
+
+            <div class="quote-section">
+                <div class="quote-subtitle">Quán thế gian hư ảo, tạm bợ:</div>
+                <p class="quote-text">
+                    "Hào nhoáng của thế gian này là cái gì nó đẹp, là cái gì nó vui, nhưng thực sự bản chất giấu đằng sau của những cái vui cái đẹp của thế gian này là gì? Là sự tạm bợ, là nguy hiểm, là lừa đảo, là ác độc, là gian tham, là lợi dụng... Khi ta nhìn thấy toàn bộ cuộc đời coi vậy chứ tạm bợ và hư ảo, bỗng nhiên ta bớt vọng tưởng liền... Thấy điều đó không có nghĩa là ta trở thành một kẻ tiêu cực chán đời, mà thấy điều đó để chỉ còn lại cái đạo lý, đạo đức là trách nhiệm. Sống với trách nhiệm mà thôi, an vui trong trách nhiệm."
+                </p>
+            </div>
+
+            <div class="quote-section">
+                <div class="quote-subtitle">Quán thân bất tịnh:</div>
+                <p class="quote-text">
+                    "Thân là bất tịnh, nhưng thường ta quên. Ta quên vì sao? Vì ta che đậy sự bất tịnh nó lại bằng y phục đẹp, việc tắm rửa sạch sẽ và đôi khi ta có sự trang điểm, dầu thơm... Những cái đó ta che đậy sự bất tịnh lại chứ bản chất thân là bất tịnh. Còn khi một người mà họ có thiền định, tâm họ yên rồi họ nhìn điều đó rất rõ... Giấu trong đó một cái tâm hồn cao quý biết yêu thương, biết tin nhân quả, hướng về sự giác ngộ, có lòng tôn kính Phật thì những điều đó rất là đẹp..."
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
