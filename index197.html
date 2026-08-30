@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Trú Nơi Cảm Giác Vô Hình & Làm Chủ Nội Tâm</title>
+    <style>
+        /* Thiết lập nền cho toàn trang */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền cảnh thiên nhiên u tịch và trang nghiêm */
+            background-image: url('https://images.unsplash.com/photo-1518173946687-a4c88986a987?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
+        .container {
+            background-color: rgba(10, 15, 30, 0.84); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .dialogue {
+            margin-bottom: 25px;
+            text-align: justify;
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #ffd700;
+            font-style: italic;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        .source {
+            text-align: center;
+            color: #d1e1f0;
+            margin-top: 40px;
+            font-size: 1.1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        .source a {
+            color: #8bbceb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .source a:hover {
+            color: #ffd700;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>An Trú Nơi Cảm Giác Vô Hình</h1>
+        <div class="subtitle">Sự Kiểm Soát Sâu Sắc & Làm Chủ Nội Tâm</div>
+
+        <div class="dialogue">
+            "Nếu mà lúc ta ngồi thiền định ta sâu hơn nữa thì trong đời sống hàng ngày ta cũng an trú nơi chính mình, nhưng cái chính mình đó không phải là cái thân nữa mà chỉ là <span class="highlight">một cảm giác vô hình về mình</span> mà thôi..."
+        </div>
+
+        <div class="dialogue">
+            "Lúc này ta kiểm soát sâu hơn cái vọng tưởng... những cái vui buồn, những cái dễ chịu khó chịu bị ta kiểm soát hết, <span class="highlight">không có khởi bậy nữa</span>. Không phải là người ta nói mình xúc phạm mình bị tổn thương... khen mình cái mình mừng vui, không có nữa..."
+        </div>
+
+        <div class="source">
+            Bài Học Hành Thiền & Thực Hành Chánh Pháp
+        </div>
+    </div>
+
+</body>
+</html>
