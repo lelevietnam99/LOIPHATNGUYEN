@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hai Khuynh Hướng Kết Bạn & Sức Tu Hành</title>
+    <style>
+        /* Thiết lập nền cho toàn trang */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ảnh nền cảnh thiên nhiên u tịch và trang nghiêm */
+            background-image: url('https://images.unsplash.com/photo-1518173946687-a4c88986a987?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
+        .container {
+            background-color: rgba(10, 15, 30, 0.84); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 850px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #8bbceb;
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .dialogue {
+            margin-bottom: 25px;
+            text-align: justify;
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 25px;
+            background-color: rgba(255, 255, 255, 0.04);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #8bbceb;
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+            text-align: justify;
+        }
+
+        ul li::before {
+            content: "✦";
+            position: absolute;
+            left: -5px;
+            color: #ffd700;
+        }
+
+        .source {
+            text-align: center;
+            color: #d1e1f0;
+            margin-top: 40px;
+            font-size: 1.1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+                font-size: 1.05rem;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Khuynh Hướng Kết Bạn</h1>
+        <div class="subtitle">Đánh Giá Sức Tu Hành Qua Cách Giao Tiếp</div>
+
+        <div class="dialogue">
+            "<span class="highlight">CON NGƯỜI THÍCH CÓ BẠN BÈ</span>, đó là nhu cầu tự nhiên của đời sống.<br>
+            Nhưng sẽ có hai khuynh hướng về kết bạn tùy thuộc vào mức độ tu hành ra sao."
+        </div>
+
+        <p>Hai khuynh hướng ấy bao gồm:</p>
+
+        <ul>
+            <li><strong>Một là:</strong> Kết bạn theo khuynh hướng kết thân riêng, có tính ích kỷ, do sức tu còn ít.</li>
+            <li><strong>Hai là:</strong> Kết bạn theo khuynh hướng chan hoà chung đồng với mọi người, không có tính kết thân riêng, không có tính ích kỷ, do sức tu đã dày.</li>
+        </ul>
+
+        <div class="dialogue" style="border-left-color: #8bbceb;">
+            Ta tinh tế quan sát chính mình xem đang kết bạn theo khuynh hướng nào để <span class="highlight">tự đánh giá sức tu của mình</span> nhé.
+        </div>
+
+        <div class="source">
+            Bài Học Đạo Lý & Thực Hành Chánh Pháp
+        </div>
+    </div>
+
+</body>
+</html>
