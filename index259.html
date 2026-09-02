@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tưởng Ấm, Hành Ấm & Sự Sai Lầm Khi Đè Nén Vọng Tưởng</title>
+    <style>
+        /* Thiết lập nền vũ trụ cho toàn trang */
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Khung chứa nội dung mờ ảo để dễ đọc chữ */
+        .container {
+            background-color: rgba(10, 15, 30, 0.85); /* Nền tối bán trong suốt */
+            backdrop-filter: blur(8px); /* Hiệu ứng kính mờ */
+            max-width: 900px;
+            padding: 45px 55px;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .quote-box {
+            margin: 25px 0;
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #ffd700;
+            font-style: italic;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        .source {
+            text-align: center;
+            color: #d1e1f0;
+            margin-top: 35px;
+            font-size: 1.05rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Hiệu ứng thanh cuộn đẹp mắt */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6); 
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="quote-box">
+            "tưởng ấm trong đầu ta gồm hai phần chính một là cái hình ảnh đang hiện ra trong đầu và hai là cái ngôn ngữ lời nói đang lãi nhải trong đầu hai cái đó ta nhìn lại tâm có thấy không.<br><br>
+            cái nói đó không phải là cái suy nghĩ mà cái đó là cái gì... nó chỉ là hiện ra một phần biểu hiện ra một phần của cái cái suy nghĩ giấu ở bên trong... cái hành ấm của ta ở trong脳 (não) nó mới là bộ phận suy nghĩ còn cái mà lãi nhảy lãi nhảy nói trong đầu ta nó không phải cái suy nghĩ mà nó chỉ là hiện ra một phần triệu của cái suy nghĩ ở trong đầu ta.<br><br>
+            khi tâm ta loạn quá ta căng thẳng ta bị stress mà nếu ta không biết ta cứ nhè ngay cái tưởng ấm mà ta kềm ta giữ ta kềm ta giữ thì ta bứt luôn ta bệnh luôn tại vì <span class="highlight">nó không phải cái gốc nó là cái ngọn</span>.<br><br>
+            ngồi thiền con thấy tâm con nó động nên con cố gắng diệt vọng tưởng nên cái diệt đó là diệt ngọn hay gốc ngọn... cho nên ta cứ đè càng đè càng dằn ép càng căng cái não thì ta ngồi thiền càng mệt nói sao ngồi thiền không thanh tịnh mà con thấy đau đầu là lý do là cứ nhè cái ngọn"
+        </div>
+
+        <div class="source">
+            Bài Học Thiền Định & Chánh Pháp Sâu Xa
+        </div>
+    </div>
+
+</body>
+</html>
